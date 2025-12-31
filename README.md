@@ -149,7 +149,7 @@ Unlike LunarLander, the Classical Control suite relies exclusively on **YOLOv11-
     3.  **Tip:** The free end of the second link.
 * **State Vector Construction (8D):**
     The raw keypoints are converted into a relative coordinate system to form the input vector:
-    $$S = [X_{joint}, Y_{joint}, X_{tip}, Y_{tip}, \dot{X}_{joint}, \dot{Y}_{joint}, \dot{X}_{tip}, \dot{Y}_{tip}]$$
+    $$S = [X\_{joint}, Y\_{joint}, X\_{t}, Y\_{t}, \dot{X}\_{joint}, \dot{Y}\_{joint}, \dot{X}\_{t}, \dot{Y}\_{t}]$$
     * *Coordinates are relative to the Base point.*
     * *Velocities are calculated via temporal differencing.*
 
