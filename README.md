@@ -9,7 +9,7 @@ The project was developed and tested on the following high-performance configura
 * **Primary Workstation:** AMD Ryzen 3900X | NVIDIA RTX 2080Ti | 32GB RAM
 * **Secondary Configuration:** Intel i7-12700KF | NVIDIA RTX 3070 | 32GB RAM
 * **Language:** Python 3.9
-* **Acceleration:** CUDA-enabled GPU acceleration for visual inference (YOLO/Pose models).
+* **Acceleration:** CUDA-enabled GPU acceleration for visual inference (YOLO-Pose/OBB models).
 
 ## System Architecture
 
