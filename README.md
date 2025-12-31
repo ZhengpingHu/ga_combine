@@ -396,10 +396,10 @@ To isolate the causes of failure, four distinct configurations were tested:
 4.  **Direct Input + MLP (16 Nodes)**
 
 ### 1. State Representations
-* **Visual State (YOLO):**  $$S = [Tip_x, Tip_y, \dot{x}_{tip}, \dot{y}_{tip}]$$
-  
+* **Visual State (YOLO):** $S = [Tip_x, Tip_y, \dot{x}_{tip}, \dot{y}_{tip}]$
     * Derived from YOLOv11 keypoint tracking. Velocities calculated via frame differencing.
-* **Direct State (Ground Truth):** $$S = [\cos\theta, \sin\theta, \dot{\theta}]$$
+* **Direct State (Ground Truth):** $S = [\cos\theta, \sin\theta, \dot{\theta}]$
+    * **Raw 3D output** directly from the Gymnasium environment. No mapping or modification was applied.
 
 ### 2. Network Architectures
 * **Linear (No Hidden):** `Input(4) -> Linear(1) -> Tanh * 2.0`
