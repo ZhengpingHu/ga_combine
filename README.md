@@ -1,6 +1,6 @@
 # Visual-Genetic-Algorithm-Control-Agent
 
-A comprehensive framework combining state-of-the-art Computer Vision (YOLOv11) with Evolutionary Algorithms (GA/NEAT) to solve classic Reinforcement Learning control tasks. This project demonstrates an end-to-end pipeline where agents perceive the environment solely through visual inputs (pixel-level) and evolve control strategies without direct access to the environment's internal state vector.
+A comprehensive framework combining Computer Vision (YOLOv11) with Evolutionary Algorithms (GA/NEAT) to solve classic Reinforcement Learning control tasks. This project demonstrates an end-to-end pipeline where agents perceive the environment solely through visual inputs (pixel-level) and evolve control strategies without direct access to the environment's internal state vector.
 
 ## Hardware & Environment
 
