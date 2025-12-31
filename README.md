@@ -450,3 +450,9 @@ python ga_pendulum.py \
     --seed-refresh-rate 0.4
 ```
 
+# References:
+[1] Ultralytics, "YOLO11," Ultralytics Documentation. [Online]. Available: https://docs.ultralytics.com/models/yolo11/. [Accessed: Dec. 30, 2025].
+
+[2] Farama Foundation, "Gymnasium," Farama Foundation Documentation. [Online]. Available: https://gymnasium.farama.org/. [Accessed: Dec. 30, 2025].
+
+[3] S. G. Ficici and J. B. Pollack, "Pareto optimality in coevolutionary learning," in Proceedings of the 6th European Conference on Advances in Artificial Life (ECAL), Prague, Czech Republic, 2001, pp. 316–325.
