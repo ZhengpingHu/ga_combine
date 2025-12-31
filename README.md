@@ -211,7 +211,7 @@ The vision system tracks the mechanical structure to reconstruct the standard 4-
 * **Calibration:**
     * A specific **Gain Factor** (`1.12`) is applied during inference. This likely compensates for visual perspective distortion or acts as a proportional control gain multiplier to make the agent more responsive to small angular deviations.
 * **State Vector (4D):**
-    $$S = [x\_{cart}, \dot{x}_{cart}, \theta_{pole}, \dot{\theta}_{pole}]$$
+    $$S = [x\_{cart}, \dot{x}\_{cart}, \theta\_{pole}, \dot{\theta}\_{pole}]$$
     * Derived from the raw pixel coordinates of the Base and Tip.
 
 ## Controller & Evolutionary Strategy
