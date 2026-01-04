@@ -1,0 +1,4 @@
+python acrobot_server.py --model ./best.pt --port 6000
+
+
+python ga_acrobot.py
