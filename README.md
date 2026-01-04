@@ -1,6 +1,6 @@
-# Visual-Neuro-Evolution-Control
+# Visual-Genetic-Algorithm-Control-Agent
 
-A comprehensive framework combining state-of-the-art Computer Vision (YOLOv11) with Evolutionary Algorithms (GA/NEAT) to solve classic Reinforcement Learning control tasks. This project demonstrates an end-to-end pipeline where agents perceive the environment solely through visual inputs (pixel-level) and evolve control strategies without direct access to the environment's internal state vector.
+A comprehensive framework combining Computer Vision (YOLOv11) with Evolutionary Algorithms (GA/NEAT) to solve classic Reinforcement Learning control tasks. This project demonstrates an end-to-end pipeline where agents perceive the environment solely through visual inputs (pixel-level) and evolve control strategies without direct access to the environment's internal state vector.
 
 ## Hardware & Environment
 
@@ -9,7 +9,7 @@ The project was developed and tested on the following high-performance configura
 * **Primary Workstation:** AMD Ryzen 3900X | NVIDIA RTX 2080Ti | 32GB RAM
 * **Secondary Configuration:** Intel i7-12700KF | NVIDIA RTX 3070 | 32GB RAM
 * **Language:** Python 3.9
-* **Acceleration:** CUDA-enabled GPU acceleration for visual inference (YOLO/Pose models).
+* **Acceleration:** CUDA-enabled GPU acceleration for visual inference (YOLO-Pose/OBB models).
 
 ## System Architecture
 
@@ -149,7 +149,7 @@ Unlike LunarLander, the Classical Control suite relies exclusively on **YOLOv11-
     3.  **Tip:** The free end of the second link.
 * **State Vector Construction (8D):**
     The raw keypoints are converted into a relative coordinate system to form the input vector:
-    $$S = [X_{joint}, Y_{joint}, X_{tip}, Y_{tip}, \dot{X}_{joint}, \dot{Y}_{joint}, \dot{X}_{tip}, \dot{Y}_{tip}]$$
+    $$S = [X\_{joint}, Y\_{joint}, X\_{t}, Y\_{t}, \dot{X}\_{joint}, \dot{Y}\_{joint}, \dot{X}\_{t}, \dot{Y}\_{t}]$$
     * *Coordinates are relative to the Base point.*
     * *Velocities are calculated via temporal differencing.*
 
@@ -211,7 +211,7 @@ The vision system tracks the mechanical structure to reconstruct the standard 4-
 * **Calibration:**
     * A specific **Gain Factor** (`1.12`) is applied during inference. This likely compensates for visual perspective distortion or acts as a proportional control gain multiplier to make the agent more responsive to small angular deviations.
 * **State Vector (4D):**
-    $$S = [x_{cart}, \dot{x}_{cart}, \theta_{pole}, \dot{\theta}_{pole}]$$
+    $$S = [x\_{cart}, \dot{x}\_{cart}, \theta\_{pole}, \dot{\theta}\_{pole}]$$
     * Derived from the raw pixel coordinates of the Base and Tip.
 
 ## Controller & Evolutionary Strategy
@@ -396,9 +396,10 @@ To isolate the causes of failure, four distinct configurations were tested:
 4.  **Direct Input + MLP (16 Nodes)**
 
 ### 1. State Representations
-* **Visual State (YOLO):** $$S = [Tip_x, Tip_y, \dot{x}_{tip}, \dot{y}_{tip}]$$
+* **Visual State (YOLO):** $S = [x\_t, y\_t, \dot{x}\_{t}, \dot{y}\_{t}]$
     * Derived from YOLOv11 keypoint tracking. Velocities calculated via frame differencing.
-* **Direct State (Ground Truth):** $$S = [\cos\theta, \sin\theta, \dot{\theta}]$$
+* **Direct State (Ground Truth):** $S = [\cos\theta, \sin\theta, \dot{\theta}]$
+    * **Raw 3D output** directly from the Gymnasium environment. No mapping or modification was applied.
 
 ### 2. Network Architectures
 * **Linear (No Hidden):** `Input(4) -> Linear(1) -> Tanh * 2.0`
@@ -450,3 +451,9 @@ python ga_pendulum.py \
     --seed-refresh-rate 0.4
 ```
 
+# References:
+[1] Ultralytics, "YOLO11," Ultralytics Documentation. [Online]. Available: https://docs.ultralytics.com/models/yolo11/. [Accessed: Dec. 30, 2025].
+
+[2] Farama Foundation, "Gymnasium," Farama Foundation Documentation. [Online]. Available: https://gymnasium.farama.org/. [Accessed: Dec. 30, 2025].
+
+[3] S. G. Ficici and J. B. Pollack, "Pareto optimality in coevolutionary learning," in Proceedings of the 6th European Conference on Advances in Artificial Life (ECAL), Prague, Czech Republic, 2001, pp. 316–325.
