@@ -1,0 +1,3 @@
+python yolo_server.py --model best.pt --port 6000 --gain 1.12
+
+python ga_client.py --rpc-port 6000 --population 50 --generations 20 --processes 16 --pool-size 100 --subset-k 5
