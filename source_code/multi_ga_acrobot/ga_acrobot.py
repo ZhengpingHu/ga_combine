@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Acrobot GA Client: Fixed Linear Topology + Proportional Fitness Sharing + Dual Refresh
+# Acrobot GA Client: Fixed Linear Topology + Proportional Fitness Sharing + Dual Refresh + Enhanced Plotting
 
 import os
 import argparse
@@ -132,7 +132,7 @@ class SeedPortfolioManager:
         new_seeds = random.sample(candidate_pool, num_replace)
         for i_replace, i_new in zip(indices_to_replace, range(num_replace)):
             self.active_subset[i_replace] = new_seeds[i_new]
-        print(f"  - Replaced {len(new_seeds)} seeds (Age/Perf).")
+        print(f"  - Replaced {len(new_seeds)} seeds (Age/Perf).")
 
     def state_dict(self): return self.scheduler.state_dict()
     def load_state_dict(self, d): self.scheduler.load_state_dict(d)
@@ -156,6 +156,10 @@ class RPCClient:
         self.conn.send(("infer", frame_bgr)); ok, res = self.conn.recv(); return res if ok else None
 
 def evaluate_individual(args):
+    """
+    Worker function. 
+    Can be used for training (pop_idx, seed_idx) or validation (pop_idx=-1, seed_idx=loop_index).
+    """
     pop_idx, seed_idx, weights, seed, rpc_host, rpc_port, authkey, max_steps = args
 
     model = FixedNNPolicy(); set_weights_vector(model, weights)
@@ -190,10 +194,10 @@ def evaluate_individual(args):
                 if done or truncated: break
                 
         env.close()
-        return pop_idx, seed_idx, total_reward
+        return pop_idx, seed_idx, total_reward, seed
     except Exception as e:
         print(f"Eval Error: {e}")
-        return pop_idx, seed_idx, -500.0
+        return pop_idx, seed_idx, -500.0, seed
 
 def calculate_competitive_fitness(results_matrix: np.ndarray) -> np.ndarray:
     """Proportional Fitness Sharing"""
@@ -222,18 +226,58 @@ def plot_separated_curves(run_dir, df_history):
     os.makedirs(plots_dir, exist_ok=True)
     gens = df_history['generation']
     
+    # 1. Standard Fitness Plot
     plt.figure(figsize=(10, 6))
     plt.plot(gens, df_history['best_fitness_score'], label='Best Fitness', color='purple')
     plt.xlabel("Generation"); plt.ylabel("Shared Fitness"); plt.title("Optimization Metric")
     plt.grid(True, alpha=0.3)
     plt.savefig(os.path.join(plots_dir, "plot1_fitness.png")); plt.close()
 
+    # 2. Standard Raw Reward Plot
     plt.figure(figsize=(10, 6))
     plt.plot(gens, df_history['global_max_raw_reward'], label='Pop Max Raw', color='green')
     plt.plot(gens, df_history['global_avg_raw_reward'], label='Pop Avg Raw', color='gray', linestyle='--')
     plt.xlabel("Generation"); plt.ylabel("Raw Reward"); plt.title("Population Performance (Higher is Better)")
     plt.legend(); plt.grid(True, alpha=0.3)
     plt.savefig(os.path.join(plots_dir, "plot2_raw_reward.png")); plt.close()
+
+    # 3. [NEW] Combined Dual-Axis Plot (Raw Reward + Fitness)
+    fig, ax1 = plt.subplots(figsize=(10, 6))
+    
+    color = 'tab:green'
+    ax1.set_xlabel('Generation')
+    ax1.set_ylabel('Max Raw Reward', color=color)
+    ax1.plot(gens, df_history['global_max_raw_reward'], color=color, label='Max Raw Reward')
+    ax1.tick_params(axis='y', labelcolor=color)
+    ax1.grid(True, alpha=0.3)
+
+    ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+    color = 'tab:purple'
+    ax2.set_ylabel('Best Fitness Score', color=color)
+    ax2.plot(gens, df_history['best_fitness_score'], color=color, linestyle='--', label='Best Fitness')
+    ax2.tick_params(axis='y', labelcolor=color)
+
+    plt.title("Combined Metrics: Environmental Reward vs Fitness Score")
+    fig.tight_layout()  # otherwise the right y-label is slightly clipped
+    plt.savefig(os.path.join(plots_dir, "plot3_combined_metrics.png"))
+    plt.close()
+
+def plot_seed_distribution(run_dir, gen, seed_rewards: List[float], best_seed: int):
+    """
+    [NEW] Draws a violin plot for the champion's performance across all seeds.
+    """
+    plots_dir = os.path.join(run_dir, "plots", "seed_dist")
+    os.makedirs(plots_dir, exist_ok=True)
+    
+    plt.figure(figsize=(8, 6))
+    sns.violinplot(y=seed_rewards, inner="point", color="lightblue")
+    plt.title(f"Gen {gen} Champion: Reward Dist. (Best Seed: {best_seed})")
+    plt.ylabel("Raw Reward")
+    plt.grid(True, axis='y', alpha=0.3)
+    
+    filename = os.path.join(plots_dir, f"violin_gen_{gen:04d}.png")
+    plt.savefig(filename)
+    plt.close()
 
 def save_history_snapshot(run_dir, gen, population, results_matrix, subset_seeds, fitness_scores):
     history_dir = os.path.join(run_dir, "history")
@@ -256,6 +300,7 @@ def run_ga(args):
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     run_dir = os.path.join(args.outdir, f"ga_acrobot_{ts}")
     os.makedirs(run_dir, exist_ok=True)
+    
     portfolio = SeedPortfolioManager(args.pool_size, args.base_seed, args.shuffle_pool, 
                                      args.pool_rng_seed, args.subset_k)
     model = FixedNNPolicy()
@@ -274,9 +319,10 @@ def run_ga(args):
                 jobs.append((i, j, pop[i], seed, args.rpc_host, args.rpc_port, args.authkey, args.max_steps))
         
         results_matrix = np.full((args.population, args.subset_k), -np.inf)
+        
         with mp.Pool(processes=args.processes) as pool:
-            for pop_idx, seed_idx, reward in tqdm(pool.imap_unordered(evaluate_individual, jobs), 
-                                                  total=len(jobs), desc=f"Gen {gen}"):
+            for pop_idx, seed_idx, reward, _ in tqdm(pool.imap_unordered(evaluate_individual, jobs), 
+                                                  total=len(jobs), desc=f"Gen {gen} [Train]"):
                 results_matrix[pop_idx, seed_idx] = reward
 
         portfolio.update_and_refresh(results_matrix, args.seed_refresh_frac, args.seed_refresh_direction, args.max_seed_age)
@@ -299,12 +345,46 @@ def run_ga(args):
         elite_num = max(2, int(args.elite_frac * args.population))
         sorted_indices = np.argsort(smoothed_scores)
         elite_indices = sorted_indices[-elite_num:]
-        
         champion_idx = elite_indices[-1]
+        
         best_fitness_val = smoothed_scores[champion_idx]
         selected_individual_raw_reward = raw_avg_rewards_per_ind[champion_idx]
         
         print(f"[GEN {gen}] PopMax={global_max_raw:.1f} | BestFit={best_fitness_val:.4f} | SelRaw={selected_individual_raw_reward:.1f}")
+        
+        if gen == args.generations:
+            champion_weights = pop[champion_idx]
+            all_seeds = portfolio.master_pool 
+            
+            val_jobs = []
+            for idx, s in enumerate(all_seeds):
+                val_jobs.append((-1, idx, champion_weights, s, args.rpc_host, args.rpc_port, args.authkey, args.max_steps))
+            
+            val_rewards = []
+            val_seed_map = {} 
+
+            print(f"  > [Final Check] Validating Final Champion on ALL {len(all_seeds)} seeds...")
+            with mp.Pool(processes=args.processes) as pool:
+                for _, s_idx, r, s_val in tqdm(pool.imap_unordered(evaluate_individual, val_jobs), 
+                                               total=len(val_jobs), desc="Final Validation"):
+                    val_rewards.append(r)
+                    val_seed_map[s_idx] = (s_val, r)
+            
+            best_val_seed = None
+            best_val_reward = -np.inf
+            
+            for s_idx, (s_val, r) in val_seed_map.items():
+                if r > best_val_reward:
+                    best_val_reward = r
+                    best_val_seed = s_val
+            
+            print(f"  > Final Champion Seed Scan: Best Seed={best_val_seed} (R={best_val_reward:.1f})")
+            
+            plot_seed_distribution(run_dir, gen, val_rewards, best_val_seed)
+            
+            with open(os.path.join(run_dir, "best_seeds_final.txt"), "w") as f:
+                f.write(f"Final Gen {gen}, BestSeed: {best_val_seed}, Reward: {best_val_reward}, Mean: {np.mean(val_rewards):.2f}\n")
+
         set_weights_vector(temp_model_for_saving, pop[champion_idx])
         logger.log_generation(
             generation=gen,
@@ -325,6 +405,7 @@ def run_ga(args):
         
         if gen % args.checkpoint_freq == 0:
             save_full_checkpoint(run_dir, gen, pop, portfolio, fitness_history, args)
+        
         if gen % 1 == 0:
             df_hist = pd.DataFrame(history_records)
             plot_separated_curves(run_dir, df_hist)
@@ -333,13 +414,14 @@ def run_ga(args):
             best_global_raw = selected_individual_raw_reward
             np.savez(os.path.join(run_dir, "best_model.npz"), weights=pop[champion_idx])
 
-        elites = [pop[i] for i in elite_indices]
-        new_pop = elites.copy()
-        while len(new_pop) < args.population:
-            p1, p2 = random.sample(elites, 2); c1, c2 = uniform_crossover(p1, p2)
-            new_pop.append(mutate(c1, args.sigma))
-            if len(new_pop) < args.population: new_pop.append(mutate(c2, args.sigma))
-        pop = new_pop
+        if gen < args.generations:
+            elites = [pop[i] for i in elite_indices]
+            new_pop = elites.copy()
+            while len(new_pop) < args.population:
+                p1, p2 = random.sample(elites, 2); c1, c2 = uniform_crossover(p1, p2)
+                new_pop.append(mutate(c1, args.sigma))
+                if len(new_pop) < args.population: new_pop.append(mutate(c2, args.sigma))
+            pop = new_pop
 
     print("\nTraining finished.")
     print(f"Results saved to {logger.base_dir}")

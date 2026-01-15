@@ -1,0 +1,23 @@
+{
+    "rpc_host": "127.0.0.1",
+    "rpc_port": 6000,
+    "authkey": "acrobot-rpc",
+    "population": 50,
+    "generations": 100,
+    "processes": 16,
+    "max_steps": 500,
+    "pool_size": 100,
+    "subset_k": 5,
+    "base_seed": 2025,
+    "seed_refresh_frac": 0.2,
+    "seed_refresh_direction": "bottom",
+    "max_seed_age": 10,
+    "elite_frac": 0.2,
+    "sigma": 0.1,
+    "fitness_avg_generations": 5,
+    "shuffle_pool": true,
+    "pool_rng_seed": 101,
+    "global_seed": 101,
+    "outdir": "batch_results/acrobot",
+    "checkpoint_freq": 5
+}

@@ -16,19 +16,19 @@ BASE_ARGS = [
     "--elite-frac", "0.2"
 ]
 
-SEEDS = [101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+SEEDS = [101, 102, 103, 104, 105]
 
 OUT_DIR = "batch_results/acrobot"
 
 def run_batch():
     os.makedirs(OUT_DIR, exist_ok=True)
     
-    print(f"Starting Acrobot Batch Experiment (10 Runs)")
+    print(f"Starting Acrobot Batch Experiment (5 Runs)")
     print(f"Results will be saved to: {os.path.abspath(OUT_DIR)}")
     print("="*60)
 
     for i, seed in enumerate(SEEDS):
-        print(f"\n[Run {i+1}/10] Starting with Seed {seed}...")
+        print(f"\n[Run {i+1}/5] Starting with Seed {seed}...")
         start_time = time.time()
         cmd = ["python", SCRIPT_NAME] + BASE_ARGS
         cmd += ["--global-seed", str(seed)]
@@ -38,10 +38,10 @@ def run_batch():
         try:
             subprocess.run(cmd, check=True)
             elapsed = time.time() - start_time
-            print(f"[Run {i+1}/10] Finished Seed {seed} in {elapsed:.1f}s")
+            print(f"[Run {i+1}/5] Finished Seed {seed} in {elapsed:.1f}s")
             
         except subprocess.CalledProcessError as e:
-            print(f"[Run {i+1}/10] Failed Seed {seed}. Error: {e}")
+            print(f"[Run {i+1}/5] Failed Seed {seed}. Error: {e}")
             
     print("\n" + "="*60)
     print("All batch runs completed!")
