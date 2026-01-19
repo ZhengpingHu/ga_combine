@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# MountainCar GA Client: Energy Shaping (Hidden) + Raw Plotting + Natural Input + Continuous Action Fix
+# MountainCar GA Client (Discrete): Energy Shaping + Batch Run (Seeds 101-105)
 
 import os
 import argparse
@@ -47,17 +47,16 @@ def calculate_max_energy(pos_history: List[float], vel_history: List[float]) -> 
     return max_e
 
 class NNPolicy(nn.Module):
-    def __init__(self, hidden_size=16):
+    def __init__(self):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(2, hidden_size),
-            nn.ReLU(),
-            nn.Linear(hidden_size, 1)
+            nn.Linear(2, 8, bias=True),
+            nn.Tanh(), 
+            nn.Linear(8, 3, bias=True)
         )
         
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        out = self.net(x)
-        return torch.tanh(out)
+        return self.net(x)
 
 def get_weights_vector(m: nn.Module) -> np.ndarray:
     with torch.no_grad():
@@ -145,6 +144,7 @@ class SeedPortfolioManager:
             new_seeds = random.sample(candidate_pool, num_to_replace)
             for i_rep, i_new in zip(indices_to_replace, range(num_to_replace)):
                 self.active_subset[i_rep] = new_seeds[i_new]
+            print(f"  - Replaced {len(new_seeds)} seeds.")
 
     def state_dict(self): return self.scheduler.state_dict()
     def load_state_dict(self, d): self.scheduler.load_state_dict(d)
@@ -172,12 +172,11 @@ def evaluate_individual(args):
     """
     pop_idx, seed_idx, weights, seed, rpc_host, rpc_port, authkey, max_steps = args
     model = NNPolicy(); set_weights_vector(model, weights); total_reward = 0.0
-    
     pos_history = []
     vel_history = []
     
     try:
-        env = gym.make("MountainCarContinuous-v0", render_mode="rgb_array")
+        env = gym.make("MountainCar-v0", render_mode="rgb_array")
         obs, _ = env.reset(seed=int(seed))
         
         pos_history.append(obs[0])
@@ -185,7 +184,6 @@ def evaluate_individual(args):
         
         last_valid_state = np.zeros(2, dtype=np.float32) 
         
-        # Safe RPC usage
         try:
             rpc = RPCClient(rpc_host, rpc_port, authkey)
             with rpc:
@@ -204,16 +202,13 @@ def evaluate_individual(args):
                     else: 
                         last_valid_state = state
                     
-                    # Update histories
-                    # Note: state from RPC might match env obs format
                     pos_history.append(state[0])
                     vel_history.append(state[1])
-
                     s = torch.tensor(state, dtype=torch.float32)
                     
                     with torch.no_grad(): 
-                        action_val = model(s).item()
-                        act = [action_val]
+
+                        act = int(torch.argmax(model(s)).item())
                     
                     obs, reward, done, truncated, info = env.step(act)
                     total_reward += reward
@@ -226,7 +221,8 @@ def evaluate_individual(args):
         raw_reward = float(total_reward)
         shaped_reward = float(total_reward)
 
-        if raw_reward <= 0.0:
+
+        if raw_reward <= -200.0:
             max_energy = calculate_max_energy(pos_history, vel_history)
             shaped_reward = raw_reward + (max_energy * 10.0)
             
@@ -234,6 +230,7 @@ def evaluate_individual(args):
             
     except Exception as e:
         return pop_idx, seed_idx, -500.0, -500.0
+
 
 def calculate_competitive_fitness(results_matrix: np.ndarray) -> np.ndarray:
     min_val = np.min(results_matrix)
@@ -298,7 +295,7 @@ def plot_final_summary_plots(final_results_matrix: np.ndarray, master_pool: List
         ax2.set_ylabel('Avg Raw Reward')
         ax2.grid(True, linestyle="--", alpha=0.5)
 
-        bins = [-np.inf, 90.0, np.inf]
+        bins = [-np.inf, -199.9, np.inf]
         labels = ["Fail", "Success"]
         categories = pd.cut(avg_scores_per_seed, bins=bins, labels=labels, right=False)
         proportions = categories.value_counts(normalize=True).sort_index() * 100
@@ -331,12 +328,11 @@ def save_full_checkpoint(run_dir, gen, population, portfolio, fitness_history, a
              "fitness_history": fitness_history, "args": vars(args)}
     torch.save(state, os.path.join(ckpt_dir, f"checkpoint_gen_{gen:04d}.pt"))
 
-
 def run_ga(args):
     if args.global_seed: set_global_seed(args.global_seed)
     
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_dir = os.path.join(args.outdir, f"ga_mc_energy_{ts}_seed{args.global_seed}")
+    run_dir = os.path.join(args.outdir, f"ga_mc_discrete_{ts}_seed{args.global_seed}")
     os.makedirs(run_dir, exist_ok=True)
     
     portfolio = SeedPortfolioManager(args.pool_size, args.base_seed, args.shuffle_pool, 
@@ -346,7 +342,7 @@ def run_ga(args):
     pop = [mutate(base_vec, args.sigma) for _ in range(args.population)]
     
     fitness_history = {}; history_records = []; best_global_raw = -np.inf
-    print(f"MountainCar GA (Energy Shaping) started. Global Seed: {args.global_seed}. Logs: {run_dir}")
+    print(f"MountainCar GA (Discrete) started. Global Seed: {args.global_seed}. Logs: {run_dir}")
 
     for gen in range(1, args.generations + 1):
         subset_seeds = portfolio.get_active_subset()
@@ -473,26 +469,26 @@ if __name__ == "__main__":
     parser.add_argument("--shuffle-pool", action="store_true", default=True)
     parser.add_argument("--pool-rng-seed", type=int, default=42)
     parser.add_argument("--global-seed", type=int, default=42)
-    parser.add_argument("--outdir", default="runs_mc")
+    parser.add_argument("--outdir", default="runs_mc_discrete")
     parser.add_argument("--checkpoint-freq", type=int, default=5)
 
     args = parser.parse_args()
 
-    target_seeds = [101, 102, 103, 104, 105]
+    target_seeds = [102, 103, 104, 105]
     
-    print(f"Starting batch experiment with seeds: {target_seeds}")
+    print(f"Starting Batch Experiment for Seeds: {target_seeds}")
     
-    for current_seed in target_seeds:
+    for seed in target_seeds:
         print("\n" + "="*60)
-        print(f"  EXECUTING RUN WITH GLOBAL SEED: {current_seed}")
+        print(f"  RUNNING WITH GLOBAL SEED: {seed}")
         print("="*60 + "\n")
+        
+        args.global_seed = seed
 
-        args.global_seed = current_seed
-        args.pool_rng_seed = current_seed 
-
+        args.pool_rng_seed = seed
+        
         run_ga(args)
-
-        if current_seed != target_seeds[-1]:
-            time.sleep(1.1)
-
-    print("\nAll 5 experiments completed.")
+        
+        time.sleep(1.5)
+    
+    print("\nBatch Experiment Completed.")
