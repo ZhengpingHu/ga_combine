@@ -474,7 +474,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    target_seeds = [102, 103, 104, 105]
+    target_seeds = [104, 105]
     
     print(f"Starting Batch Experiment for Seeds: {target_seeds}")
     
