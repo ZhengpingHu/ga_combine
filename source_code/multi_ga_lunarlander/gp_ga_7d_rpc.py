@@ -438,7 +438,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # --- Batch Experiment Loop (Seeds 101-105) ---
-    target_seeds = [104, 105]
+    target_seeds = [105]
     
     print(f"Starting LunarLander GA Batch Experiment with seeds: {target_seeds}")
     
