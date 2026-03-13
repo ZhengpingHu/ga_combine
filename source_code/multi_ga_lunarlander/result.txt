@@ -1,0 +1,27 @@
+(neat) PS D:\Git\ga_combine\source_code\multi_ga_lunarlander\eval_106\evaluation_results> python eval_table.py
+(neat) PS D:\Git\ga_combine\source_code\multi_ga_lunarlander\eval_106\evaluation_results> python eval_table.py
+==================================================
+LunarLander-v2 Evaluation Analysis Results
+==================================================
+Total Evaluation Runs: 500
+Absolute Max Reward: 273.53
+--------------------------------------------------
+>>> Data for LaTeX Table <<<
+Avg Reward (Population): -46.4 ± 104.6
+Max Reward (Best Agent [102]): -7.7 ± 134.9
+Run Success Rate: 4.0%
+==================================================
+
+
+
+(neat) PS D:\Git\ga_combine\source_code\multi_ga_lunarlander> python gen.py
+Run 101 converged at: Generation 131 (Smoothed Peak: 20.18)
+Run 102 converged at: Generation 184 (Smoothed Peak: 42.14)
+Run 103 converged at: Generation 83 (Smoothed Peak: -66.58)
+Run 104 converged at: Generation 146 (Smoothed Peak: 22.31)
+Run 105 converged at: Generation 184 (Smoothed Peak: 32.96)
+==================================================
+>>> Data for LaTeX Table <<<
+Generations to Converge: 145.6 +/- 37.6
+==================================================
+(neat) PS D:\Git\ga_combine\source_code\multi_ga_lunarlander>
