@@ -7,8 +7,7 @@ import pandas as pd
 from stable_baselines3 import PPO
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.callbacks import BaseCallback
-from stable_baselines3.common.monitor import Monitor
-from stable_baselines3.common.vec_env import SubprocVecEnv
+from stable_baselines3.common.vec_env import SubprocVecEnv, VecFrameStack
 from gymnasium import spaces
 
 # ==========================================
@@ -29,17 +28,6 @@ class PixelCartPole(gym.ObservationWrapper):
         # Resize to match CNN input requirements
         img = cv2.resize(img, self.img_size, interpolation=cv2.INTER_AREA)
         return img
-
-def make_env(env_id, seed, rank):
-    def _init():
-        # Must enable rgb_array for visual extraction
-        env = gym.make(env_id, render_mode="rgb_array")
-        env = Monitor(env) 
-        env = PixelCartPole(env)
-        # Offset the seed for each parallel worker
-        env.action_space.seed(seed + rank)
-        return env
-    return _init
 
 # ==========================================
 # 2. Advanced Callback: Early Stop, CSV Saving & Real-time Logging
@@ -81,8 +69,8 @@ class RobustLoggerCallback(BaseCallback):
             
             self.last_print_step = self.num_timesteps
             
-            # Trigger Early Stopping if target is consistently reached
-            if recent_avg >= self.target_reward:
+            # Trigger Early Stopping ONLY if we have at least 20 episodes
+            if len(self.episode_rewards) >= 20 and recent_avg >= self.target_reward:
                 print(f"\n    [SUCCESS] Target reward {self.target_reward} reached at step {self.num_timesteps}!")
                 print(f"    [SUCCESS] Time taken to converge: {elapsed_time:.2f} seconds.")
                 return False  # Stop the training loop
@@ -116,7 +104,7 @@ if __name__ == "__main__":
         csv_save_path = os.path.join(seed_dir, "ppo_learning_curve.csv")
         model_save_path = os.path.join(seed_dir, "final_ppo_model.zip")
         
-        # True multiprocessing using SubprocVecEnv
+        # Create vectorized environment with automatic Monitor wrapping
         vec_env = make_vec_env(
             env_id="CartPole-v1", 
             n_envs=num_envs_per_run, 
@@ -125,6 +113,9 @@ if __name__ == "__main__":
             wrapper_class=PixelCartPole,
             env_kwargs={"render_mode": "rgb_array"}
         )
+        
+        # CRITICAL FIX: Stack 4 consecutive frames so the CNN can infer velocity
+        vec_env = VecFrameStack(vec_env, n_stack=4)
         
         # Initialize PPO with CNN policy and optimized hyperparams for 16 envs
         model = PPO("CnnPolicy", vec_env, verbose=0, device="cuda", seed=run_seed,
