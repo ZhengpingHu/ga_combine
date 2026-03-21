@@ -1,0 +1,82 @@
+(base) PS D:\OneDrive\OneDrive - Dalhousie University\2026_Winter\ga_combine\source_code\multi_ga_cart_pole> python cartpole_timetest.py --rpc-port 6000 --population 50 --generations 20 --processes 1 --pool-size 100 --subset-k 5
+Starting Batch Experiment: 5 runs.
+Seeds: [101, 102, 103, 104, 105]
+
+============================================================
+STARTING RUN 1/5 | SEED: 101
+============================================================
+
+Initial seed subset: [623054291, 829401385, 618241786, 820359671, 993502358]
+Training started. Logs at: runs_cartpole\ga_cartpole_20260320_214035_seed101
+Gen 1: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [01:08<00:00,  3.63it/s]
+    [Time Profile] Physics: 0.1s (0.2%) | Render: 15.7s (27.4%) | RPC+YOLO: 41.6s (72.5%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 1] PopMax=16.4 | BestFit=0.1586 | SelRaw=16.4
+Gen 2: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [01:18<00:00,  3.20it/s]
+    [Time Profile] Physics: 0.1s (0.2%) | Render: 16.2s (24.2%) | RPC+YOLO: 50.6s (75.6%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 2] PopMax=35.0 | BestFit=0.2926 | SelRaw=35.0
+Gen 3: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [01:40<00:00,  2.48it/s]
+    [Time Profile] Physics: 0.2s (0.2%) | Render: 18.9s (21.2%) | RPC+YOLO: 70.1s (78.6%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 3] PopMax=47.6 | BestFit=0.2516 | SelRaw=47.2
+Gen 4: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [01:56<00:00,  2.15it/s]
+    [Time Profile] Physics: 0.2s (0.2%) | Render: 20.5s (19.6%) | RPC+YOLO: 83.8s (80.1%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 4] PopMax=62.6 | BestFit=0.2600 | SelRaw=62.6
+Gen 5: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [02:13<00:00,  1.87it/s]
+    [Time Profile] Physics: 0.3s (0.2%) | Render: 23.1s (19.0%) | RPC+YOLO: 98.3s (80.8%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 5] PopMax=83.6 | BestFit=0.2761 | SelRaw=83.6
+Gen 6: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [02:36<00:00,  1.60it/s]
+    [Time Profile] Physics: 0.3s (0.2%) | Render: 25.0s (17.4%) | RPC+YOLO: 118.8s (82.4%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 6] PopMax=87.6 | BestFit=0.2646 | SelRaw=87.6
+Gen 7: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [02:38<00:00,  1.58it/s]
+    [Time Profile] Physics: 0.3s (0.2%) | Render: 25.8s (17.6%) | RPC+YOLO: 120.7s (82.2%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 7] PopMax=86.2 | BestFit=0.2543 | SelRaw=86.2
+Gen 8: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [02:35<00:00,  1.60it/s]
+    [Time Profile] Physics: 0.3s (0.2%) | Render: 26.2s (18.2%) | RPC+YOLO: 117.6s (81.6%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 8] PopMax=81.2 | BestFit=0.2441 | SelRaw=81.2
+Gen 9: 100%|█████████████████████████████████████████████████████████████████████████| 250/250 [02:40<00:00,  1.55it/s]
+    [Time Profile] Physics: 0.3s (0.2%) | Render: 26.4s (17.7%) | RPC+YOLO: 122.2s (82.0%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 9] PopMax=80.8 | BestFit=0.2377 | SelRaw=80.2
+Gen 10: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [02:52<00:00,  1.45it/s]
+    [Time Profile] Physics: 0.4s (0.2%) | Render: 28.2s (17.6%) | RPC+YOLO: 131.9s (82.2%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 10] PopMax=182.0 | BestFit=0.4319 | SelRaw=182.0
+Gen 11: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [03:19<00:00,  1.26it/s]
+    [Time Profile] Physics: 0.4s (0.2%) | Render: 30.6s (16.4%) | RPC+YOLO: 156.0s (83.4%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 11] PopMax=188.2 | BestFit=0.4167 | SelRaw=188.2
+Gen 12: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [03:14<00:00,  1.29it/s]
+    [Time Profile] Physics: 0.4s (0.2%) | Render: 28.7s (15.7%) | RPC+YOLO: 153.2s (84.0%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 12] PopMax=186.8 | BestFit=0.4314 | SelRaw=186.8
+Gen 13: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [03:55<00:00,  1.06it/s]
+    [Time Profile] Physics: 0.5s (0.2%) | Render: 33.1s (14.8%) | RPC+YOLO: 190.1s (85.0%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 13] PopMax=213.8 | BestFit=0.4257 | SelRaw=213.8
+Gen 14: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [03:31<00:00,  1.18it/s]
+    [Time Profile] Physics: 0.5s (0.3%) | Render: 34.8s (17.4%) | RPC+YOLO: 164.3s (82.3%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 14] PopMax=207.2 | BestFit=0.4132 | SelRaw=207.2
+Gen 15: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [03:33<00:00,  1.17it/s]
+    [Time Profile] Physics: 0.5s (0.3%) | Render: 38.3s (19.0%) | RPC+YOLO: 162.0s (80.7%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 15] PopMax=215.6 | BestFit=0.3931 | SelRaw=215.6
+Gen 16: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [03:33<00:00,  1.17it/s]
+    [Time Profile] Physics: 0.5s (0.3%) | Render: 38.3s (19.1%) | RPC+YOLO: 162.2s (80.7%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 16] PopMax=198.4 | BestFit=0.3732 | SelRaw=198.4
+Gen 17: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [03:53<00:00,  1.07it/s]
+    [Time Profile] Physics: 0.6s (0.3%) | Render: 41.7s (18.9%) | RPC+YOLO: 178.6s (80.8%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 17] PopMax=344.8 | BestFit=0.4620 | SelRaw=344.8
+Gen 18: 100%|████████████████████████████████████████████████████████████████████████| 250/250 [06:02<00:00,  1.45s/it]
+    [Time Profile] Physics: 1.0s (0.3%) | Render: 61.1s (17.5%) | RPC+YOLO: 287.0s (82.2%)
+  - Replaced 2 seeds (Age/Perf).
+[GEN 18] PopMax=500.0 | BestFit=0.4187 | SelRaw=500.0
