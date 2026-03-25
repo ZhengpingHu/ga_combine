@@ -1,0 +1,529 @@
+(base) PS D:\OneDrive\OneDrive - Dalhousie University\2026_Winter\ga_combine\source_code\multi_ppo_cartpole_double> python ppo_cartpole_1M.py
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+=== Starting E2E PPO Vision Baseline (3M PARAMS, CLEAN ENV) Tests ===
+Target Score: 495.0 | Max Steps Allowed: 1000000
+
+
+--- Running Seed 101 (1/5) with 16 parallel workers ---
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[*] PPO 3M Model Instantiated (CLEAN ENVIRONMENT)!
+[*] Total Parameters: 3,029,667 (Trainable: 3,029,667)
+    [Progress] Steps: 10000 | Elapsed: 11.2s | Recent 20-Ep Avg Reward: 26.4
+    [Progress] Steps: 20000 | Elapsed: 20.7s | Recent 20-Ep Avg Reward: 21.1
+    [Progress] Steps: 30000 | Elapsed: 29.6s | Recent 20-Ep Avg Reward: 25.1
+    [Progress] Steps: 40000 | Elapsed: 38.4s | Recent 20-Ep Avg Reward: 36.6
+    [Progress] Steps: 50000 | Elapsed: 51.0s | Recent 20-Ep Avg Reward: 47.2
+    [Progress] Steps: 60000 | Elapsed: 59.7s | Recent 20-Ep Avg Reward: 61.2
+    [Progress] Steps: 70000 | Elapsed: 68.0s | Recent 20-Ep Avg Reward: 68.5
+    [Progress] Steps: 80000 | Elapsed: 76.3s | Recent 20-Ep Avg Reward: 76.3
+    [Progress] Steps: 90000 | Elapsed: 84.6s | Recent 20-Ep Avg Reward: 85.3
+    [Progress] Steps: 100000 | Elapsed: 97.0s | Recent 20-Ep Avg Reward: 100.8
+    [Progress] Steps: 110000 | Elapsed: 105.6s | Recent 20-Ep Avg Reward: 118.9
+    [Progress] Steps: 120000 | Elapsed: 114.4s | Recent 20-Ep Avg Reward: 114.8
+    [Progress] Steps: 130000 | Elapsed: 123.0s | Recent 20-Ep Avg Reward: 140.7
+    [Progress] Steps: 140000 | Elapsed: 135.3s | Recent 20-Ep Avg Reward: 147.7
+    [Progress] Steps: 150000 | Elapsed: 143.9s | Recent 20-Ep Avg Reward: 316.1
+    [Progress] Steps: 160000 | Elapsed: 152.4s | Recent 20-Ep Avg Reward: 239.4
+    [Progress] Steps: 170000 | Elapsed: 161.2s | Recent 20-Ep Avg Reward: 224.5
+    [Progress] Steps: 180000 | Elapsed: 169.7s | Recent 20-Ep Avg Reward: 297.0
+    [Progress] Steps: 190000 | Elapsed: 181.8s | Recent 20-Ep Avg Reward: 334.9
+    [Progress] Steps: 200000 | Elapsed: 190.1s | Recent 20-Ep Avg Reward: 367.3
+    [Progress] Steps: 210000 | Elapsed: 198.4s | Recent 20-Ep Avg Reward: 380.5
+    [Progress] Steps: 220000 | Elapsed: 206.7s | Recent 20-Ep Avg Reward: 366.9
+    [Progress] Steps: 230000 | Elapsed: 219.3s | Recent 20-Ep Avg Reward: 374.4
+    [Progress] Steps: 240000 | Elapsed: 227.9s | Recent 20-Ep Avg Reward: 415.9
+    [Progress] Steps: 250000 | Elapsed: 236.6s | Recent 20-Ep Avg Reward: 466.9
+    [Progress] Steps: 260000 | Elapsed: 245.3s | Recent 20-Ep Avg Reward: 317.2
+    [Progress] Steps: 270000 | Elapsed: 253.9s | Recent 20-Ep Avg Reward: 263.8
+    [Progress] Steps: 280000 | Elapsed: 266.5s | Recent 20-Ep Avg Reward: 444.5
+    [Progress] Steps: 290000 | Elapsed: 275.1s | Recent 20-Ep Avg Reward: 354.6
+    [Progress] Steps: 300000 | Elapsed: 283.7s | Recent 20-Ep Avg Reward: 341.9
+    [Progress] Steps: 310000 | Elapsed: 292.4s | Recent 20-Ep Avg Reward: 408.5
+    [Progress] Steps: 320000 | Elapsed: 304.5s | Recent 20-Ep Avg Reward: 419.4
+    [Progress] Steps: 330000 | Elapsed: 312.8s | Recent 20-Ep Avg Reward: 292.6
+    [Progress] Steps: 340000 | Elapsed: 321.1s | Recent 20-Ep Avg Reward: 469.2
+    [Progress] Steps: 350000 | Elapsed: 329.4s | Recent 20-Ep Avg Reward: 289.1
+    [Progress] Steps: 360000 | Elapsed: 338.2s | Recent 20-Ep Avg Reward: 262.3
+    [Progress] Steps: 370000 | Elapsed: 350.3s | Recent 20-Ep Avg Reward: 235.2
+    [Progress] Steps: 380000 | Elapsed: 358.9s | Recent 20-Ep Avg Reward: 201.7
+    [Progress] Steps: 390000 | Elapsed: 367.7s | Recent 20-Ep Avg Reward: 277.9
+    [Progress] Steps: 400000 | Elapsed: 376.2s | Recent 20-Ep Avg Reward: 277.1
+    [Progress] Steps: 410000 | Elapsed: 388.8s | Recent 20-Ep Avg Reward: 283.6
+    [Progress] Steps: 420000 | Elapsed: 397.2s | Recent 20-Ep Avg Reward: 390.9
+    [Progress] Steps: 430000 | Elapsed: 405.5s | Recent 20-Ep Avg Reward: 396.1
+    [Progress] Steps: 440000 | Elapsed: 414.1s | Recent 20-Ep Avg Reward: 392.8
+    [Progress] Steps: 450000 | Elapsed: 422.4s | Recent 20-Ep Avg Reward: 296.4
+    [Progress] Steps: 460000 | Elapsed: 434.1s | Recent 20-Ep Avg Reward: 293.8
+    [Progress] Steps: 470000 | Elapsed: 442.4s | Recent 20-Ep Avg Reward: 358.2
+    [Progress] Steps: 480000 | Elapsed: 451.0s | Recent 20-Ep Avg Reward: 472.5
+    [Progress] Steps: 490000 | Elapsed: 459.6s | Recent 20-Ep Avg Reward: 500.0
+
+    [SUCCESS] Target reward 495.0 reached at step 490000!
+    [SUCCESS] Time taken to converge: 459.65 seconds.
+[*] Final Result for Seed 101: Stopped at 490000 steps in 460.35 seconds
+[*] Data strictly saved to: ppo_3m_clean_results_seed_101\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_3m_clean_results_seed_101\final_ppo_model.zip
+
+--- Running Seed 102 (2/5) with 16 parallel workers ---
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[*] PPO 3M Model Instantiated (CLEAN ENVIRONMENT)!
+[*] Total Parameters: 3,029,667 (Trainable: 3,029,667)
+    [Progress] Steps: 10000 | Elapsed: 10.4s | Recent 20-Ep Avg Reward: 18.6
+    [Progress] Steps: 20000 | Elapsed: 18.9s | Recent 20-Ep Avg Reward: 24.7
+    [Progress] Steps: 30000 | Elapsed: 27.8s | Recent 20-Ep Avg Reward: 25.6
+    [Progress] Steps: 40000 | Elapsed: 36.7s | Recent 20-Ep Avg Reward: 25.5
+    [Progress] Steps: 50000 | Elapsed: 49.2s | Recent 20-Ep Avg Reward: 38.9
+    [Progress] Steps: 60000 | Elapsed: 57.9s | Recent 20-Ep Avg Reward: 55.8
+    [Progress] Steps: 70000 | Elapsed: 66.5s | Recent 20-Ep Avg Reward: 60.4
+    [Progress] Steps: 80000 | Elapsed: 75.2s | Recent 20-Ep Avg Reward: 78.3
+    [Progress] Steps: 90000 | Elapsed: 83.5s | Recent 20-Ep Avg Reward: 113.7
+    [Progress] Steps: 100000 | Elapsed: 95.3s | Recent 20-Ep Avg Reward: 113.8
+    [Progress] Steps: 110000 | Elapsed: 103.6s | Recent 20-Ep Avg Reward: 169.4
+    [Progress] Steps: 120000 | Elapsed: 112.3s | Recent 20-Ep Avg Reward: 178.9
+    [Progress] Steps: 130000 | Elapsed: 121.0s | Recent 20-Ep Avg Reward: 244.8
+    [Progress] Steps: 140000 | Elapsed: 133.5s | Recent 20-Ep Avg Reward: 184.6
+    [Progress] Steps: 150000 | Elapsed: 141.9s | Recent 20-Ep Avg Reward: 261.8
+    [Progress] Steps: 160000 | Elapsed: 150.4s | Recent 20-Ep Avg Reward: 260.6
+    [Progress] Steps: 170000 | Elapsed: 159.0s | Recent 20-Ep Avg Reward: 346.4
+    [Progress] Steps: 180000 | Elapsed: 167.6s | Recent 20-Ep Avg Reward: 412.8
+    [Progress] Steps: 190000 | Elapsed: 180.2s | Recent 20-Ep Avg Reward: 388.8
+    [Progress] Steps: 200000 | Elapsed: 189.0s | Recent 20-Ep Avg Reward: 423.6
+    [Progress] Steps: 210000 | Elapsed: 197.3s | Recent 20-Ep Avg Reward: 428.6
+    [Progress] Steps: 220000 | Elapsed: 205.6s | Recent 20-Ep Avg Reward: 119.5
+    [Progress] Steps: 230000 | Elapsed: 217.4s | Recent 20-Ep Avg Reward: 198.9
+    [Progress] Steps: 240000 | Elapsed: 225.9s | Recent 20-Ep Avg Reward: 304.9
+    [Progress] Steps: 250000 | Elapsed: 234.6s | Recent 20-Ep Avg Reward: 401.6
+    [Progress] Steps: 260000 | Elapsed: 243.2s | Recent 20-Ep Avg Reward: 391.1
+    [Progress] Steps: 270000 | Elapsed: 251.9s | Recent 20-Ep Avg Reward: 96.6
+    [Progress] Steps: 280000 | Elapsed: 264.3s | Recent 20-Ep Avg Reward: 116.8
+    [Progress] Steps: 290000 | Elapsed: 272.9s | Recent 20-Ep Avg Reward: 134.1
+    [Progress] Steps: 300000 | Elapsed: 281.5s | Recent 20-Ep Avg Reward: 316.5
+    [Progress] Steps: 310000 | Elapsed: 290.2s | Recent 20-Ep Avg Reward: 204.5
+    [Progress] Steps: 320000 | Elapsed: 302.8s | Recent 20-Ep Avg Reward: 262.4
+    [Progress] Steps: 330000 | Elapsed: 311.4s | Recent 20-Ep Avg Reward: 352.4
+    [Progress] Steps: 340000 | Elapsed: 319.7s | Recent 20-Ep Avg Reward: 375.9
+    [Progress] Steps: 350000 | Elapsed: 328.0s | Recent 20-Ep Avg Reward: 371.3
+    [Progress] Steps: 360000 | Elapsed: 336.2s | Recent 20-Ep Avg Reward: 278.5
+    [Progress] Steps: 370000 | Elapsed: 348.5s | Recent 20-Ep Avg Reward: 205.8
+    [Progress] Steps: 380000 | Elapsed: 357.0s | Recent 20-Ep Avg Reward: 431.4
+    [Progress] Steps: 390000 | Elapsed: 365.8s | Recent 20-Ep Avg Reward: 456.1
+    [Progress] Steps: 400000 | Elapsed: 374.4s | Recent 20-Ep Avg Reward: 411.1
+    [Progress] Steps: 410000 | Elapsed: 386.8s | Recent 20-Ep Avg Reward: 430.1
+    [Progress] Steps: 420000 | Elapsed: 395.6s | Recent 20-Ep Avg Reward: 404.7
+    [Progress] Steps: 430000 | Elapsed: 404.1s | Recent 20-Ep Avg Reward: 271.6
+    [Progress] Steps: 440000 | Elapsed: 412.8s | Recent 20-Ep Avg Reward: 417.4
+    [Progress] Steps: 450000 | Elapsed: 421.4s | Recent 20-Ep Avg Reward: 490.5
+    [Progress] Steps: 460000 | Elapsed: 433.7s | Recent 20-Ep Avg Reward: 415.4
+    [Progress] Steps: 470000 | Elapsed: 442.1s | Recent 20-Ep Avg Reward: 482.5
+    [Progress] Steps: 480000 | Elapsed: 450.4s | Recent 20-Ep Avg Reward: 437.9
+    [Progress] Steps: 490000 | Elapsed: 458.8s | Recent 20-Ep Avg Reward: 417.4
+    [Progress] Steps: 500000 | Elapsed: 471.2s | Recent 20-Ep Avg Reward: 362.1
+    [Progress] Steps: 510000 | Elapsed: 480.1s | Recent 20-Ep Avg Reward: 447.6
+    [Progress] Steps: 520000 | Elapsed: 489.0s | Recent 20-Ep Avg Reward: 487.9
+    [Progress] Steps: 530000 | Elapsed: 497.8s | Recent 20-Ep Avg Reward: 432.9
+    [Progress] Steps: 540000 | Elapsed: 506.5s | Recent 20-Ep Avg Reward: 438.6
+    [Progress] Steps: 550000 | Elapsed: 521.5s | Recent 20-Ep Avg Reward: 416.4
+    [Progress] Steps: 560000 | Elapsed: 530.1s | Recent 20-Ep Avg Reward: 382.2
+    [Progress] Steps: 570000 | Elapsed: 539.0s | Recent 20-Ep Avg Reward: 55.3
+    [Progress] Steps: 580000 | Elapsed: 547.6s | Recent 20-Ep Avg Reward: 126.2
+    [Progress] Steps: 590000 | Elapsed: 559.7s | Recent 20-Ep Avg Reward: 145.7
+    [Progress] Steps: 600000 | Elapsed: 568.0s | Recent 20-Ep Avg Reward: 355.1
+    [Progress] Steps: 610000 | Elapsed: 576.4s | Recent 20-Ep Avg Reward: 259.8
+    [Progress] Steps: 620000 | Elapsed: 584.7s | Recent 20-Ep Avg Reward: 485.7
+    [Progress] Steps: 630000 | Elapsed: 593.3s | Recent 20-Ep Avg Reward: 466.9
+    [Progress] Steps: 640000 | Elapsed: 605.7s | Recent 20-Ep Avg Reward: 479.4
+    [Progress] Steps: 650000 | Elapsed: 614.4s | Recent 20-Ep Avg Reward: 327.7
+    [Progress] Steps: 660000 | Elapsed: 623.0s | Recent 20-Ep Avg Reward: 476.8
+    [Progress] Steps: 670000 | Elapsed: 631.6s | Recent 20-Ep Avg Reward: 470.4
+    [Progress] Steps: 680000 | Elapsed: 644.0s | Recent 20-Ep Avg Reward: 339.5
+    [Progress] Steps: 690000 | Elapsed: 652.8s | Recent 20-Ep Avg Reward: 395.3
+    [Progress] Steps: 700000 | Elapsed: 661.5s | Recent 20-Ep Avg Reward: 386.4
+    [Progress] Steps: 710000 | Elapsed: 670.2s | Recent 20-Ep Avg Reward: 390.2
+    [Progress] Steps: 720000 | Elapsed: 678.4s | Recent 20-Ep Avg Reward: 449.1
+    [Progress] Steps: 730000 | Elapsed: 690.1s | Recent 20-Ep Avg Reward: 293.6
+    [Progress] Steps: 740000 | Elapsed: 698.4s | Recent 20-Ep Avg Reward: 389.8
+    [Progress] Steps: 750000 | Elapsed: 707.0s | Recent 20-Ep Avg Reward: 147.0
+    [Progress] Steps: 760000 | Elapsed: 715.8s | Recent 20-Ep Avg Reward: 329.4
+    [Progress] Steps: 770000 | Elapsed: 724.4s | Recent 20-Ep Avg Reward: 404.4
+    [Progress] Steps: 780000 | Elapsed: 737.0s | Recent 20-Ep Avg Reward: 472.8
+    [Progress] Steps: 790000 | Elapsed: 745.7s | Recent 20-Ep Avg Reward: 119.5
+    [Progress] Steps: 800000 | Elapsed: 754.4s | Recent 20-Ep Avg Reward: 142.2
+    [Progress] Steps: 810000 | Elapsed: 763.1s | Recent 20-Ep Avg Reward: 170.2
+    [Progress] Steps: 820000 | Elapsed: 775.6s | Recent 20-Ep Avg Reward: 253.5
+    [Progress] Steps: 830000 | Elapsed: 784.1s | Recent 20-Ep Avg Reward: 341.6
+    [Progress] Steps: 840000 | Elapsed: 792.9s | Recent 20-Ep Avg Reward: 468.2
+    [Progress] Steps: 850000 | Elapsed: 801.2s | Recent 20-Ep Avg Reward: 483.5
+    [Progress] Steps: 860000 | Elapsed: 809.5s | Recent 20-Ep Avg Reward: 496.8
+
+    [SUCCESS] Target reward 495.0 reached at step 860000!
+    [SUCCESS] Time taken to converge: 809.45 seconds.
+[*] Final Result for Seed 102: Stopped at 860000 steps in 810.04 seconds
+[*] Data strictly saved to: ppo_3m_clean_results_seed_102\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_3m_clean_results_seed_102\final_ppo_model.zip
+
+--- Running Seed 103 (3/5) with 16 parallel workers ---
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[*] PPO 3M Model Instantiated (CLEAN ENVIRONMENT)!
+[*] Total Parameters: 3,029,667 (Trainable: 3,029,667)
+    [Progress] Steps: 10000 | Elapsed: 10.2s | Recent 20-Ep Avg Reward: 19.6
+    [Progress] Steps: 20000 | Elapsed: 19.0s | Recent 20-Ep Avg Reward: 30.1
+    [Progress] Steps: 30000 | Elapsed: 28.0s | Recent 20-Ep Avg Reward: 28.9
+    [Progress] Steps: 40000 | Elapsed: 36.8s | Recent 20-Ep Avg Reward: 32.1
+    [Progress] Steps: 50000 | Elapsed: 49.4s | Recent 20-Ep Avg Reward: 44.2
+    [Progress] Steps: 60000 | Elapsed: 58.3s | Recent 20-Ep Avg Reward: 54.2
+    [Progress] Steps: 70000 | Elapsed: 67.0s | Recent 20-Ep Avg Reward: 75.1
+    [Progress] Steps: 80000 | Elapsed: 75.8s | Recent 20-Ep Avg Reward: 78.0
+    [Progress] Steps: 90000 | Elapsed: 84.5s | Recent 20-Ep Avg Reward: 123.5
+    [Progress] Steps: 100000 | Elapsed: 97.0s | Recent 20-Ep Avg Reward: 197.2
+    [Progress] Steps: 110000 | Elapsed: 105.3s | Recent 20-Ep Avg Reward: 222.9
+    [Progress] Steps: 120000 | Elapsed: 113.6s | Recent 20-Ep Avg Reward: 241.9
+    [Progress] Steps: 130000 | Elapsed: 121.9s | Recent 20-Ep Avg Reward: 208.1
+    [Progress] Steps: 140000 | Elapsed: 133.9s | Recent 20-Ep Avg Reward: 256.4
+    [Progress] Steps: 150000 | Elapsed: 142.4s | Recent 20-Ep Avg Reward: 220.8
+    [Progress] Steps: 160000 | Elapsed: 150.9s | Recent 20-Ep Avg Reward: 291.9
+    [Progress] Steps: 170000 | Elapsed: 159.5s | Recent 20-Ep Avg Reward: 309.4
+    [Progress] Steps: 180000 | Elapsed: 167.9s | Recent 20-Ep Avg Reward: 378.6
+    [Progress] Steps: 190000 | Elapsed: 180.3s | Recent 20-Ep Avg Reward: 396.9
+    [Progress] Steps: 200000 | Elapsed: 188.9s | Recent 20-Ep Avg Reward: 377.2
+    [Progress] Steps: 210000 | Elapsed: 197.4s | Recent 20-Ep Avg Reward: 407.4
+    [Progress] Steps: 220000 | Elapsed: 206.0s | Recent 20-Ep Avg Reward: 420.4
+    [Progress] Steps: 230000 | Elapsed: 218.3s | Recent 20-Ep Avg Reward: 192.7
+    [Progress] Steps: 240000 | Elapsed: 226.5s | Recent 20-Ep Avg Reward: 388.4
+    [Progress] Steps: 250000 | Elapsed: 234.7s | Recent 20-Ep Avg Reward: 422.1
+    [Progress] Steps: 260000 | Elapsed: 242.9s | Recent 20-Ep Avg Reward: 455.6
+    [Progress] Steps: 270000 | Elapsed: 251.1s | Recent 20-Ep Avg Reward: 330.6
+    [Progress] Steps: 280000 | Elapsed: 263.6s | Recent 20-Ep Avg Reward: 440.7
+    [Progress] Steps: 290000 | Elapsed: 272.1s | Recent 20-Ep Avg Reward: 285.1
+    [Progress] Steps: 300000 | Elapsed: 280.8s | Recent 20-Ep Avg Reward: 419.0
+    [Progress] Steps: 310000 | Elapsed: 289.4s | Recent 20-Ep Avg Reward: 395.1
+    [Progress] Steps: 320000 | Elapsed: 301.7s | Recent 20-Ep Avg Reward: 438.1
+    [Progress] Steps: 330000 | Elapsed: 310.3s | Recent 20-Ep Avg Reward: 455.8
+    [Progress] Steps: 340000 | Elapsed: 318.8s | Recent 20-Ep Avg Reward: 391.9
+    [Progress] Steps: 350000 | Elapsed: 327.3s | Recent 20-Ep Avg Reward: 340.4
+    [Progress] Steps: 360000 | Elapsed: 335.8s | Recent 20-Ep Avg Reward: 347.8
+    [Progress] Steps: 370000 | Elapsed: 347.6s | Recent 20-Ep Avg Reward: 266.4
+    [Progress] Steps: 380000 | Elapsed: 355.8s | Recent 20-Ep Avg Reward: 153.1
+    [Progress] Steps: 390000 | Elapsed: 363.9s | Recent 20-Ep Avg Reward: 268.6
+    [Progress] Steps: 400000 | Elapsed: 372.3s | Recent 20-Ep Avg Reward: 226.9
+    [Progress] Steps: 410000 | Elapsed: 384.8s | Recent 20-Ep Avg Reward: 151.9
+    [Progress] Steps: 420000 | Elapsed: 393.5s | Recent 20-Ep Avg Reward: 265.1
+    [Progress] Steps: 430000 | Elapsed: 402.1s | Recent 20-Ep Avg Reward: 335.9
+    [Progress] Steps: 440000 | Elapsed: 410.8s | Recent 20-Ep Avg Reward: 492.5
+    [Progress] Steps: 450000 | Elapsed: 419.3s | Recent 20-Ep Avg Reward: 463.8
+    [Progress] Steps: 460000 | Elapsed: 431.9s | Recent 20-Ep Avg Reward: 420.6
+    [Progress] Steps: 470000 | Elapsed: 440.6s | Recent 20-Ep Avg Reward: 428.2
+    [Progress] Steps: 480000 | Elapsed: 449.2s | Recent 20-Ep Avg Reward: 349.6
+    [Progress] Steps: 490000 | Elapsed: 457.9s | Recent 20-Ep Avg Reward: 377.1
+    [Progress] Steps: 500000 | Elapsed: 469.5s | Recent 20-Ep Avg Reward: 392.9
+    [Progress] Steps: 510000 | Elapsed: 477.8s | Recent 20-Ep Avg Reward: 418.6
+    [Progress] Steps: 520000 | Elapsed: 486.0s | Recent 20-Ep Avg Reward: 448.7
+    [Progress] Steps: 530000 | Elapsed: 494.5s | Recent 20-Ep Avg Reward: 460.2
+    [Progress] Steps: 540000 | Elapsed: 503.2s | Recent 20-Ep Avg Reward: 378.4
+    [Progress] Steps: 550000 | Elapsed: 515.6s | Recent 20-Ep Avg Reward: 402.8
+    [Progress] Steps: 560000 | Elapsed: 524.1s | Recent 20-Ep Avg Reward: 378.2
+    [Progress] Steps: 570000 | Elapsed: 532.6s | Recent 20-Ep Avg Reward: 307.1
+    [Progress] Steps: 580000 | Elapsed: 541.1s | Recent 20-Ep Avg Reward: 433.3
+    [Progress] Steps: 590000 | Elapsed: 553.6s | Recent 20-Ep Avg Reward: 457.6
+    [Progress] Steps: 600000 | Elapsed: 562.2s | Recent 20-Ep Avg Reward: 443.4
+    [Progress] Steps: 610000 | Elapsed: 570.9s | Recent 20-Ep Avg Reward: 341.1
+    [Progress] Steps: 620000 | Elapsed: 579.4s | Recent 20-Ep Avg Reward: 275.2
+    [Progress] Steps: 630000 | Elapsed: 587.6s | Recent 20-Ep Avg Reward: 359.1
+    [Progress] Steps: 640000 | Elapsed: 599.2s | Recent 20-Ep Avg Reward: 375.4
+    [Progress] Steps: 650000 | Elapsed: 607.5s | Recent 20-Ep Avg Reward: 445.2
+    [Progress] Steps: 660000 | Elapsed: 616.1s | Recent 20-Ep Avg Reward: 372.1
+    [Progress] Steps: 670000 | Elapsed: 624.7s | Recent 20-Ep Avg Reward: 429.4
+    [Progress] Steps: 680000 | Elapsed: 637.1s | Recent 20-Ep Avg Reward: 449.9
+    [Progress] Steps: 690000 | Elapsed: 645.9s | Recent 20-Ep Avg Reward: 498.6
+
+    [SUCCESS] Target reward 495.0 reached at step 690000!
+    [SUCCESS] Time taken to converge: 645.87 seconds.
+[*] Final Result for Seed 103: Stopped at 690000 steps in 646.42 seconds
+[*] Data strictly saved to: ppo_3m_clean_results_seed_103\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_3m_clean_results_seed_103\final_ppo_model.zip
+
+--- Running Seed 104 (4/5) with 16 parallel workers ---
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[*] PPO 3M Model Instantiated (CLEAN ENVIRONMENT)!
+[*] Total Parameters: 3,029,667 (Trainable: 3,029,667)
+    [Progress] Steps: 10000 | Elapsed: 10.0s | Recent 20-Ep Avg Reward: 20.4
+    [Progress] Steps: 20000 | Elapsed: 18.5s | Recent 20-Ep Avg Reward: 22.6
+    [Progress] Steps: 30000 | Elapsed: 27.2s | Recent 20-Ep Avg Reward: 29.0
+    [Progress] Steps: 40000 | Elapsed: 35.9s | Recent 20-Ep Avg Reward: 36.8
+    [Progress] Steps: 50000 | Elapsed: 48.3s | Recent 20-Ep Avg Reward: 47.0
+    [Progress] Steps: 60000 | Elapsed: 56.6s | Recent 20-Ep Avg Reward: 70.2
+    [Progress] Steps: 70000 | Elapsed: 64.8s | Recent 20-Ep Avg Reward: 65.0
+    [Progress] Steps: 80000 | Elapsed: 73.1s | Recent 20-Ep Avg Reward: 76.0
+    [Progress] Steps: 90000 | Elapsed: 81.3s | Recent 20-Ep Avg Reward: 112.0
+    [Progress] Steps: 100000 | Elapsed: 93.8s | Recent 20-Ep Avg Reward: 149.4
+    [Progress] Steps: 110000 | Elapsed: 102.5s | Recent 20-Ep Avg Reward: 138.8
+    [Progress] Steps: 120000 | Elapsed: 111.0s | Recent 20-Ep Avg Reward: 177.1
+    [Progress] Steps: 130000 | Elapsed: 119.8s | Recent 20-Ep Avg Reward: 228.0
+    [Progress] Steps: 140000 | Elapsed: 132.2s | Recent 20-Ep Avg Reward: 327.4
+    [Progress] Steps: 150000 | Elapsed: 140.7s | Recent 20-Ep Avg Reward: 300.4
+    [Progress] Steps: 160000 | Elapsed: 149.5s | Recent 20-Ep Avg Reward: 298.6
+    [Progress] Steps: 170000 | Elapsed: 157.9s | Recent 20-Ep Avg Reward: 368.1
+    [Progress] Steps: 180000 | Elapsed: 166.6s | Recent 20-Ep Avg Reward: 407.9
+    [Progress] Steps: 190000 | Elapsed: 178.3s | Recent 20-Ep Avg Reward: 278.1
+    [Progress] Steps: 200000 | Elapsed: 186.5s | Recent 20-Ep Avg Reward: 395.1
+    [Progress] Steps: 210000 | Elapsed: 194.7s | Recent 20-Ep Avg Reward: 445.1
+    [Progress] Steps: 220000 | Elapsed: 203.2s | Recent 20-Ep Avg Reward: 135.2
+    [Progress] Steps: 230000 | Elapsed: 215.6s | Recent 20-Ep Avg Reward: 169.4
+    [Progress] Steps: 240000 | Elapsed: 224.1s | Recent 20-Ep Avg Reward: 157.9
+    [Progress] Steps: 250000 | Elapsed: 232.6s | Recent 20-Ep Avg Reward: 304.1
+    [Progress] Steps: 260000 | Elapsed: 241.2s | Recent 20-Ep Avg Reward: 384.4
+    [Progress] Steps: 270000 | Elapsed: 249.8s | Recent 20-Ep Avg Reward: 397.4
+    [Progress] Steps: 280000 | Elapsed: 262.2s | Recent 20-Ep Avg Reward: 467.6
+    [Progress] Steps: 290000 | Elapsed: 270.7s | Recent 20-Ep Avg Reward: 407.4
+    [Progress] Steps: 300000 | Elapsed: 279.4s | Recent 20-Ep Avg Reward: 428.3
+    [Progress] Steps: 310000 | Elapsed: 287.9s | Recent 20-Ep Avg Reward: 377.1
+    [Progress] Steps: 320000 | Elapsed: 299.5s | Recent 20-Ep Avg Reward: 318.8
+    [Progress] Steps: 330000 | Elapsed: 307.7s | Recent 20-Ep Avg Reward: 418.9
+    [Progress] Steps: 340000 | Elapsed: 315.9s | Recent 20-Ep Avg Reward: 488.1
+    [Progress] Steps: 350000 | Elapsed: 324.7s | Recent 20-Ep Avg Reward: 408.7
+    [Progress] Steps: 360000 | Elapsed: 333.2s | Recent 20-Ep Avg Reward: 500.0
+
+    [SUCCESS] Target reward 495.0 reached at step 360000!
+    [SUCCESS] Time taken to converge: 333.21 seconds.
+[*] Final Result for Seed 104: Stopped at 360000 steps in 333.73 seconds
+[*] Data strictly saved to: ppo_3m_clean_results_seed_104\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_3m_clean_results_seed_104\final_ppo_model.zip
+
+--- Running Seed 105 (5/5) with 16 parallel workers ---
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+C:\ProgramData\anaconda3\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[*] PPO 3M Model Instantiated (CLEAN ENVIRONMENT)!
+[*] Total Parameters: 3,029,667 (Trainable: 3,029,667)
+    [Progress] Steps: 10000 | Elapsed: 10.4s | Recent 20-Ep Avg Reward: 19.6
+    [Progress] Steps: 20000 | Elapsed: 18.8s | Recent 20-Ep Avg Reward: 27.8
+    [Progress] Steps: 30000 | Elapsed: 27.5s | Recent 20-Ep Avg Reward: 37.3
+    [Progress] Steps: 40000 | Elapsed: 36.4s | Recent 20-Ep Avg Reward: 48.5
+    [Progress] Steps: 50000 | Elapsed: 48.8s | Recent 20-Ep Avg Reward: 56.9
+    [Progress] Steps: 60000 | Elapsed: 59.4s | Recent 20-Ep Avg Reward: 90.5
+    [Progress] Steps: 70000 | Elapsed: 72.4s | Recent 20-Ep Avg Reward: 96.5
+    [Progress] Steps: 80000 | Elapsed: 85.7s | Recent 20-Ep Avg Reward: 116.0
+    [Progress] Steps: 90000 | Elapsed: 99.3s | Recent 20-Ep Avg Reward: 85.7
+    [Progress] Steps: 100000 | Elapsed: 118.8s | Recent 20-Ep Avg Reward: 146.2
+    [Progress] Steps: 110000 | Elapsed: 132.2s | Recent 20-Ep Avg Reward: 198.6
+    [Progress] Steps: 120000 | Elapsed: 145.2s | Recent 20-Ep Avg Reward: 268.8
+    [Progress] Steps: 130000 | Elapsed: 158.4s | Recent 20-Ep Avg Reward: 284.6
+    [Progress] Steps: 140000 | Elapsed: 177.5s | Recent 20-Ep Avg Reward: 278.1
+    [Progress] Steps: 150000 | Elapsed: 190.7s | Recent 20-Ep Avg Reward: 190.3
+    [Progress] Steps: 160000 | Elapsed: 203.8s | Recent 20-Ep Avg Reward: 344.8
+    [Progress] Steps: 170000 | Elapsed: 216.9s | Recent 20-Ep Avg Reward: 182.3
+    [Progress] Steps: 180000 | Elapsed: 230.2s | Recent 20-Ep Avg Reward: 216.5
+    [Progress] Steps: 190000 | Elapsed: 249.6s | Recent 20-Ep Avg Reward: 157.8
+    [Progress] Steps: 200000 | Elapsed: 262.8s | Recent 20-Ep Avg Reward: 224.9
+    [Progress] Steps: 210000 | Elapsed: 276.0s | Recent 20-Ep Avg Reward: 386.5
+    [Progress] Steps: 220000 | Elapsed: 289.2s | Recent 20-Ep Avg Reward: 235.3
+    [Progress] Steps: 230000 | Elapsed: 308.4s | Recent 20-Ep Avg Reward: 154.1
+    [Progress] Steps: 240000 | Elapsed: 316.7s | Recent 20-Ep Avg Reward: 287.9
+    [Progress] Steps: 250000 | Elapsed: 325.0s | Recent 20-Ep Avg Reward: 401.5
+    [Progress] Steps: 260000 | Elapsed: 333.3s | Recent 20-Ep Avg Reward: 350.7
+    [Progress] Steps: 270000 | Elapsed: 341.5s | Recent 20-Ep Avg Reward: 212.4
+    [Progress] Steps: 280000 | Elapsed: 354.0s | Recent 20-Ep Avg Reward: 220.8
+    [Progress] Steps: 290000 | Elapsed: 362.6s | Recent 20-Ep Avg Reward: 190.6
+    [Progress] Steps: 300000 | Elapsed: 371.3s | Recent 20-Ep Avg Reward: 405.8
+    [Progress] Steps: 310000 | Elapsed: 379.9s | Recent 20-Ep Avg Reward: 238.1
+    [Progress] Steps: 320000 | Elapsed: 392.5s | Recent 20-Ep Avg Reward: 390.9
+    [Progress] Steps: 330000 | Elapsed: 401.1s | Recent 20-Ep Avg Reward: 358.9
+    [Progress] Steps: 340000 | Elapsed: 409.8s | Recent 20-Ep Avg Reward: 353.9
+    [Progress] Steps: 350000 | Elapsed: 418.5s | Recent 20-Ep Avg Reward: 257.6
+    [Progress] Steps: 360000 | Elapsed: 427.2s | Recent 20-Ep Avg Reward: 339.3
+    [Progress] Steps: 370000 | Elapsed: 439.0s | Recent 20-Ep Avg Reward: 464.1
+    [Progress] Steps: 380000 | Elapsed: 447.3s | Recent 20-Ep Avg Reward: 383.9
+    [Progress] Steps: 390000 | Elapsed: 455.6s | Recent 20-Ep Avg Reward: 349.4
+    [Progress] Steps: 400000 | Elapsed: 464.1s | Recent 20-Ep Avg Reward: 464.5
+    [Progress] Steps: 410000 | Elapsed: 476.6s | Recent 20-Ep Avg Reward: 379.1
+    [Progress] Steps: 420000 | Elapsed: 485.4s | Recent 20-Ep Avg Reward: 407.9
+    [Progress] Steps: 430000 | Elapsed: 493.9s | Recent 20-Ep Avg Reward: 433.4
+    [Progress] Steps: 440000 | Elapsed: 502.7s | Recent 20-Ep Avg Reward: 459.9
+    [Progress] Steps: 450000 | Elapsed: 511.3s | Recent 20-Ep Avg Reward: 349.1
+    [Progress] Steps: 460000 | Elapsed: 523.7s | Recent 20-Ep Avg Reward: 232.8
+    [Progress] Steps: 470000 | Elapsed: 532.4s | Recent 20-Ep Avg Reward: 463.1
+    [Progress] Steps: 480000 | Elapsed: 541.0s | Recent 20-Ep Avg Reward: 282.2
+    [Progress] Steps: 490000 | Elapsed: 549.8s | Recent 20-Ep Avg Reward: 265.1
+    [Progress] Steps: 500000 | Elapsed: 561.5s | Recent 20-Ep Avg Reward: 453.1
+    [Progress] Steps: 510000 | Elapsed: 569.8s | Recent 20-Ep Avg Reward: 192.0
+    [Progress] Steps: 520000 | Elapsed: 578.2s | Recent 20-Ep Avg Reward: 101.0
+    [Progress] Steps: 530000 | Elapsed: 586.7s | Recent 20-Ep Avg Reward: 148.4
+    [Progress] Steps: 540000 | Elapsed: 595.5s | Recent 20-Ep Avg Reward: 378.9
+    [Progress] Steps: 550000 | Elapsed: 608.0s | Recent 20-Ep Avg Reward: 414.4
+    [Progress] Steps: 560000 | Elapsed: 616.7s | Recent 20-Ep Avg Reward: 444.9
+    [Progress] Steps: 570000 | Elapsed: 625.3s | Recent 20-Ep Avg Reward: 469.5
+    [Progress] Steps: 580000 | Elapsed: 634.0s | Recent 20-Ep Avg Reward: 475.0
+    [Progress] Steps: 590000 | Elapsed: 646.5s | Recent 20-Ep Avg Reward: 336.1
+    [Progress] Steps: 600000 | Elapsed: 655.2s | Recent 20-Ep Avg Reward: 412.9
+    [Progress] Steps: 610000 | Elapsed: 664.0s | Recent 20-Ep Avg Reward: 405.6
+    [Progress] Steps: 620000 | Elapsed: 672.6s | Recent 20-Ep Avg Reward: 450.8
+    [Progress] Steps: 630000 | Elapsed: 680.9s | Recent 20-Ep Avg Reward: 441.9
+    [Progress] Steps: 640000 | Elapsed: 692.6s | Recent 20-Ep Avg Reward: 383.9
+    [Progress] Steps: 650000 | Elapsed: 701.0s | Recent 20-Ep Avg Reward: 408.3
+    [Progress] Steps: 660000 | Elapsed: 709.7s | Recent 20-Ep Avg Reward: 441.0
+    [Progress] Steps: 670000 | Elapsed: 718.3s | Recent 20-Ep Avg Reward: 500.0
+
+    [SUCCESS] Target reward 495.0 reached at step 670000!
+    [SUCCESS] Time taken to converge: 718.34 seconds.
+[*] Final Result for Seed 105: Stopped at 670000 steps in 718.87 seconds
+[*] Data strictly saved to: ppo_3m_clean_results_seed_105\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_3m_clean_results_seed_105\final_ppo_model.zip
+
+==================================================
+=== FINAL CONVERGENCE SUMMARY (3M PARAMS, CLEAN ENV) ACROSS 5 SEEDS ===
+Average Convergence Time: 593.88 sec (±173.56)
+Average Convergence Steps: 614000 steps (±172812)
+==================================================
