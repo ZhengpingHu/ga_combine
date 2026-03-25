@@ -14,22 +14,50 @@ from stable_baselines3.common.vec_env import SubprocVecEnv, VecFrameStack
 from gymnasium import spaces
 
 # ==========================================
-# 1. Pixel Wrapper for End-to-End Vision (Clean Environment)
+# 1. Combined Wrapper: Visual Clutter + Pixel Resizing
 # ==========================================
-class PixelAcrobot(gym.ObservationWrapper):
-    def __init__(self, env):
+class NoisyPixelAcrobot(gym.ObservationWrapper):
+    def __init__(self, env, gaussian_std=25.0, add_clutter=True):
         super().__init__(env)
         # Standard input size for Nature CNN (84x84)
         self.img_size = (84, 84)
         self.observation_space = spaces.Box(
             low=0, high=255, shape=(self.img_size[1], self.img_size[0], 3), dtype=np.uint8
         )
+        
+        self.gaussian_std = gaussian_std
+        self.add_clutter = add_clutter
+        # Pre-generate a static random noise texture for the background
+        self.clutter_texture = np.random.randint(50, 200, (500, 500, 3), dtype=np.uint8)
 
     def observation(self, obs):
         # Render the raw RGB frame
-        img = self.env.render()
+        frame = self.env.render()
+        if frame is None:
+            return np.zeros((self.img_size[1], self.img_size[0], 3), dtype=np.uint8)
+            
+        frame = frame.astype(np.float32)
+
+        # Inject Dynamic Background Clutter
+        if self.add_clutter:
+            # Acrobot's background is nearly pure white. Mask pixels > 240.
+            bg_mask = np.all(frame > 240, axis=-1)
+            self.clutter_texture = np.roll(self.clutter_texture, shift=3, axis=0)
+            self.clutter_texture = np.roll(self.clutter_texture, shift=7, axis=1)
+            h, w = frame.shape[:2]
+            texture_resized = cv2.resize(self.clutter_texture, (w, h))
+            frame[bg_mask] = texture_resized[bg_mask].astype(np.float32)
+
+        # Inject Gaussian Sensor Noise
+        if self.gaussian_std > 0:
+            noise = np.random.normal(0, self.gaussian_std, frame.shape)
+            frame += noise
+
+        # Clip back to valid RGB range [0, 255]
+        frame = np.clip(frame, 0, 255).astype(np.uint8)
+
         # Resize to match CNN input requirements
-        img = cv2.resize(img, self.img_size, interpolation=cv2.INTER_AREA)
+        img = cv2.resize(frame, self.img_size, interpolation=cv2.INTER_AREA)
         return img
 
 # ==========================================
@@ -74,7 +102,7 @@ class Strict10kLoggerCallback(BaseCallback):
             
             self.last_print_step = self.num_timesteps
             
-            # Early Stopping Check
+            # Early Stopping Check (For Acrobot, greater than e.g. -85 is good)
             if len(self.episode_rewards) >= 20 and recent_avg >= self.target_reward:
                 print(f"\n    [SUCCESS] Target reward {self.target_reward} reached at step {self.num_timesteps}!")
                 print(f"    [SUCCESS] Time taken to converge: {elapsed_time:.2f} seconds.")
@@ -90,20 +118,20 @@ if __name__ == "__main__":
     test_seeds = [101, 102, 103, 104, 105]
     num_envs_per_run = 16  
     
-    max_training_steps = 12_500_000 # Clean environment typically runs longer if needed
-    target_score = -85.0  # Acrobot specific target
+    max_training_steps = 20_000_000 
+    target_score = -85.0  # Acrobot specific target (Negative reward task)
     
     convergence_times = []
     convergence_steps = []
 
-    print("=== Starting E2E PPO (3M Params) Tests on ACROBOT IN CLEAN ENVIRONMENT ===")
+    print("=== Starting E2E PPO (3M Params) Tests on ACROBOT IN NOISY ENVIRONMENT ===")
     print(f"Target Score: {target_score} | Max Steps Allowed: {max_training_steps}\n")
     
     for idx, run_seed in enumerate(test_seeds):
-        print(f"\n--- Running CLEAN Acrobot Seed {run_seed} ({idx + 1}/{len(test_seeds)}) with {num_envs_per_run} workers ---")
+        print(f"\n--- Running NOISY Acrobot Seed {run_seed} ({idx + 1}/{len(test_seeds)}) with {num_envs_per_run} workers ---")
         
-        # Dedicated directory for 3M param Acrobot clean models
-        seed_dir = f"ppo_3m_clean_acrobot_results_seed_{run_seed}"
+        # Dedicated directory for 3M param Acrobot noisy models
+        seed_dir = f"ppo_3m_noisy_acrobot_results_seed_{run_seed}"
         os.makedirs(seed_dir, exist_ok=True)
         csv_save_path = os.path.join(seed_dir, "ppo_learning_curve.csv")
         model_save_path = os.path.join(seed_dir, "final_ppo_model.zip")
@@ -113,7 +141,7 @@ if __name__ == "__main__":
             n_envs=num_envs_per_run, 
             seed=run_seed,
             vec_env_cls=SubprocVecEnv,
-            wrapper_class=PixelAcrobot,
+            wrapper_class=NoisyPixelAcrobot,
             env_kwargs={"render_mode": "rgb_array"}
         )
         
@@ -133,7 +161,7 @@ if __name__ == "__main__":
         # Calculate and print precise parameter count
         total_params = sum(p.numel() for p in model.policy.parameters())
         trainable_params = sum(p.numel() for p in model.policy.parameters() if p.requires_grad)
-        print(f"[*] PPO 3M Model Instantiated for CLEAN Acrobot!")
+        print(f"[*] PPO 3M Model Instantiated for Acrobot!")
         print(f"[*] Total Parameters: {total_params:,} (Trainable: {trainable_params:,})")
         # ==========================================
 
@@ -152,7 +180,7 @@ if __name__ == "__main__":
         
         model.save(model_save_path)
         
-        print(f"[*] Final Result for Clean Seed {run_seed}: Stopped at {final_steps} steps in {train_duration:.2f} seconds")
+        print(f"[*] Final Result for Noisy Seed {run_seed}: Stopped at {final_steps} steps in {train_duration:.2f} seconds")
         print(f"[*] Data strictly saved to: {csv_save_path}")
         
         convergence_times.append(train_duration)
@@ -161,7 +189,7 @@ if __name__ == "__main__":
         vec_env.close()
 
     print("\n" + "="*50)
-    print("=== FINAL CONVERGENCE SUMMARY (ACROBOT 3M PARAMS, CLEAN) ===")
+    print("=== FINAL CONVERGENCE SUMMARY (ACROBOT 3M PARAMS, NOISY) ===")
     print(f"Average Convergence Time: {np.mean(convergence_times):.2f} sec")
     print(f"Average Convergence Steps: {np.mean(convergence_steps):.0f} steps")
     print("="*50 + "\n")
