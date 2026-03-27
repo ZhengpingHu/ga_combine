@@ -1,0 +1,333 @@
+Windows PowerShell
+版权所有（C） Microsoft Corporation。保留所有权利。
+
+安装最新的 PowerShell，了解新功能和改进！https://aka.ms/PSWindows
+
+PS C:\Git\ga_combine\source_code\multi_ppo_acrobot_noisy> python ppo_3m_noisy_acrobot_train.py
+=== Starting E2E PPO (3M Params) Tests on ACROBOT IN NOISY ENVIRONMENT ===
+Target Score: -85.0 | Max Steps Allowed: 1000000
+
+
+--- Running NOISY Acrobot Seed 103 (1/3) with 16 workers ---
+[*] PPO 3M Model Instantiated for Acrobot!
+[*] Total Parameters: 3,029,924 (Trainable: 3,029,924)
+    [Progress] Steps: 10000 | Elapsed: 38.0s | Recent Avg Reward: -494.0
+    [Progress] Steps: 20000 | Elapsed: 76.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 30000 | Elapsed: 114.1s | Recent Avg Reward: -498.1
+    [Progress] Steps: 40000 | Elapsed: 151.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 50000 | Elapsed: 194.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 60000 | Elapsed: 231.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 70000 | Elapsed: 269.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 80000 | Elapsed: 307.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 90000 | Elapsed: 346.0s | Recent Avg Reward: -500.0
+    [Progress] Steps: 100000 | Elapsed: 387.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 110000 | Elapsed: 425.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 120000 | Elapsed: 464.1s | Recent Avg Reward: -493.4
+    [Progress] Steps: 130000 | Elapsed: 502.0s | Recent Avg Reward: -498.5
+    [Progress] Steps: 140000 | Elapsed: 544.6s | Recent Avg Reward: -449.9
+    [Progress] Steps: 150000 | Elapsed: 582.7s | Recent Avg Reward: -443.6
+    [Progress] Steps: 160000 | Elapsed: 620.6s | Recent Avg Reward: -431.1
+    [Progress] Steps: 170000 | Elapsed: 658.9s | Recent Avg Reward: -400.4
+    [Progress] Steps: 180000 | Elapsed: 697.4s | Recent Avg Reward: -356.9
+    [Progress] Steps: 190000 | Elapsed: 740.0s | Recent Avg Reward: -280.9
+    [Progress] Steps: 200000 | Elapsed: 778.5s | Recent Avg Reward: -260.3
+    [Progress] Steps: 210000 | Elapsed: 817.1s | Recent Avg Reward: -179.8
+    [Progress] Steps: 220000 | Elapsed: 855.6s | Recent Avg Reward: -154.7
+    [Progress] Steps: 230000 | Elapsed: 899.2s | Recent Avg Reward: -154.3
+    [Progress] Steps: 240000 | Elapsed: 938.0s | Recent Avg Reward: -127.5
+    [Progress] Steps: 250000 | Elapsed: 976.5s | Recent Avg Reward: -126.0
+    [Progress] Steps: 260000 | Elapsed: 1015.7s | Recent Avg Reward: -117.7
+    [Progress] Steps: 270000 | Elapsed: 1055.0s | Recent Avg Reward: -122.0
+    [Progress] Steps: 280000 | Elapsed: 1098.5s | Recent Avg Reward: -114.7
+    [Progress] Steps: 290000 | Elapsed: 1137.6s | Recent Avg Reward: -108.4
+    [Progress] Steps: 300000 | Elapsed: 1176.9s | Recent Avg Reward: -98.0
+    [Progress] Steps: 310000 | Elapsed: 1215.8s | Recent Avg Reward: -108.2
+    [Progress] Steps: 320000 | Elapsed: 1259.7s | Recent Avg Reward: -99.6
+    [Progress] Steps: 330000 | Elapsed: 1298.5s | Recent Avg Reward: -111.0
+    [Progress] Steps: 340000 | Elapsed: 1337.4s | Recent Avg Reward: -115.0
+    [Progress] Steps: 350000 | Elapsed: 1376.9s | Recent Avg Reward: -110.3
+    [Progress] Steps: 360000 | Elapsed: 1416.3s | Recent Avg Reward: -94.0
+    [Progress] Steps: 370000 | Elapsed: 1459.7s | Recent Avg Reward: -103.7
+    [Progress] Steps: 380000 | Elapsed: 1498.9s | Recent Avg Reward: -105.8
+    [Progress] Steps: 390000 | Elapsed: 1538.2s | Recent Avg Reward: -103.5
+    [Progress] Steps: 400000 | Elapsed: 1577.0s | Recent Avg Reward: -106.0
+    [Progress] Steps: 410000 | Elapsed: 1621.3s | Recent Avg Reward: -92.7
+    [Progress] Steps: 420000 | Elapsed: 1660.2s | Recent Avg Reward: -115.3
+    [Progress] Steps: 430000 | Elapsed: 1699.0s | Recent Avg Reward: -104.0
+    [Progress] Steps: 440000 | Elapsed: 1738.4s | Recent Avg Reward: -114.5
+    [Progress] Steps: 450000 | Elapsed: 1777.8s | Recent Avg Reward: -104.3
+    [Progress] Steps: 460000 | Elapsed: 1821.2s | Recent Avg Reward: -125.5
+    [Progress] Steps: 470000 | Elapsed: 1860.3s | Recent Avg Reward: -104.0
+    [Progress] Steps: 480000 | Elapsed: 1899.7s | Recent Avg Reward: -95.0
+    [Progress] Steps: 490000 | Elapsed: 1938.7s | Recent Avg Reward: -109.8
+    [Progress] Steps: 500000 | Elapsed: 1982.8s | Recent Avg Reward: -111.2
+    [Progress] Steps: 510000 | Elapsed: 2021.8s | Recent Avg Reward: -103.6
+    [Progress] Steps: 520000 | Elapsed: 2060.3s | Recent Avg Reward: -120.5
+    [Progress] Steps: 530000 | Elapsed: 2099.5s | Recent Avg Reward: -125.3
+    [Progress] Steps: 540000 | Elapsed: 2139.0s | Recent Avg Reward: -114.2
+    [Progress] Steps: 550000 | Elapsed: 2182.0s | Recent Avg Reward: -110.4
+    [Progress] Steps: 560000 | Elapsed: 2221.0s | Recent Avg Reward: -136.4
+    [Progress] Steps: 570000 | Elapsed: 2260.1s | Recent Avg Reward: -115.4
+    [Progress] Steps: 580000 | Elapsed: 2299.0s | Recent Avg Reward: -104.1
+    [Progress] Steps: 590000 | Elapsed: 2343.3s | Recent Avg Reward: -102.4
+    [Progress] Steps: 600000 | Elapsed: 2382.4s | Recent Avg Reward: -95.8
+    [Progress] Steps: 610000 | Elapsed: 2421.3s | Recent Avg Reward: -106.2
+    [Progress] Steps: 620000 | Elapsed: 2460.6s | Recent Avg Reward: -103.8
+    [Progress] Steps: 630000 | Elapsed: 2500.1s | Recent Avg Reward: -100.8
+    [Progress] Steps: 640000 | Elapsed: 2543.3s | Recent Avg Reward: -97.0
+    [Progress] Steps: 650000 | Elapsed: 2582.6s | Recent Avg Reward: -95.0
+    [Progress] Steps: 660000 | Elapsed: 2622.0s | Recent Avg Reward: -108.9
+    [Progress] Steps: 670000 | Elapsed: 2660.9s | Recent Avg Reward: -104.8
+    [Progress] Steps: 680000 | Elapsed: 2705.1s | Recent Avg Reward: -104.0
+    [Progress] Steps: 690000 | Elapsed: 2743.9s | Recent Avg Reward: -102.2
+    [Progress] Steps: 700000 | Elapsed: 2782.6s | Recent Avg Reward: -127.8
+    [Progress] Steps: 710000 | Elapsed: 2822.0s | Recent Avg Reward: -110.8
+    [Progress] Steps: 720000 | Elapsed: 2861.3s | Recent Avg Reward: -104.2
+    [Progress] Steps: 730000 | Elapsed: 2904.5s | Recent Avg Reward: -110.0
+    [Progress] Steps: 740000 | Elapsed: 2943.7s | Recent Avg Reward: -113.5
+    [Progress] Steps: 750000 | Elapsed: 2982.8s | Recent Avg Reward: -145.3
+    [Progress] Steps: 760000 | Elapsed: 3021.5s | Recent Avg Reward: -131.7
+    [Progress] Steps: 770000 | Elapsed: 3060.6s | Recent Avg Reward: -136.4
+    [Progress] Steps: 780000 | Elapsed: 3104.0s | Recent Avg Reward: -123.1
+    [Progress] Steps: 790000 | Elapsed: 3142.7s | Recent Avg Reward: -155.6
+    [Progress] Steps: 800000 | Elapsed: 3181.8s | Recent Avg Reward: -158.9
+    [Progress] Steps: 810000 | Elapsed: 3220.7s | Recent Avg Reward: -128.7
+    [Progress] Steps: 820000 | Elapsed: 3264.0s | Recent Avg Reward: -124.2
+    [Progress] Steps: 830000 | Elapsed: 3302.9s | Recent Avg Reward: -135.2
+    [Progress] Steps: 840000 | Elapsed: 3341.9s | Recent Avg Reward: -109.6
+    [Progress] Steps: 850000 | Elapsed: 3380.8s | Recent Avg Reward: -111.0
+    [Progress] Steps: 860000 | Elapsed: 3420.1s | Recent Avg Reward: -124.2
+    [Progress] Steps: 870000 | Elapsed: 3463.6s | Recent Avg Reward: -136.3
+    [Progress] Steps: 880000 | Elapsed: 3502.3s | Recent Avg Reward: -110.1
+    [Progress] Steps: 890000 | Elapsed: 3541.4s | Recent Avg Reward: -115.8
+    [Progress] Steps: 900000 | Elapsed: 3580.7s | Recent Avg Reward: -120.7
+    [Progress] Steps: 910000 | Elapsed: 3623.8s | Recent Avg Reward: -138.8
+    [Progress] Steps: 920000 | Elapsed: 3662.6s | Recent Avg Reward: -129.9
+    [Progress] Steps: 930000 | Elapsed: 3701.8s | Recent Avg Reward: -126.8
+    [Progress] Steps: 940000 | Elapsed: 3740.6s | Recent Avg Reward: -119.4
+    [Progress] Steps: 950000 | Elapsed: 3779.9s | Recent Avg Reward: -122.3
+    [Progress] Steps: 960000 | Elapsed: 3823.5s | Recent Avg Reward: -117.8
+    [Progress] Steps: 970000 | Elapsed: 3862.2s | Recent Avg Reward: -121.2
+    [Progress] Steps: 980000 | Elapsed: 3901.5s | Recent Avg Reward: -125.9
+    [Progress] Steps: 990000 | Elapsed: 3940.9s | Recent Avg Reward: -108.5
+    [Progress] Steps: 1000000 | Elapsed: 3984.5s | Recent Avg Reward: -104.2
+[*] Final Result for Noisy Seed 103: Stopped at 1007616 steps in 4016.79 seconds
+[*] Data strictly saved to: ppo_3m_noisy_acrobot_results_seed_103\ppo_learning_curve.csv
+
+--- Running NOISY Acrobot Seed 104 (2/3) with 16 workers ---
+[*] PPO 3M Model Instantiated for Acrobot!
+[*] Total Parameters: 3,029,924 (Trainable: 3,029,924)
+    [Progress] Steps: 10000 | Elapsed: 37.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 20000 | Elapsed: 74.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 30000 | Elapsed: 112.3s | Recent Avg Reward: -498.8
+    [Progress] Steps: 40000 | Elapsed: 149.8s | Recent Avg Reward: -500.0
+    [Progress] Steps: 50000 | Elapsed: 191.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 60000 | Elapsed: 229.1s | Recent Avg Reward: -493.5
+    [Progress] Steps: 70000 | Elapsed: 266.8s | Recent Avg Reward: -499.2
+    [Progress] Steps: 80000 | Elapsed: 303.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 90000 | Elapsed: 341.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 100000 | Elapsed: 383.5s | Recent Avg Reward: -484.4
+    [Progress] Steps: 110000 | Elapsed: 420.8s | Recent Avg Reward: -499.8
+    [Progress] Steps: 120000 | Elapsed: 458.5s | Recent Avg Reward: -497.5
+    [Progress] Steps: 130000 | Elapsed: 496.0s | Recent Avg Reward: -500.0
+    [Progress] Steps: 140000 | Elapsed: 537.9s | Recent Avg Reward: -494.4
+    [Progress] Steps: 150000 | Elapsed: 575.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 160000 | Elapsed: 613.3s | Recent Avg Reward: -498.1
+    [Progress] Steps: 170000 | Elapsed: 651.1s | Recent Avg Reward: -495.9
+    [Progress] Steps: 180000 | Elapsed: 688.3s | Recent Avg Reward: -488.0
+    [Progress] Steps: 190000 | Elapsed: 730.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 200000 | Elapsed: 768.5s | Recent Avg Reward: -499.4
+    [Progress] Steps: 210000 | Elapsed: 806.2s | Recent Avg Reward: -500.0
+    [Progress] Steps: 220000 | Elapsed: 843.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 230000 | Elapsed: 885.7s | Recent Avg Reward: -498.1
+    [Progress] Steps: 240000 | Elapsed: 923.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 250000 | Elapsed: 961.0s | Recent Avg Reward: -500.0
+    [Progress] Steps: 260000 | Elapsed: 998.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 270000 | Elapsed: 1036.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 280000 | Elapsed: 1078.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 290000 | Elapsed: 1116.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 300000 | Elapsed: 1153.8s | Recent Avg Reward: -500.0
+    [Progress] Steps: 310000 | Elapsed: 1191.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 320000 | Elapsed: 1234.2s | Recent Avg Reward: -500.0
+    [Progress] Steps: 330000 | Elapsed: 1271.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 340000 | Elapsed: 1308.8s | Recent Avg Reward: -500.0
+    [Progress] Steps: 350000 | Elapsed: 1346.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 360000 | Elapsed: 1384.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 370000 | Elapsed: 1426.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 380000 | Elapsed: 1464.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 390000 | Elapsed: 1501.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 400000 | Elapsed: 1539.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 410000 | Elapsed: 1581.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 420000 | Elapsed: 1618.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 430000 | Elapsed: 1656.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 440000 | Elapsed: 1694.8s | Recent Avg Reward: -500.0
+    [Progress] Steps: 450000 | Elapsed: 1732.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 460000 | Elapsed: 1774.2s | Recent Avg Reward: -500.0
+    [Progress] Steps: 470000 | Elapsed: 1811.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 480000 | Elapsed: 1849.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 490000 | Elapsed: 1886.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 500000 | Elapsed: 1929.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 510000 | Elapsed: 1966.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 520000 | Elapsed: 2004.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 530000 | Elapsed: 2042.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 540000 | Elapsed: 2080.2s | Recent Avg Reward: -500.0
+    [Progress] Steps: 550000 | Elapsed: 2121.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 560000 | Elapsed: 2159.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 570000 | Elapsed: 2197.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 580000 | Elapsed: 2234.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 590000 | Elapsed: 2277.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 600000 | Elapsed: 2314.8s | Recent Avg Reward: -500.0
+    [Progress] Steps: 610000 | Elapsed: 2352.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 620000 | Elapsed: 2389.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 630000 | Elapsed: 2428.0s | Recent Avg Reward: -500.0
+    [Progress] Steps: 640000 | Elapsed: 2470.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 650000 | Elapsed: 2507.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 660000 | Elapsed: 2545.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 670000 | Elapsed: 2582.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 680000 | Elapsed: 2625.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 690000 | Elapsed: 2662.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 700000 | Elapsed: 2700.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 710000 | Elapsed: 2738.0s | Recent Avg Reward: -500.0
+    [Progress] Steps: 720000 | Elapsed: 2776.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 730000 | Elapsed: 2817.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 740000 | Elapsed: 2855.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 750000 | Elapsed: 2893.2s | Recent Avg Reward: -500.0
+    [Progress] Steps: 760000 | Elapsed: 2931.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 770000 | Elapsed: 2968.2s | Recent Avg Reward: -500.0
+    [Progress] Steps: 780000 | Elapsed: 3010.2s | Recent Avg Reward: -500.0
+    [Progress] Steps: 790000 | Elapsed: 3048.0s | Recent Avg Reward: -500.0
+    [Progress] Steps: 800000 | Elapsed: 3085.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 810000 | Elapsed: 3123.2s | Recent Avg Reward: -500.0
+    [Progress] Steps: 820000 | Elapsed: 3165.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 830000 | Elapsed: 3202.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 840000 | Elapsed: 3240.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 850000 | Elapsed: 3278.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 860000 | Elapsed: 3315.6s | Recent Avg Reward: -500.0
+    [Progress] Steps: 870000 | Elapsed: 3358.0s | Recent Avg Reward: -500.0
+    [Progress] Steps: 880000 | Elapsed: 3395.8s | Recent Avg Reward: -500.0
+    [Progress] Steps: 890000 | Elapsed: 3433.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 900000 | Elapsed: 3470.8s | Recent Avg Reward: -500.0
+    [Progress] Steps: 910000 | Elapsed: 3513.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 920000 | Elapsed: 3550.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 930000 | Elapsed: 3588.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 940000 | Elapsed: 3626.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 950000 | Elapsed: 3664.1s | Recent Avg Reward: -500.0
+    [Progress] Steps: 960000 | Elapsed: 3705.8s | Recent Avg Reward: -500.0
+    [Progress] Steps: 970000 | Elapsed: 3743.4s | Recent Avg Reward: -500.0
+    [Progress] Steps: 980000 | Elapsed: 3780.5s | Recent Avg Reward: -500.0
+    [Progress] Steps: 990000 | Elapsed: 3818.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 1000000 | Elapsed: 3860.9s | Recent Avg Reward: -500.0
+[*] Final Result for Noisy Seed 104: Stopped at 1007616 steps in 3890.71 seconds
+[*] Data strictly saved to: ppo_3m_noisy_acrobot_results_seed_104\ppo_learning_curve.csv
+
+--- Running NOISY Acrobot Seed 105 (3/3) with 16 workers ---
+[*] PPO 3M Model Instantiated for Acrobot!
+[*] Total Parameters: 3,029,924 (Trainable: 3,029,924)
+    [Progress] Steps: 10000 | Elapsed: 37.7s | Recent Avg Reward: -500.0
+    [Progress] Steps: 20000 | Elapsed: 75.3s | Recent Avg Reward: -500.0
+    [Progress] Steps: 30000 | Elapsed: 112.9s | Recent Avg Reward: -500.0
+    [Progress] Steps: 40000 | Elapsed: 150.0s | Recent Avg Reward: -496.0
+    [Progress] Steps: 50000 | Elapsed: 192.0s | Recent Avg Reward: -500.0
+    [Progress] Steps: 60000 | Elapsed: 229.3s | Recent Avg Reward: -477.5
+    [Progress] Steps: 70000 | Elapsed: 266.3s | Recent Avg Reward: -481.2
+    [Progress] Steps: 80000 | Elapsed: 304.1s | Recent Avg Reward: -436.9
+    [Progress] Steps: 90000 | Elapsed: 341.9s | Recent Avg Reward: -424.1
+    [Progress] Steps: 100000 | Elapsed: 383.7s | Recent Avg Reward: -425.6
+    [Progress] Steps: 110000 | Elapsed: 421.3s | Recent Avg Reward: -427.6
+    [Progress] Steps: 120000 | Elapsed: 458.9s | Recent Avg Reward: -390.9
+    [Progress] Steps: 130000 | Elapsed: 496.1s | Recent Avg Reward: -385.6
+    [Progress] Steps: 140000 | Elapsed: 538.7s | Recent Avg Reward: -275.9
+    [Progress] Steps: 150000 | Elapsed: 576.7s | Recent Avg Reward: -207.3
+    [Progress] Steps: 160000 | Elapsed: 614.4s | Recent Avg Reward: -165.8
+    [Progress] Steps: 170000 | Elapsed: 653.0s | Recent Avg Reward: -139.7
+    [Progress] Steps: 180000 | Elapsed: 691.7s | Recent Avg Reward: -132.3
+    [Progress] Steps: 190000 | Elapsed: 734.6s | Recent Avg Reward: -124.0
+    [Progress] Steps: 200000 | Elapsed: 773.3s | Recent Avg Reward: -122.0
+    [Progress] Steps: 210000 | Elapsed: 812.1s | Recent Avg Reward: -115.2
+    [Progress] Steps: 220000 | Elapsed: 850.8s | Recent Avg Reward: -99.5
+    [Progress] Steps: 230000 | Elapsed: 894.5s | Recent Avg Reward: -118.1
+    [Progress] Steps: 240000 | Elapsed: 933.1s | Recent Avg Reward: -117.9
+    [Progress] Steps: 250000 | Elapsed: 971.4s | Recent Avg Reward: -104.2
+    [Progress] Steps: 260000 | Elapsed: 1010.2s | Recent Avg Reward: -93.4
+    [Progress] Steps: 270000 | Elapsed: 1049.1s | Recent Avg Reward: -118.6
+    [Progress] Steps: 280000 | Elapsed: 1092.1s | Recent Avg Reward: -98.0
+    [Progress] Steps: 290000 | Elapsed: 1131.1s | Recent Avg Reward: -90.5
+    [Progress] Steps: 300000 | Elapsed: 1169.8s | Recent Avg Reward: -107.8
+    [Progress] Steps: 310000 | Elapsed: 1208.9s | Recent Avg Reward: -97.0
+    [Progress] Steps: 320000 | Elapsed: 1252.4s | Recent Avg Reward: -96.0
+    [Progress] Steps: 330000 | Elapsed: 1290.0s | Recent Avg Reward: -361.6
+    [Progress] Steps: 340000 | Elapsed: 1328.2s | Recent Avg Reward: -133.5
+    [Progress] Steps: 350000 | Elapsed: 1367.0s | Recent Avg Reward: -128.2
+    [Progress] Steps: 360000 | Elapsed: 1405.9s | Recent Avg Reward: -106.0
+    [Progress] Steps: 370000 | Elapsed: 1448.8s | Recent Avg Reward: -108.5
+    [Progress] Steps: 380000 | Elapsed: 1487.7s | Recent Avg Reward: -105.9
+    [Progress] Steps: 390000 | Elapsed: 1526.6s | Recent Avg Reward: -109.4
+    [Progress] Steps: 400000 | Elapsed: 1565.5s | Recent Avg Reward: -108.9
+    [Progress] Steps: 410000 | Elapsed: 1608.7s | Recent Avg Reward: -118.4
+    [Progress] Steps: 420000 | Elapsed: 1647.3s | Recent Avg Reward: -101.7
+    [Progress] Steps: 430000 | Elapsed: 1685.7s | Recent Avg Reward: -99.7
+    [Progress] Steps: 440000 | Elapsed: 1724.6s | Recent Avg Reward: -116.2
+    [Progress] Steps: 450000 | Elapsed: 1763.2s | Recent Avg Reward: -113.0
+    [Progress] Steps: 460000 | Elapsed: 1806.4s | Recent Avg Reward: -94.9
+    [Progress] Steps: 470000 | Elapsed: 1845.2s | Recent Avg Reward: -97.5
+    [Progress] Steps: 480000 | Elapsed: 1884.3s | Recent Avg Reward: -106.7
+    [Progress] Steps: 490000 | Elapsed: 1923.3s | Recent Avg Reward: -108.4
+    [Progress] Steps: 500000 | Elapsed: 1966.5s | Recent Avg Reward: -118.0
+    [Progress] Steps: 510000 | Elapsed: 2004.9s | Recent Avg Reward: -112.8
+    [Progress] Steps: 520000 | Elapsed: 2043.4s | Recent Avg Reward: -101.2
+    [Progress] Steps: 530000 | Elapsed: 2082.3s | Recent Avg Reward: -128.1
+    [Progress] Steps: 540000 | Elapsed: 2120.9s | Recent Avg Reward: -121.5
+    [Progress] Steps: 550000 | Elapsed: 2163.9s | Recent Avg Reward: -106.0
+    [Progress] Steps: 560000 | Elapsed: 2202.7s | Recent Avg Reward: -113.0
+    [Progress] Steps: 570000 | Elapsed: 2241.4s | Recent Avg Reward: -126.0
+    [Progress] Steps: 580000 | Elapsed: 2279.9s | Recent Avg Reward: -131.6
+    [Progress] Steps: 590000 | Elapsed: 2322.8s | Recent Avg Reward: -124.2
+    [Progress] Steps: 600000 | Elapsed: 2361.1s | Recent Avg Reward: -107.2
+    [Progress] Steps: 610000 | Elapsed: 2399.5s | Recent Avg Reward: -112.5
+    [Progress] Steps: 620000 | Elapsed: 2438.3s | Recent Avg Reward: -120.0
+    [Progress] Steps: 630000 | Elapsed: 2477.2s | Recent Avg Reward: -115.3
+    [Progress] Steps: 640000 | Elapsed: 2520.1s | Recent Avg Reward: -95.5
+    [Progress] Steps: 650000 | Elapsed: 2558.8s | Recent Avg Reward: -104.6
+    [Progress] Steps: 660000 | Elapsed: 2597.6s | Recent Avg Reward: -93.5
+    [Progress] Steps: 670000 | Elapsed: 2636.4s | Recent Avg Reward: -98.8
+    [Progress] Steps: 680000 | Elapsed: 2679.5s | Recent Avg Reward: -99.0
+    [Progress] Steps: 690000 | Elapsed: 2718.1s | Recent Avg Reward: -95.5
+    [Progress] Steps: 700000 | Elapsed: 2756.8s | Recent Avg Reward: -105.8
+    [Progress] Steps: 710000 | Elapsed: 2795.4s | Recent Avg Reward: -100.0
+    [Progress] Steps: 720000 | Elapsed: 2834.4s | Recent Avg Reward: -96.5
+    [Progress] Steps: 730000 | Elapsed: 2877.3s | Recent Avg Reward: -118.0
+    [Progress] Steps: 740000 | Elapsed: 2916.1s | Recent Avg Reward: -106.0
+    [Progress] Steps: 750000 | Elapsed: 2955.0s | Recent Avg Reward: -116.3
+    [Progress] Steps: 760000 | Elapsed: 2993.9s | Recent Avg Reward: -108.6
+    [Progress] Steps: 770000 | Elapsed: 3032.1s | Recent Avg Reward: -130.4
+    [Progress] Steps: 780000 | Elapsed: 3075.2s | Recent Avg Reward: -122.0
+    [Progress] Steps: 790000 | Elapsed: 3114.1s | Recent Avg Reward: -107.7
+    [Progress] Steps: 800000 | Elapsed: 3152.5s | Recent Avg Reward: -106.0
+    [Progress] Steps: 810000 | Elapsed: 3191.6s | Recent Avg Reward: -105.2
+    [Progress] Steps: 820000 | Elapsed: 3234.6s | Recent Avg Reward: -108.9
+    [Progress] Steps: 830000 | Elapsed: 3273.2s | Recent Avg Reward: -117.2
+    [Progress] Steps: 840000 | Elapsed: 3311.9s | Recent Avg Reward: -121.0
+    [Progress] Steps: 850000 | Elapsed: 3350.6s | Recent Avg Reward: -117.3
+    [Progress] Steps: 860000 | Elapsed: 3389.0s | Recent Avg Reward: -106.3
+    [Progress] Steps: 870000 | Elapsed: 3432.1s | Recent Avg Reward: -103.3
+    [Progress] Steps: 880000 | Elapsed: 3470.8s | Recent Avg Reward: -112.2
+    [Progress] Steps: 890000 | Elapsed: 3509.2s | Recent Avg Reward: -105.7
+    [Progress] Steps: 900000 | Elapsed: 3548.2s | Recent Avg Reward: -116.8
+    [Progress] Steps: 910000 | Elapsed: 3591.3s | Recent Avg Reward: -107.0
+    [Progress] Steps: 920000 | Elapsed: 3630.0s | Recent Avg Reward: -100.7
+    [Progress] Steps: 930000 | Elapsed: 3668.9s | Recent Avg Reward: -119.6
+    [Progress] Steps: 940000 | Elapsed: 3707.6s | Recent Avg Reward: -114.3
+    [Progress] Steps: 950000 | Elapsed: 3745.8s | Recent Avg Reward: -112.7
+    [Progress] Steps: 960000 | Elapsed: 3788.9s | Recent Avg Reward: -98.9
+    [Progress] Steps: 970000 | Elapsed: 3827.7s | Recent Avg Reward: -101.8
+    [Progress] Steps: 980000 | Elapsed: 3866.1s | Recent Avg Reward: -107.8
+    [Progress] Steps: 990000 | Elapsed: 3904.9s | Recent Avg Reward: -117.0
+    [Progress] Steps: 1000000 | Elapsed: 3948.3s | Recent Avg Reward: -103.2
+[*] Final Result for Noisy Seed 105: Stopped at 1007616 steps in 3979.48 seconds
+[*] Data strictly saved to: ppo_3m_noisy_acrobot_results_seed_105\ppo_learning_curve.csv
+
+==================================================
+=== FINAL CONVERGENCE SUMMARY (ACROBOT 3M PARAMS, NOISY) ===
+Average Convergence Time: 3962.33 sec
+Average Convergence Steps: 1007616 steps
+==================================================
