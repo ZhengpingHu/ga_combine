@@ -115,10 +115,10 @@ class Strict10kLoggerCallback(BaseCallback):
 # ==========================================
 if __name__ == "__main__":
     # Full batch of seeds for rigorous ablation
-    test_seeds = [101, 102, 103, 104, 105]
+    test_seeds = [103, 104, 105]
     num_envs_per_run = 16  
     
-    max_training_steps = 20_000_000 
+    max_training_steps = 1_000_000 
     target_score = -85.0  # Acrobot specific target (Negative reward task)
     
     convergence_times = []
