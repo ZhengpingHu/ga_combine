@@ -1,0 +1,4 @@
+generation,best_fitness_score,global_max_raw_reward,global_avg_raw_reward,selected_individual_reward
+1,0.15864189918858507,16.4,10.316,16.4
+2,0.2925536286655065,35.0,11.811999999999998,35.0
+3,0.2515617202436824,47.6,19.084,47.2

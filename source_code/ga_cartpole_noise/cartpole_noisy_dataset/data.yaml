@@ -1,0 +1,7 @@
+path: D:\OneDrive\OneDrive - Dalhousie University\2026_Winter\ga_combine\source_code\ga_cartpole_noise\cartpole_noisy_dataset
+train: images/train
+val: images/train  # Use train for val as it's a simple overfitting task for robustness
+
+nc: 1
+names: ['cartpole']
+kpt_shape: [2, 3]  # 2 keypoints, each has (x, y, visible)

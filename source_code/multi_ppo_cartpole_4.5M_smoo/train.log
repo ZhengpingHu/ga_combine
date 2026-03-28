@@ -1,0 +1,274 @@
+(base) PS D:\OneDrive\OneDrive - Dalhousie University\2026_Winter\ga_combine\source_code\multi_ppo_cartpole_4.5M_smoo> python ppo_cartpole_4.5M.py
+=== Starting E2E PPO Vision Baseline (Strict Time-Equivalent) Tests ===
+Target Score: 495.0 | Max Steps Allowed: 4500000
+
+
+--- Running Seed 101 (1/5) with 16 parallel workers ---
+    [Progress] Steps: 10000 | Elapsed: 8.9s | Recent 20-Ep Avg Reward: 23.5
+    [Progress] Steps: 20000 | Elapsed: 17.2s | Recent 20-Ep Avg Reward: 19.7
+    [Progress] Steps: 30000 | Elapsed: 25.5s | Recent 20-Ep Avg Reward: 30.2
+    [Progress] Steps: 40000 | Elapsed: 34.1s | Recent 20-Ep Avg Reward: 28.6
+    [Progress] Steps: 50000 | Elapsed: 46.5s | Recent 20-Ep Avg Reward: 36.5
+    [Progress] Steps: 60000 | Elapsed: 55.1s | Recent 20-Ep Avg Reward: 56.8
+    [Progress] Steps: 70000 | Elapsed: 63.5s | Recent 20-Ep Avg Reward: 64.3
+    [Progress] Steps: 80000 | Elapsed: 72.1s | Recent 20-Ep Avg Reward: 68.7
+    [Progress] Steps: 90000 | Elapsed: 80.4s | Recent 20-Ep Avg Reward: 92.0
+    [Progress] Steps: 100000 | Elapsed: 92.4s | Recent 20-Ep Avg Reward: 123.5
+    [Progress] Steps: 110000 | Elapsed: 100.8s | Recent 20-Ep Avg Reward: 151.6
+    [Progress] Steps: 120000 | Elapsed: 109.2s | Recent 20-Ep Avg Reward: 165.3
+    [Progress] Steps: 130000 | Elapsed: 117.6s | Recent 20-Ep Avg Reward: 167.1
+    [Progress] Steps: 140000 | Elapsed: 129.1s | Recent 20-Ep Avg Reward: 231.8
+    [Progress] Steps: 150000 | Elapsed: 137.2s | Recent 20-Ep Avg Reward: 188.7
+    [Progress] Steps: 160000 | Elapsed: 145.3s | Recent 20-Ep Avg Reward: 276.2
+    [Progress] Steps: 170000 | Elapsed: 154.8s | Recent 20-Ep Avg Reward: 149.1
+    [Progress] Steps: 180000 | Elapsed: 167.2s | Recent 20-Ep Avg Reward: 252.9
+    [Progress] Steps: 190000 | Elapsed: 182.4s | Recent 20-Ep Avg Reward: 254.8
+    [Progress] Steps: 200000 | Elapsed: 190.8s | Recent 20-Ep Avg Reward: 364.9
+    [Progress] Steps: 210000 | Elapsed: 199.2s | Recent 20-Ep Avg Reward: 309.8
+    [Progress] Steps: 220000 | Elapsed: 207.5s | Recent 20-Ep Avg Reward: 333.6
+    [Progress] Steps: 230000 | Elapsed: 219.4s | Recent 20-Ep Avg Reward: 383.4
+    [Progress] Steps: 240000 | Elapsed: 227.8s | Recent 20-Ep Avg Reward: 416.6
+    [Progress] Steps: 250000 | Elapsed: 239.3s | Recent 20-Ep Avg Reward: 426.4
+    [Progress] Steps: 260000 | Elapsed: 252.1s | Recent 20-Ep Avg Reward: 307.1
+    [Progress] Steps: 270000 | Elapsed: 265.1s | Recent 20-Ep Avg Reward: 311.6
+    [Progress] Steps: 280000 | Elapsed: 283.8s | Recent 20-Ep Avg Reward: 439.1
+    [Progress] Steps: 290000 | Elapsed: 293.1s | Recent 20-Ep Avg Reward: 404.9
+    [Progress] Steps: 300000 | Elapsed: 305.5s | Recent 20-Ep Avg Reward: 386.7
+    [Progress] Steps: 310000 | Elapsed: 318.0s | Recent 20-Ep Avg Reward: 441.8
+    [Progress] Steps: 320000 | Elapsed: 336.5s | Recent 20-Ep Avg Reward: 458.1
+    [Progress] Steps: 330000 | Elapsed: 349.1s | Recent 20-Ep Avg Reward: 431.4
+    [Progress] Steps: 340000 | Elapsed: 361.8s | Recent 20-Ep Avg Reward: 318.1
+    [Progress] Steps: 350000 | Elapsed: 371.7s | Recent 20-Ep Avg Reward: 332.1
+    [Progress] Steps: 360000 | Elapsed: 380.1s | Recent 20-Ep Avg Reward: 462.4
+    [Progress] Steps: 370000 | Elapsed: 395.8s | Recent 20-Ep Avg Reward: 477.1
+    [Progress] Steps: 380000 | Elapsed: 408.4s | Recent 20-Ep Avg Reward: 473.2
+    [Progress] Steps: 390000 | Elapsed: 418.5s | Recent 20-Ep Avg Reward: 402.2
+    [Progress] Steps: 400000 | Elapsed: 428.6s | Recent 20-Ep Avg Reward: 365.7
+    [Progress] Steps: 410000 | Elapsed: 447.0s | Recent 20-Ep Avg Reward: 476.7
+    [Progress] Steps: 420000 | Elapsed: 459.8s | Recent 20-Ep Avg Reward: 449.3
+    [Progress] Steps: 430000 | Elapsed: 472.8s | Recent 20-Ep Avg Reward: 481.6
+    [Progress] Steps: 440000 | Elapsed: 485.3s | Recent 20-Ep Avg Reward: 305.1
+    [Progress] Steps: 450000 | Elapsed: 497.7s | Recent 20-Ep Avg Reward: 405.1
+    [Progress] Steps: 460000 | Elapsed: 516.3s | Recent 20-Ep Avg Reward: 431.2
+    [Progress] Steps: 470000 | Elapsed: 526.1s | Recent 20-Ep Avg Reward: 365.4
+    [Progress] Steps: 480000 | Elapsed: 537.8s | Recent 20-Ep Avg Reward: 255.7
+    [Progress] Steps: 490000 | Elapsed: 550.7s | Recent 20-Ep Avg Reward: 429.7
+    [Progress] Steps: 500000 | Elapsed: 569.0s | Recent 20-Ep Avg Reward: 460.9
+    [Progress] Steps: 510000 | Elapsed: 581.5s | Recent 20-Ep Avg Reward: 424.9
+    [Progress] Steps: 520000 | Elapsed: 594.1s | Recent 20-Ep Avg Reward: 217.7
+    [Progress] Steps: 530000 | Elapsed: 606.5s | Recent 20-Ep Avg Reward: 395.2
+    [Progress] Steps: 540000 | Elapsed: 619.1s | Recent 20-Ep Avg Reward: 447.2
+    [Progress] Steps: 550000 | Elapsed: 637.7s | Recent 20-Ep Avg Reward: 357.4
+    [Progress] Steps: 560000 | Elapsed: 650.3s | Recent 20-Ep Avg Reward: 449.8
+    [Progress] Steps: 570000 | Elapsed: 663.2s | Recent 20-Ep Avg Reward: 485.1
+    [Progress] Steps: 580000 | Elapsed: 675.9s | Recent 20-Ep Avg Reward: 490.9
+    [Progress] Steps: 590000 | Elapsed: 692.8s | Recent 20-Ep Avg Reward: 493.4
+    [Progress] Steps: 600000 | Elapsed: 705.3s | Recent 20-Ep Avg Reward: 481.0
+    [Progress] Steps: 610000 | Elapsed: 717.8s | Recent 20-Ep Avg Reward: 500.0
+
+    [SUCCESS] Target reward 495.0 reached at step 610000!
+    [SUCCESS] Time taken to converge: 717.79 seconds.
+[*] Final Result for Seed 101: Stopped at 610000 steps in 718.47 seconds
+[*] Data strictly saved to: ppo_results_seed_101\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_results_seed_101\final_ppo_model.zip
+
+--- Running Seed 102 (2/5) with 16 parallel workers ---
+    [Progress] Steps: 10000 | Elapsed: 14.0s | Recent 20-Ep Avg Reward: 22.6
+    [Progress] Steps: 20000 | Elapsed: 26.9s | Recent 20-Ep Avg Reward: 21.0
+    [Progress] Steps: 30000 | Elapsed: 39.3s | Recent 20-Ep Avg Reward: 27.1
+    [Progress] Steps: 40000 | Elapsed: 48.3s | Recent 20-Ep Avg Reward: 37.5
+    [Progress] Steps: 50000 | Elapsed: 67.1s | Recent 20-Ep Avg Reward: 42.6
+    [Progress] Steps: 60000 | Elapsed: 80.0s | Recent 20-Ep Avg Reward: 69.5
+    [Progress] Steps: 70000 | Elapsed: 92.7s | Recent 20-Ep Avg Reward: 77.7
+    [Progress] Steps: 80000 | Elapsed: 105.5s | Recent 20-Ep Avg Reward: 48.5
+    [Progress] Steps: 90000 | Elapsed: 115.1s | Recent 20-Ep Avg Reward: 73.7
+    [Progress] Steps: 100000 | Elapsed: 132.5s | Recent 20-Ep Avg Reward: 95.2
+    [Progress] Steps: 110000 | Elapsed: 145.1s | Recent 20-Ep Avg Reward: 147.6
+    [Progress] Steps: 120000 | Elapsed: 157.4s | Recent 20-Ep Avg Reward: 216.2
+    [Progress] Steps: 130000 | Elapsed: 170.0s | Recent 20-Ep Avg Reward: 269.0
+    [Progress] Steps: 140000 | Elapsed: 188.2s | Recent 20-Ep Avg Reward: 307.1
+    [Progress] Steps: 150000 | Elapsed: 200.6s | Recent 20-Ep Avg Reward: 360.9
+    [Progress] Steps: 160000 | Elapsed: 213.0s | Recent 20-Ep Avg Reward: 410.2
+    [Progress] Steps: 170000 | Elapsed: 225.5s | Recent 20-Ep Avg Reward: 384.2
+    [Progress] Steps: 180000 | Elapsed: 237.9s | Recent 20-Ep Avg Reward: 362.2
+    [Progress] Steps: 190000 | Elapsed: 256.0s | Recent 20-Ep Avg Reward: 451.8
+    [Progress] Steps: 200000 | Elapsed: 268.9s | Recent 20-Ep Avg Reward: 425.5
+    [Progress] Steps: 210000 | Elapsed: 281.8s | Recent 20-Ep Avg Reward: 370.8
+    [Progress] Steps: 220000 | Elapsed: 294.5s | Recent 20-Ep Avg Reward: 459.1
+    [Progress] Steps: 230000 | Elapsed: 313.0s | Recent 20-Ep Avg Reward: 487.7
+    [Progress] Steps: 240000 | Elapsed: 326.0s | Recent 20-Ep Avg Reward: 227.1
+    [Progress] Steps: 250000 | Elapsed: 338.6s | Recent 20-Ep Avg Reward: 79.6
+    [Progress] Steps: 260000 | Elapsed: 351.4s | Recent 20-Ep Avg Reward: 126.3
+    [Progress] Steps: 270000 | Elapsed: 364.0s | Recent 20-Ep Avg Reward: 245.3
+    [Progress] Steps: 280000 | Elapsed: 382.5s | Recent 20-Ep Avg Reward: 397.6
+    [Progress] Steps: 290000 | Elapsed: 395.2s | Recent 20-Ep Avg Reward: 461.1
+    [Progress] Steps: 300000 | Elapsed: 408.0s | Recent 20-Ep Avg Reward: 316.4
+    [Progress] Steps: 310000 | Elapsed: 420.7s | Recent 20-Ep Avg Reward: 439.0
+    [Progress] Steps: 320000 | Elapsed: 437.0s | Recent 20-Ep Avg Reward: 397.6
+    [Progress] Steps: 330000 | Elapsed: 446.0s | Recent 20-Ep Avg Reward: 318.6
+    [Progress] Steps: 340000 | Elapsed: 458.6s | Recent 20-Ep Avg Reward: 440.0
+    [Progress] Steps: 350000 | Elapsed: 470.9s | Recent 20-Ep Avg Reward: 453.6
+    [Progress] Steps: 360000 | Elapsed: 483.8s | Recent 20-Ep Avg Reward: 387.6
+    [Progress] Steps: 370000 | Elapsed: 502.4s | Recent 20-Ep Avg Reward: 476.3
+    [Progress] Steps: 380000 | Elapsed: 515.0s | Recent 20-Ep Avg Reward: 354.6
+    [Progress] Steps: 390000 | Elapsed: 527.6s | Recent 20-Ep Avg Reward: 436.8
+    [Progress] Steps: 400000 | Elapsed: 540.1s | Recent 20-Ep Avg Reward: 462.3
+    [Progress] Steps: 410000 | Elapsed: 558.7s | Recent 20-Ep Avg Reward: 460.1
+    [Progress] Steps: 420000 | Elapsed: 571.7s | Recent 20-Ep Avg Reward: 500.0
+
+    [SUCCESS] Target reward 495.0 reached at step 420000!
+    [SUCCESS] Time taken to converge: 571.68 seconds.
+[*] Final Result for Seed 102: Stopped at 420000 steps in 572.72 seconds
+[*] Data strictly saved to: ppo_results_seed_102\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_results_seed_102\final_ppo_model.zip
+
+--- Running Seed 103 (3/5) with 16 parallel workers ---
+    [Progress] Steps: 10000 | Elapsed: 14.2s | Recent 20-Ep Avg Reward: 25.8
+    [Progress] Steps: 20000 | Elapsed: 27.5s | Recent 20-Ep Avg Reward: 24.7
+    [Progress] Steps: 30000 | Elapsed: 40.9s | Recent 20-Ep Avg Reward: 23.9
+    [Progress] Steps: 40000 | Elapsed: 50.3s | Recent 20-Ep Avg Reward: 32.2
+    [Progress] Steps: 50000 | Elapsed: 69.0s | Recent 20-Ep Avg Reward: 44.6
+    [Progress] Steps: 60000 | Elapsed: 82.0s | Recent 20-Ep Avg Reward: 70.0
+    [Progress] Steps: 70000 | Elapsed: 95.1s | Recent 20-Ep Avg Reward: 71.5
+    [Progress] Steps: 80000 | Elapsed: 108.4s | Recent 20-Ep Avg Reward: 89.0
+    [Progress] Steps: 90000 | Elapsed: 121.6s | Recent 20-Ep Avg Reward: 105.8
+    [Progress] Steps: 100000 | Elapsed: 140.9s | Recent 20-Ep Avg Reward: 96.4
+    [Progress] Steps: 110000 | Elapsed: 153.6s | Recent 20-Ep Avg Reward: 180.2
+    [Progress] Steps: 120000 | Elapsed: 166.4s | Recent 20-Ep Avg Reward: 134.1
+    [Progress] Steps: 130000 | Elapsed: 179.2s | Recent 20-Ep Avg Reward: 145.6
+    [Progress] Steps: 140000 | Elapsed: 198.0s | Recent 20-Ep Avg Reward: 119.0
+    [Progress] Steps: 150000 | Elapsed: 210.8s | Recent 20-Ep Avg Reward: 161.3
+    [Progress] Steps: 160000 | Elapsed: 223.7s | Recent 20-Ep Avg Reward: 200.4
+    [Progress] Steps: 170000 | Elapsed: 236.5s | Recent 20-Ep Avg Reward: 198.0
+    [Progress] Steps: 180000 | Elapsed: 249.4s | Recent 20-Ep Avg Reward: 170.9
+    [Progress] Steps: 190000 | Elapsed: 268.1s | Recent 20-Ep Avg Reward: 297.7
+    [Progress] Steps: 200000 | Elapsed: 280.9s | Recent 20-Ep Avg Reward: 311.2
+    [Progress] Steps: 210000 | Elapsed: 293.7s | Recent 20-Ep Avg Reward: 309.7
+    [Progress] Steps: 220000 | Elapsed: 306.6s | Recent 20-Ep Avg Reward: 445.7
+    [Progress] Steps: 230000 | Elapsed: 325.4s | Recent 20-Ep Avg Reward: 302.2
+    [Progress] Steps: 240000 | Elapsed: 338.0s | Recent 20-Ep Avg Reward: 433.4
+    [Progress] Steps: 250000 | Elapsed: 350.6s | Recent 20-Ep Avg Reward: 332.4
+    [Progress] Steps: 260000 | Elapsed: 363.4s | Recent 20-Ep Avg Reward: 391.1
+    [Progress] Steps: 270000 | Elapsed: 376.2s | Recent 20-Ep Avg Reward: 261.6
+    [Progress] Steps: 280000 | Elapsed: 390.5s | Recent 20-Ep Avg Reward: 410.1
+    [Progress] Steps: 290000 | Elapsed: 402.2s | Recent 20-Ep Avg Reward: 458.4
+    [Progress] Steps: 300000 | Elapsed: 415.2s | Recent 20-Ep Avg Reward: 375.6
+    [Progress] Steps: 310000 | Elapsed: 428.3s | Recent 20-Ep Avg Reward: 397.9
+    [Progress] Steps: 320000 | Elapsed: 447.0s | Recent 20-Ep Avg Reward: 402.6
+    [Progress] Steps: 330000 | Elapsed: 459.8s | Recent 20-Ep Avg Reward: 426.6
+    [Progress] Steps: 340000 | Elapsed: 472.6s | Recent 20-Ep Avg Reward: 361.4
+    [Progress] Steps: 350000 | Elapsed: 485.4s | Recent 20-Ep Avg Reward: 421.8
+    [Progress] Steps: 360000 | Elapsed: 498.4s | Recent 20-Ep Avg Reward: 486.4
+    [Progress] Steps: 370000 | Elapsed: 517.4s | Recent 20-Ep Avg Reward: 497.9
+
+    [SUCCESS] Target reward 495.0 reached at step 370000!
+    [SUCCESS] Time taken to converge: 517.43 seconds.
+[*] Final Result for Seed 103: Stopped at 370000 steps in 518.47 seconds
+[*] Data strictly saved to: ppo_results_seed_103\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_results_seed_103\final_ppo_model.zip
+
+--- Running Seed 104 (4/5) with 16 parallel workers ---
+    [Progress] Steps: 10000 | Elapsed: 13.0s | Recent 20-Ep Avg Reward: 24.6
+    [Progress] Steps: 20000 | Elapsed: 25.8s | Recent 20-Ep Avg Reward: 21.8
+    [Progress] Steps: 30000 | Elapsed: 38.6s | Recent 20-Ep Avg Reward: 31.6
+    [Progress] Steps: 40000 | Elapsed: 51.3s | Recent 20-Ep Avg Reward: 38.3
+    [Progress] Steps: 50000 | Elapsed: 70.2s | Recent 20-Ep Avg Reward: 46.4
+    [Progress] Steps: 60000 | Elapsed: 83.0s | Recent 20-Ep Avg Reward: 80.5
+    [Progress] Steps: 70000 | Elapsed: 95.8s | Recent 20-Ep Avg Reward: 73.5
+    [Progress] Steps: 80000 | Elapsed: 108.7s | Recent 20-Ep Avg Reward: 68.5
+    [Progress] Steps: 90000 | Elapsed: 121.4s | Recent 20-Ep Avg Reward: 86.5
+    [Progress] Steps: 100000 | Elapsed: 140.3s | Recent 20-Ep Avg Reward: 115.2
+    [Progress] Steps: 110000 | Elapsed: 153.3s | Recent 20-Ep Avg Reward: 123.2
+    [Progress] Steps: 120000 | Elapsed: 166.2s | Recent 20-Ep Avg Reward: 118.6
+    [Progress] Steps: 130000 | Elapsed: 179.2s | Recent 20-Ep Avg Reward: 108.3
+    [Progress] Steps: 140000 | Elapsed: 197.7s | Recent 20-Ep Avg Reward: 160.9
+    [Progress] Steps: 150000 | Elapsed: 206.3s | Recent 20-Ep Avg Reward: 203.3
+    [Progress] Steps: 160000 | Elapsed: 218.8s | Recent 20-Ep Avg Reward: 266.9
+    [Progress] Steps: 170000 | Elapsed: 231.3s | Recent 20-Ep Avg Reward: 286.4
+    [Progress] Steps: 180000 | Elapsed: 244.2s | Recent 20-Ep Avg Reward: 174.3
+    [Progress] Steps: 190000 | Elapsed: 262.9s | Recent 20-Ep Avg Reward: 366.9
+    [Progress] Steps: 200000 | Elapsed: 275.6s | Recent 20-Ep Avg Reward: 376.7
+    [Progress] Steps: 210000 | Elapsed: 288.2s | Recent 20-Ep Avg Reward: 334.1
+    [Progress] Steps: 220000 | Elapsed: 301.1s | Recent 20-Ep Avg Reward: 345.2
+    [Progress] Steps: 230000 | Elapsed: 320.1s | Recent 20-Ep Avg Reward: 373.6
+    [Progress] Steps: 240000 | Elapsed: 332.9s | Recent 20-Ep Avg Reward: 359.2
+    [Progress] Steps: 250000 | Elapsed: 346.0s | Recent 20-Ep Avg Reward: 344.7
+    [Progress] Steps: 260000 | Elapsed: 358.9s | Recent 20-Ep Avg Reward: 210.3
+    [Progress] Steps: 270000 | Elapsed: 371.9s | Recent 20-Ep Avg Reward: 188.2
+    [Progress] Steps: 280000 | Elapsed: 390.8s | Recent 20-Ep Avg Reward: 239.6
+    [Progress] Steps: 290000 | Elapsed: 403.6s | Recent 20-Ep Avg Reward: 373.9
+    [Progress] Steps: 300000 | Elapsed: 416.4s | Recent 20-Ep Avg Reward: 308.6
+    [Progress] Steps: 310000 | Elapsed: 429.2s | Recent 20-Ep Avg Reward: 290.6
+    [Progress] Steps: 320000 | Elapsed: 448.0s | Recent 20-Ep Avg Reward: 388.8
+    [Progress] Steps: 330000 | Elapsed: 460.8s | Recent 20-Ep Avg Reward: 402.1
+    [Progress] Steps: 340000 | Elapsed: 473.5s | Recent 20-Ep Avg Reward: 187.6
+    [Progress] Steps: 350000 | Elapsed: 486.2s | Recent 20-Ep Avg Reward: 177.1
+    [Progress] Steps: 360000 | Elapsed: 499.0s | Recent 20-Ep Avg Reward: 138.4
+    [Progress] Steps: 370000 | Elapsed: 515.6s | Recent 20-Ep Avg Reward: 272.4
+    [Progress] Steps: 380000 | Elapsed: 524.0s | Recent 20-Ep Avg Reward: 439.7
+    [Progress] Steps: 390000 | Elapsed: 532.5s | Recent 20-Ep Avg Reward: 459.8
+    [Progress] Steps: 400000 | Elapsed: 540.8s | Recent 20-Ep Avg Reward: 376.6
+    [Progress] Steps: 410000 | Elapsed: 553.0s | Recent 20-Ep Avg Reward: 485.9
+    [Progress] Steps: 420000 | Elapsed: 561.3s | Recent 20-Ep Avg Reward: 466.2
+    [Progress] Steps: 430000 | Elapsed: 569.5s | Recent 20-Ep Avg Reward: 416.1
+    [Progress] Steps: 440000 | Elapsed: 577.8s | Recent 20-Ep Avg Reward: 426.6
+    [Progress] Steps: 450000 | Elapsed: 585.9s | Recent 20-Ep Avg Reward: 500.0
+
+    [SUCCESS] Target reward 495.0 reached at step 450000!
+    [SUCCESS] Time taken to converge: 585.95 seconds.
+[*] Final Result for Seed 104: Stopped at 450000 steps in 586.91 seconds
+[*] Data strictly saved to: ppo_results_seed_104\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_results_seed_104\final_ppo_model.zip
+
+--- Running Seed 105 (5/5) with 16 parallel workers ---
+    [Progress] Steps: 10000 | Elapsed: 10.2s | Recent 20-Ep Avg Reward: 25.6
+    [Progress] Steps: 20000 | Elapsed: 18.9s | Recent 20-Ep Avg Reward: 23.2
+    [Progress] Steps: 30000 | Elapsed: 27.5s | Recent 20-Ep Avg Reward: 31.3
+    [Progress] Steps: 40000 | Elapsed: 36.1s | Recent 20-Ep Avg Reward: 36.0
+    [Progress] Steps: 50000 | Elapsed: 51.4s | Recent 20-Ep Avg Reward: 51.4
+    [Progress] Steps: 60000 | Elapsed: 64.4s | Recent 20-Ep Avg Reward: 71.0
+    [Progress] Steps: 70000 | Elapsed: 77.4s | Recent 20-Ep Avg Reward: 64.0
+    [Progress] Steps: 80000 | Elapsed: 90.2s | Recent 20-Ep Avg Reward: 98.8
+    [Progress] Steps: 90000 | Elapsed: 103.1s | Recent 20-Ep Avg Reward: 107.5
+    [Progress] Steps: 100000 | Elapsed: 122.0s | Recent 20-Ep Avg Reward: 101.7
+    [Progress] Steps: 110000 | Elapsed: 134.8s | Recent 20-Ep Avg Reward: 132.9
+    [Progress] Steps: 120000 | Elapsed: 147.6s | Recent 20-Ep Avg Reward: 205.9
+    [Progress] Steps: 130000 | Elapsed: 160.5s | Recent 20-Ep Avg Reward: 220.8
+    [Progress] Steps: 140000 | Elapsed: 179.4s | Recent 20-Ep Avg Reward: 216.6
+    [Progress] Steps: 150000 | Elapsed: 190.0s | Recent 20-Ep Avg Reward: 314.6
+    [Progress] Steps: 160000 | Elapsed: 198.4s | Recent 20-Ep Avg Reward: 338.4
+    [Progress] Steps: 170000 | Elapsed: 206.8s | Recent 20-Ep Avg Reward: 379.8
+    [Progress] Steps: 180000 | Elapsed: 215.2s | Recent 20-Ep Avg Reward: 378.4
+    [Progress] Steps: 190000 | Elapsed: 226.8s | Recent 20-Ep Avg Reward: 348.4
+    [Progress] Steps: 200000 | Elapsed: 234.9s | Recent 20-Ep Avg Reward: 312.5
+    [Progress] Steps: 210000 | Elapsed: 243.0s | Recent 20-Ep Avg Reward: 362.6
+    [Progress] Steps: 220000 | Elapsed: 251.4s | Recent 20-Ep Avg Reward: 342.5
+    [Progress] Steps: 230000 | Elapsed: 263.5s | Recent 20-Ep Avg Reward: 344.1
+    [Progress] Steps: 240000 | Elapsed: 271.9s | Recent 20-Ep Avg Reward: 455.9
+    [Progress] Steps: 250000 | Elapsed: 280.2s | Recent 20-Ep Avg Reward: 485.5
+    [Progress] Steps: 260000 | Elapsed: 288.7s | Recent 20-Ep Avg Reward: 425.7
+    [Progress] Steps: 270000 | Elapsed: 296.9s | Recent 20-Ep Avg Reward: 396.4
+    [Progress] Steps: 280000 | Elapsed: 309.0s | Recent 20-Ep Avg Reward: 263.9
+    [Progress] Steps: 290000 | Elapsed: 317.5s | Recent 20-Ep Avg Reward: 211.8
+    [Progress] Steps: 300000 | Elapsed: 325.7s | Recent 20-Ep Avg Reward: 248.0
+    [Progress] Steps: 310000 | Elapsed: 333.9s | Recent 20-Ep Avg Reward: 480.7
+    [Progress] Steps: 320000 | Elapsed: 345.5s | Recent 20-Ep Avg Reward: 407.9
+    [Progress] Steps: 330000 | Elapsed: 353.7s | Recent 20-Ep Avg Reward: 373.1
+    [Progress] Steps: 340000 | Elapsed: 361.8s | Recent 20-Ep Avg Reward: 252.8
+    [Progress] Steps: 350000 | Elapsed: 370.1s | Recent 20-Ep Avg Reward: 181.2
+    [Progress] Steps: 360000 | Elapsed: 378.7s | Recent 20-Ep Avg Reward: 454.9
+    [Progress] Steps: 370000 | Elapsed: 390.8s | Recent 20-Ep Avg Reward: 461.1
+    [Progress] Steps: 380000 | Elapsed: 399.0s | Recent 20-Ep Avg Reward: 466.1
+    [Progress] Steps: 390000 | Elapsed: 407.5s | Recent 20-Ep Avg Reward: 500.0
+
+    [SUCCESS] Target reward 495.0 reached at step 390000!
+    [SUCCESS] Time taken to converge: 407.50 seconds.
+[*] Final Result for Seed 105: Stopped at 390000 steps in 408.04 seconds
+[*] Data strictly saved to: ppo_results_seed_105\ppo_learning_curve.csv
+[*] Model successfully saved to: ppo_results_seed_105\final_ppo_model.zip
+
+==================================================
+=== FINAL CONVERGENCE SUMMARY ACROSS 5 SEEDS ===
+Average Convergence Time: 560.92 sec (±100.81)
+Average Convergence Steps: 448000 steps (±85417)
+==================================================

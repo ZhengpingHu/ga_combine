@@ -1,0 +1,16 @@
+(base) PS D:\OneDrive\OneDrive - Dalhousie University\2026_Winter\ga_combine\source_code\power_analysis> python plot_power_profiling.py
+=========================================
+ 开始生成双系统独立能耗报告
+=========================================
+
+=== 开始处理并绘制分组: [GA] ===
+  [*] GA+YOLO (No Noise)   | GPU总能耗:  4454.22 J | CPU平均负载: 16.0%
+  [*] GA+YOLO (Noisy)      | GPU总能耗:  4566.24 J | CPU平均负载: 22.7%
+  [+] GA 图像成功保存至: submission_plots\system_energy_profiling_ga_ieee.png
+
+=== 开始处理并绘制分组: [PPO] ===
+  [*] PPO (No Noise)       | GPU总能耗:  7768.74 J | CPU平均负载: 17.9%
+  [*] PPO (Noisy)          | GPU总能耗:  3279.95 J | CPU平均负载: 40.1%
+  [+] PPO 图像成功保存至: submission_plots\system_energy_profiling_ppo_ieee.png
+
+[+] 全部两套图表生成完毕！
