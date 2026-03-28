@@ -34,9 +34,12 @@ class PendulumStateEstimator:
         print(f"[Estimator] Loading YOLO from {model_path} ...")
         self.model = YOLO(model_path).to(self.device)
         
-        # Initialize buffer for moving average and tracking previous smoothed state
+        # Initialize buffer for moving average and tracking previous states
         self.pos_buffer = deque(maxlen=self.window_size)
         self.prev_smoothed_pos: Optional[np.ndarray] = None
+        
+        # [NEW] Track the raw keypoints from the previous frame for continuity checking
+        self.prev_kpts: Optional[Tuple[np.ndarray, np.ndarray]] = None
 
     def clone(self):
         new_obj = PendulumStateEstimator.__new__(PendulumStateEstimator)
@@ -47,12 +50,14 @@ class PendulumStateEstimator:
         
         new_obj.pos_buffer = deque(maxlen=self.window_size)
         new_obj.prev_smoothed_pos = None
+        new_obj.prev_kpts = None
         return new_obj
 
     def begin_episode(self):
         # Clear buffer and history at the start of each episode
         self.pos_buffer.clear()
         self.prev_smoothed_pos = None
+        self.prev_kpts = None
 
     @torch.no_grad()
     def process_frame(self, frame_bgr: np.ndarray) -> Optional[np.ndarray]:
@@ -62,8 +67,31 @@ class PendulumStateEstimator:
         if r.keypoints is None or r.keypoints.xy.shape[1] < 2: return None
 
         kpts = r.keypoints.xy[0].cpu().numpy()
-        pivot_x, pivot_y = kpts[0]
-        tip_x, tip_y = kpts[1]
+        pivot = kpts[0]
+        tip = kpts[1]
+
+        # ==========================================
+        # [NEW] Continuous Keypoint Tracking & Swap Logic
+        # ==========================================
+        if self.prev_kpts is not None:
+            prev_pivot, prev_tip = self.prev_kpts
+            
+            # Calculate total pixel movement if we DO NOT swap
+            dist_no_swap = np.linalg.norm(pivot - prev_pivot) + np.linalg.norm(tip - prev_tip)
+            # Calculate total pixel movement if we DO swap
+            dist_swap = np.linalg.norm(tip - prev_pivot) + np.linalg.norm(pivot - prev_tip)
+            
+            # If swapping results in a significantly smaller movement trajectory,
+            # it means YOLO flipped the pivot and tip. We must swap them back.
+            if dist_swap < dist_no_swap:
+                pivot, tip = tip, pivot # Pythonic swap!
+                
+        # Save the current corrected keypoints for the next frame
+        self.prev_kpts = (pivot, tip)
+        # ==========================================
+
+        pivot_x, pivot_y = pivot
+        tip_x, tip_y = tip
         
         scale = self.img_size / 2.0 
         norm_x = (tip_x - pivot_x) / scale
@@ -71,7 +99,7 @@ class PendulumStateEstimator:
         
         current_raw_pos = np.array([norm_x, norm_y], dtype=np.float32)
         
-        # Append raw position to buffer
+        # Append strictly CORRECTED raw position to buffer
         self.pos_buffer.append(current_raw_pos)
         
         # Calculate smoothed position (Moving Average)
