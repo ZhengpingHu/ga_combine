@@ -1,0 +1,579 @@
+(neat) PS D:\Git\ga_combine\source_code\multi_ga_pendulum_smoo> python ga_pendulum.py --population 50 --generations 100 --subset-k 5 --seed-refresh-rate 0.4
+Starting Batch Experiment with seeds: [101, 102, 103, 104, 105]
+
+##################################################
+STARTING RUN WITH GLOBAL SEED: 101
+##################################################
+
+Global Seed set to: 101
+Initial subset: [2099, 2049, 2094, 2070, 2084] (Max Age: 10)
+Training Started. Logs: runs_pendulum/ga_1774047806_seed101
+   Detailed logs: runs_pendulum/ga_1774047806_seed101/detailed_history.csv
+   Checkpoints:   runs_pendulum/ga_1774047806_seed101/checkpoints/
+Gen 1 | Fit: 0.15 | MaxRaw: -1183.1 | Avg: -1278.3
+Gen 2 | Fit: 0.13 | MaxRaw: -991.7 | Avg: -1091.2
+Gen 3 | Fit: 0.15 | MaxRaw: -1025.7 | Avg: -1149.7
+Gen 4 | Fit: 0.16 | MaxRaw: -800.7 | Avg: -1073.7
+Gen 5 | Fit: 0.14 | MaxRaw: -878.6 | Avg: -1034.2
+Gen 6 | Fit: 0.14 | MaxRaw: -880.7 | Avg: -1069.3
+Gen 7 | Fit: 0.15 | MaxRaw: -1041.9 | Avg: -1217.7
+Gen 8 | Fit: 0.16 | MaxRaw: -786.0 | Avg: -1044.9
+Gen 9 | Fit: 0.15 | MaxRaw: -840.6 | Avg: -1020.3
+Gen 10 | Fit: 0.14 | MaxRaw: -888.4 | Avg: -1079.2
+Gen 11 | Fit: 0.14 | MaxRaw: -916.3 | Avg: -1140.0
+Gen 12 | Fit: 0.14 | MaxRaw: -916.8 | Avg: -1115.6
+Gen 13 | Fit: 0.16 | MaxRaw: -697.3 | Avg: -952.6
+Gen 14 | Fit: 0.16 | MaxRaw: -757.6 | Avg: -1015.1
+Gen 15 | Fit: 0.13 | MaxRaw: -893.0 | Avg: -1097.0
+Gen 16 | Fit: 0.15 | MaxRaw: -868.5 | Avg: -1077.1
+Gen 17 | Fit: 0.14 | MaxRaw: -767.8 | Avg: -1000.4
+Gen 18 | Fit: 0.16 | MaxRaw: -643.2 | Avg: -917.3
+Gen 19 | Fit: 0.14 | MaxRaw: -756.1 | Avg: -1007.5
+Gen 20 | Fit: 0.15 | MaxRaw: -665.2 | Avg: -960.0
+Gen 21 | Fit: 0.14 | MaxRaw: -838.3 | Avg: -1057.7
+Gen 22 | Fit: 0.16 | MaxRaw: -685.1 | Avg: -977.5
+Gen 23 | Fit: 0.13 | MaxRaw: -1127.9 | Avg: -1266.1
+Gen 24 | Fit: 0.14 | MaxRaw: -1044.5 | Avg: -1200.6
+Gen 25 | Fit: 0.14 | MaxRaw: -950.4 | Avg: -1134.4
+Gen 26 | Fit: 0.16 | MaxRaw: -908.0 | Avg: -1126.5
+Gen 27 | Fit: 0.14 | MaxRaw: -843.0 | Avg: -1073.5
+Gen 28 | Fit: 0.15 | MaxRaw: -772.3 | Avg: -1020.1
+Gen 29 | Fit: 0.16 | MaxRaw: -750.2 | Avg: -982.3
+Gen 30 | Fit: 0.15 | MaxRaw: -637.8 | Avg: -936.8
+Gen 31 | Fit: 0.14 | MaxRaw: -783.0 | Avg: -1057.9
+Gen 32 | Fit: 0.13 | MaxRaw: -794.9 | Avg: -1055.1
+Gen 33 | Fit: 0.16 | MaxRaw: -713.8 | Avg: -983.6
+Gen 34 | Fit: 0.18 | MaxRaw: -667.1 | Avg: -987.6
+Gen 35 | Fit: 0.16 | MaxRaw: -689.1 | Avg: -1004.5
+Gen 36 | Fit: 0.18 | MaxRaw: -663.8 | Avg: -992.5
+Gen 37 | Fit: 0.16 | MaxRaw: -730.6 | Avg: -978.2
+Gen 38 | Fit: 0.14 | MaxRaw: -763.1 | Avg: -1008.3
+Gen 39 | Fit: 0.17 | MaxRaw: -589.3 | Avg: -913.9
+Gen 40 | Fit: 0.14 | MaxRaw: -907.3 | Avg: -1148.2
+Gen 41 | Fit: 0.14 | MaxRaw: -789.8 | Avg: -1067.3
+Gen 42 | Fit: 0.17 | MaxRaw: -718.1 | Avg: -1027.5
+Gen 43 | Fit: 0.17 | MaxRaw: -586.6 | Avg: -959.7
+Gen 44 | Fit: 0.17 | MaxRaw: -650.4 | Avg: -950.9
+Gen 45 | Fit: 0.16 | MaxRaw: -653.4 | Avg: -927.7
+Gen 46 | Fit: 0.15 | MaxRaw: -761.9 | Avg: -1051.7
+Gen 47 | Fit: 0.15 | MaxRaw: -656.4 | Avg: -957.0
+Gen 48 | Fit: 0.15 | MaxRaw: -787.3 | Avg: -1046.5
+Gen 49 | Fit: 0.18 | MaxRaw: -660.6 | Avg: -967.0
+Gen 50 | Fit: 0.15 | MaxRaw: -741.0 | Avg: -1032.5
+Gen 51 | Fit: 0.18 | MaxRaw: -664.1 | Avg: -979.0
+Gen 52 | Fit: 0.19 | MaxRaw: -626.2 | Avg: -978.7
+Gen 53 | Fit: 0.16 | MaxRaw: -650.3 | Avg: -975.1
+Gen 54 | Fit: 0.13 | MaxRaw: -838.1 | Avg: -1122.8
+Gen 55 | Fit: 0.17 | MaxRaw: -688.8 | Avg: -987.1
+Gen 56 | Fit: 0.17 | MaxRaw: -607.1 | Avg: -979.8
+Gen 57 | Fit: 0.18 | MaxRaw: -582.8 | Avg: -969.1
+Gen 58 | Fit: 0.15 | MaxRaw: -829.4 | Avg: -1120.7
+Gen 59 | Fit: 0.15 | MaxRaw: -738.3 | Avg: -1034.6
+Gen 60 | Fit: 0.18 | MaxRaw: -604.2 | Avg: -954.0
+Gen 61 | Fit: 0.17 | MaxRaw: -737.4 | Avg: -1014.4
+Gen 62 | Fit: 0.16 | MaxRaw: -633.3 | Avg: -971.1
+Gen 63 | Fit: 0.15 | MaxRaw: -875.2 | Avg: -1172.6
+Gen 64 | Fit: 0.18 | MaxRaw: -673.9 | Avg: -1025.2
+Gen 65 | Fit: 0.17 | MaxRaw: -604.2 | Avg: -956.2
+Gen 66 | Fit: 0.16 | MaxRaw: -781.2 | Avg: -1096.1
+Gen 67 | Fit: 0.19 | MaxRaw: -712.0 | Avg: -1107.7
+Gen 68 | Fit: 0.18 | MaxRaw: -727.8 | Avg: -1075.5
+Gen 69 | Fit: 0.16 | MaxRaw: -625.1 | Avg: -979.1
+Gen 70 | Fit: 0.14 | MaxRaw: -855.1 | Avg: -1115.8
+Gen 71 | Fit: 0.16 | MaxRaw: -612.8 | Avg: -934.3
+Gen 72 | Fit: 0.16 | MaxRaw: -599.3 | Avg: -885.6
+Gen 73 | Fit: 0.16 | MaxRaw: -706.0 | Avg: -984.8
+Gen 74 | Fit: 0.17 | MaxRaw: -578.6 | Avg: -886.9
+Gen 75 | Fit: 0.15 | MaxRaw: -593.1 | Avg: -905.5
+Gen 76 | Fit: 0.14 | MaxRaw: -795.4 | Avg: -1036.3
+Gen 77 | Fit: 0.15 | MaxRaw: -655.3 | Avg: -957.0
+Gen 78 | Fit: 0.16 | MaxRaw: -719.7 | Avg: -1054.8
+Gen 79 | Fit: 0.15 | MaxRaw: -746.9 | Avg: -1044.6
+Gen 80 | Fit: 0.15 | MaxRaw: -667.1 | Avg: -950.6
+Gen 81 | Fit: 0.17 | MaxRaw: -577.2 | Avg: -937.5
+Gen 82 | Fit: 0.14 | MaxRaw: -881.8 | Avg: -1140.7
+Gen 83 | Fit: 0.19 | MaxRaw: -602.8 | Avg: -1016.0
+Gen 84 | Fit: 0.18 | MaxRaw: -705.1 | Avg: -1011.1
+Gen 85 | Fit: 0.18 | MaxRaw: -575.8 | Avg: -966.9
+Gen 86 | Fit: 0.15 | MaxRaw: -854.7 | Avg: -1114.7
+Gen 87 | Fit: 0.18 | MaxRaw: -630.4 | Avg: -1027.4
+Gen 88 | Fit: 0.21 | MaxRaw: -611.0 | Avg: -1000.2
+Gen 89 | Fit: 0.17 | MaxRaw: -630.6 | Avg: -941.4
+Gen 90 | Fit: 0.17 | MaxRaw: -581.5 | Avg: -987.6
+Gen 91 | Fit: 0.17 | MaxRaw: -607.6 | Avg: -969.4
+Gen 92 | Fit: 0.14 | MaxRaw: -778.7 | Avg: -1022.6
+Gen 93 | Fit: 0.14 | MaxRaw: -847.3 | Avg: -1138.1
+Gen 94 | Fit: 0.17 | MaxRaw: -668.3 | Avg: -1013.1
+Gen 95 | Fit: 0.17 | MaxRaw: -712.7 | Avg: -1052.8
+Gen 96 | Fit: 0.15 | MaxRaw: -759.4 | Avg: -1085.8
+Gen 97 | Fit: 0.16 | MaxRaw: -731.2 | Avg: -1026.7
+Gen 98 | Fit: 0.17 | MaxRaw: -664.5 | Avg: -1001.1
+Gen 99 | Fit: 0.16 | MaxRaw: -618.0 | Avg: -957.8
+Gen 100 | Fit: 0.17 | MaxRaw: -727.6 | Avg: -991.0
+
+Final Robustness Check (All 100 Seeds)...
+100%|████████████████████████████████████████████████████████████████████████████| 5000/5000 [5:34:53<00:00,  4.02s/it]
+Best Agent Score: -815.22
+Finish. Results in runs_pendulum/ga_1774047806_seed101
+
+##################################################
+STARTING RUN WITH GLOBAL SEED: 102
+##################################################
+
+Global Seed set to: 102
+Initial subset: [2043, 2111, 2103, 2070, 2046] (Max Age: 10)
+Training Started. Logs: runs_pendulum/ga_1774168889_seed102
+   Detailed logs: runs_pendulum/ga_1774168889_seed102/detailed_history.csv
+   Checkpoints:   runs_pendulum/ga_1774168889_seed102/checkpoints/
+Gen 1 | Fit: 0.15 | MaxRaw: -1195.8 | Avg: -1286.3
+Gen 2 | Fit: 0.13 | MaxRaw: -890.2 | Avg: -1007.8
+Gen 3 | Fit: 0.14 | MaxRaw: -906.4 | Avg: -1113.4
+Gen 4 | Fit: 0.14 | MaxRaw: -880.6 | Avg: -1039.5
+Gen 5 | Fit: 0.14 | MaxRaw: -829.6 | Avg: -958.0
+Gen 6 | Fit: 0.13 | MaxRaw: -1041.8 | Avg: -1189.7
+Gen 7 | Fit: 0.16 | MaxRaw: -807.0 | Avg: -1059.7
+Gen 8 | Fit: 0.17 | MaxRaw: -817.3 | Avg: -1065.4
+Gen 9 | Fit: 0.17 | MaxRaw: -796.2 | Avg: -1030.2
+Gen 10 | Fit: 0.14 | MaxRaw: -1014.4 | Avg: -1212.7
+Gen 11 | Fit: 0.15 | MaxRaw: -799.4 | Avg: -1028.2
+Gen 12 | Fit: 0.13 | MaxRaw: -943.4 | Avg: -1077.7
+Gen 13 | Fit: 0.16 | MaxRaw: -859.3 | Avg: -1073.9
+Gen 14 | Fit: 0.14 | MaxRaw: -853.3 | Avg: -1111.4
+Gen 15 | Fit: 0.14 | MaxRaw: -882.9 | Avg: -1072.7
+Gen 16 | Fit: 0.17 | MaxRaw: -690.0 | Avg: -976.5
+Gen 17 | Fit: 0.14 | MaxRaw: -1043.0 | Avg: -1249.5
+Gen 18 | Fit: 0.16 | MaxRaw: -778.2 | Avg: -1092.2
+Gen 19 | Fit: 0.13 | MaxRaw: -808.7 | Avg: -1057.5
+Gen 20 | Fit: 0.15 | MaxRaw: -710.4 | Avg: -964.3
+Gen 21 | Fit: 0.17 | MaxRaw: -590.3 | Avg: -922.2
+Gen 22 | Fit: 0.13 | MaxRaw: -1027.2 | Avg: -1190.2
+Gen 23 | Fit: 0.15 | MaxRaw: -898.4 | Avg: -1077.6
+Gen 24 | Fit: 0.18 | MaxRaw: -732.8 | Avg: -944.0
+Gen 25 | Fit: 0.13 | MaxRaw: -799.5 | Avg: -1103.9
+Gen 26 | Fit: 0.17 | MaxRaw: -756.0 | Avg: -1039.3
+Gen 27 | Fit: 0.18 | MaxRaw: -566.3 | Avg: -919.7
+Gen 28 | Fit: 0.15 | MaxRaw: -742.5 | Avg: -995.3
+Gen 29 | Fit: 0.13 | MaxRaw: -778.8 | Avg: -1014.9
+Gen 30 | Fit: 0.17 | MaxRaw: -578.6 | Avg: -911.0
+Gen 31 | Fit: 0.16 | MaxRaw: -604.2 | Avg: -908.7
+Gen 32 | Fit: 0.16 | MaxRaw: -766.8 | Avg: -1038.0
+Gen 33 | Fit: 0.14 | MaxRaw: -769.2 | Avg: -1031.3
+Gen 34 | Fit: 0.13 | MaxRaw: -889.5 | Avg: -1114.9
+Gen 35 | Fit: 0.14 | MaxRaw: -859.4 | Avg: -1065.9
+Gen 36 | Fit: 0.14 | MaxRaw: -807.0 | Avg: -1020.8
+Gen 37 | Fit: 0.14 | MaxRaw: -855.2 | Avg: -1084.5
+Gen 38 | Fit: 0.16 | MaxRaw: -626.7 | Avg: -911.0
+Gen 39 | Fit: 0.15 | MaxRaw: -722.8 | Avg: -966.4
+Gen 40 | Fit: 0.17 | MaxRaw: -649.7 | Avg: -916.5
+Gen 41 | Fit: 0.14 | MaxRaw: -831.6 | Avg: -1026.7
+Gen 42 | Fit: 0.16 | MaxRaw: -629.1 | Avg: -905.6
+Gen 43 | Fit: 0.13 | MaxRaw: -824.1 | Avg: -1033.8
+Gen 44 | Fit: 0.17 | MaxRaw: -649.9 | Avg: -940.1
+Gen 45 | Fit: 0.13 | MaxRaw: -792.8 | Avg: -1011.9
+Gen 46 | Fit: 0.13 | MaxRaw: -849.7 | Avg: -1067.3
+Gen 47 | Fit: 0.15 | MaxRaw: -706.5 | Avg: -945.6
+Gen 48 | Fit: 0.17 | MaxRaw: -624.6 | Avg: -948.8
+Gen 49 | Fit: 0.16 | MaxRaw: -733.5 | Avg: -943.2
+Gen 50 | Fit: 0.15 | MaxRaw: -719.7 | Avg: -954.2
+Gen 51 | Fit: 0.15 | MaxRaw: -935.8 | Avg: -1141.1
+Gen 52 | Fit: 0.18 | MaxRaw: -705.6 | Avg: -996.8
+Gen 53 | Fit: 0.14 | MaxRaw: -953.7 | Avg: -1144.6
+Gen 54 | Fit: 0.15 | MaxRaw: -731.5 | Avg: -982.3
+Gen 55 | Fit: 0.15 | MaxRaw: -728.3 | Avg: -1007.4
+Gen 56 | Fit: 0.16 | MaxRaw: -738.4 | Avg: -997.7
+Gen 57 | Fit: 0.17 | MaxRaw: -746.7 | Avg: -1048.3
+Gen 58 | Fit: 0.15 | MaxRaw: -787.4 | Avg: -1049.9
+Gen 59 | Fit: 0.17 | MaxRaw: -653.6 | Avg: -944.7
+Gen 60 | Fit: 0.16 | MaxRaw: -694.2 | Avg: -966.8
+Gen 61 | Fit: 0.15 | MaxRaw: -700.5 | Avg: -992.4
+Gen 62 | Fit: 0.16 | MaxRaw: -631.9 | Avg: -898.2
+Gen 63 | Fit: 0.15 | MaxRaw: -650.6 | Avg: -938.0
+Gen 64 | Fit: 0.16 | MaxRaw: -664.2 | Avg: -925.3
+Gen 65 | Fit: 0.15 | MaxRaw: -659.4 | Avg: -883.3
+Gen 66 | Fit: 0.16 | MaxRaw: -739.5 | Avg: -988.7
+Gen 67 | Fit: 0.17 | MaxRaw: -671.8 | Avg: -948.7
+Gen 68 | Fit: 0.18 | MaxRaw: -612.1 | Avg: -961.2
+Gen 69 | Fit: 0.16 | MaxRaw: -706.5 | Avg: -997.6
+Gen 70 | Fit: 0.17 | MaxRaw: -732.9 | Avg: -973.4
+Gen 71 | Fit: 0.15 | MaxRaw: -655.9 | Avg: -916.9
+Gen 72 | Fit: 0.13 | MaxRaw: -757.2 | Avg: -989.4
+Gen 73 | Fit: 0.15 | MaxRaw: -634.7 | Avg: -891.7
+Gen 74 | Fit: 0.14 | MaxRaw: -815.8 | Avg: -1057.3
+Gen 75 | Fit: 0.15 | MaxRaw: -744.2 | Avg: -1005.5
+Gen 76 | Fit: 0.17 | MaxRaw: -623.0 | Avg: -970.0
+Gen 77 | Fit: 0.16 | MaxRaw: -650.6 | Avg: -916.5
+Gen 78 | Fit: 0.17 | MaxRaw: -697.2 | Avg: -999.8
+Gen 79 | Fit: 0.17 | MaxRaw: -665.7 | Avg: -935.4
+Gen 80 | Fit: 0.15 | MaxRaw: -717.5 | Avg: -998.4
+Gen 81 | Fit: 0.18 | MaxRaw: -623.9 | Avg: -936.0
+Gen 82 | Fit: 0.16 | MaxRaw: -661.2 | Avg: -967.9
+Gen 83 | Fit: 0.16 | MaxRaw: -681.5 | Avg: -933.3
+Gen 84 | Fit: 0.17 | MaxRaw: -646.5 | Avg: -957.5
+Gen 85 | Fit: 0.17 | MaxRaw: -610.5 | Avg: -934.2
+Gen 86 | Fit: 0.15 | MaxRaw: -799.1 | Avg: -1061.8
+Gen 87 | Fit: 0.17 | MaxRaw: -682.9 | Avg: -978.0
+Gen 88 | Fit: 0.15 | MaxRaw: -702.6 | Avg: -971.8
+Gen 89 | Fit: 0.17 | MaxRaw: -667.9 | Avg: -946.5
+Gen 90 | Fit: 0.17 | MaxRaw: -717.7 | Avg: -1020.5
+Gen 91 | Fit: 0.17 | MaxRaw: -695.1 | Avg: -1026.9
+Gen 92 | Fit: 0.16 | MaxRaw: -654.6 | Avg: -983.3
+Gen 93 | Fit: 0.18 | MaxRaw: -592.0 | Avg: -944.7
+Gen 94 | Fit: 0.16 | MaxRaw: -796.7 | Avg: -1054.2
+Gen 95 | Fit: 0.18 | MaxRaw: -629.0 | Avg: -989.3
+Gen 96 | Fit: 0.14 | MaxRaw: -698.9 | Avg: -960.3
+Gen 97 | Fit: 0.17 | MaxRaw: -628.9 | Avg: -919.5
+Gen 98 | Fit: 0.14 | MaxRaw: -815.6 | Avg: -1052.8
+Gen 99 | Fit: 0.18 | MaxRaw: -715.0 | Avg: -969.5
+Gen 100 | Fit: 0.17 | MaxRaw: -734.0 | Avg: -1009.5
+
+Final Robustness Check (All 100 Seeds)...
+100%|████████████████████████████████████████████████████████████████████████████| 5000/5000 [5:32:16<00:00,  3.99s/it]
+Best Agent Score: -777.77
+Finish. Results in runs_pendulum/ga_1774168889_seed102
+
+##################################################
+STARTING RUN WITH GLOBAL SEED: 103
+##################################################
+
+Global Seed set to: 103
+Initial subset: [2116, 2083, 2117, 2114, 2119] (Max Age: 10)
+Training Started. Logs: runs_pendulum/ga_1774289558_seed103
+   Detailed logs: runs_pendulum/ga_1774289558_seed103/detailed_history.csv
+   Checkpoints:   runs_pendulum/ga_1774289558_seed103/checkpoints/
+Gen 1 | Fit: 0.11 | MaxRaw: -1336.9 | Avg: -1382.0
+Gen 2 | Fit: 0.17 | MaxRaw: -1007.4 | Avg: -1093.1
+Gen 3 | Fit: 0.18 | MaxRaw: -857.2 | Avg: -1019.4
+Gen 4 | Fit: 0.16 | MaxRaw: -793.8 | Avg: -999.4
+Gen 5 | Fit: 0.14 | MaxRaw: -904.9 | Avg: -1082.8
+Gen 6 | Fit: 0.14 | MaxRaw: -941.7 | Avg: -1116.0
+Gen 7 | Fit: 0.16 | MaxRaw: -1096.6 | Avg: -1247.9
+Gen 8 | Fit: 0.13 | MaxRaw: -961.3 | Avg: -1134.4
+Gen 9 | Fit: 0.15 | MaxRaw: -938.7 | Avg: -1151.6
+Gen 10 | Fit: 0.16 | MaxRaw: -919.2 | Avg: -1096.1
+Gen 11 | Fit: 0.14 | MaxRaw: -918.2 | Avg: -1069.2
+Gen 12 | Fit: 0.16 | MaxRaw: -936.3 | Avg: -1088.0
+Gen 13 | Fit: 0.18 | MaxRaw: -981.0 | Avg: -1257.9
+Gen 14 | Fit: 0.12 | MaxRaw: -1232.9 | Avg: -1301.6
+Gen 15 | Fit: 0.12 | MaxRaw: -1179.1 | Avg: -1285.1
+Gen 16 | Fit: 0.12 | MaxRaw: -965.0 | Avg: -1238.3
+Gen 17 | Fit: 0.14 | MaxRaw: -912.3 | Avg: -1143.3
+Gen 18 | Fit: 0.14 | MaxRaw: -899.5 | Avg: -1119.6
+Gen 19 | Fit: 0.14 | MaxRaw: -1022.3 | Avg: -1212.1
+Gen 20 | Fit: 0.14 | MaxRaw: -868.8 | Avg: -1139.4
+Gen 21 | Fit: 0.19 | MaxRaw: -662.6 | Avg: -1002.0
+Gen 22 | Fit: 0.14 | MaxRaw: -877.8 | Avg: -1128.8
+Gen 23 | Fit: 0.14 | MaxRaw: -957.7 | Avg: -1132.6
+Gen 24 | Fit: 0.15 | MaxRaw: -710.0 | Avg: -973.1
+Gen 25 | Fit: 0.15 | MaxRaw: -769.8 | Avg: -1035.0
+Gen 26 | Fit: 0.16 | MaxRaw: -778.4 | Avg: -1025.1
+Gen 27 | Fit: 0.15 | MaxRaw: -854.4 | Avg: -1087.6
+Gen 28 | Fit: 0.14 | MaxRaw: -893.5 | Avg: -1090.7
+Gen 29 | Fit: 0.18 | MaxRaw: -625.3 | Avg: -925.7
+Gen 30 | Fit: 0.18 | MaxRaw: -691.8 | Avg: -999.3
+Gen 31 | Fit: 0.17 | MaxRaw: -691.0 | Avg: -966.2
+Gen 32 | Fit: 0.15 | MaxRaw: -710.0 | Avg: -928.5
+Gen 33 | Fit: 0.15 | MaxRaw: -646.4 | Avg: -932.7
+Gen 34 | Fit: 0.14 | MaxRaw: -774.5 | Avg: -1014.2
+Gen 35 | Fit: 0.15 | MaxRaw: -786.3 | Avg: -1023.8
+Gen 36 | Fit: 0.13 | MaxRaw: -800.7 | Avg: -1034.4
+Gen 37 | Fit: 0.15 | MaxRaw: -602.2 | Avg: -872.2
+Gen 38 | Fit: 0.13 | MaxRaw: -814.5 | Avg: -1050.8
+Gen 39 | Fit: 0.17 | MaxRaw: -691.2 | Avg: -974.8
+Gen 40 | Fit: 0.15 | MaxRaw: -711.5 | Avg: -997.1
+Gen 41 | Fit: 0.14 | MaxRaw: -781.9 | Avg: -1031.7
+Gen 42 | Fit: 0.17 | MaxRaw: -621.2 | Avg: -939.2
+Gen 43 | Fit: 0.17 | MaxRaw: -643.0 | Avg: -949.3
+Gen 44 | Fit: 0.15 | MaxRaw: -712.3 | Avg: -1013.6
+Gen 45 | Fit: 0.14 | MaxRaw: -898.1 | Avg: -1113.7
+Gen 46 | Fit: 0.19 | MaxRaw: -622.4 | Avg: -918.4
+Gen 47 | Fit: 0.17 | MaxRaw: -656.3 | Avg: -950.5
+Gen 48 | Fit: 0.16 | MaxRaw: -607.1 | Avg: -902.8
+Gen 49 | Fit: 0.17 | MaxRaw: -605.6 | Avg: -910.7
+Gen 50 | Fit: 0.15 | MaxRaw: -737.4 | Avg: -1034.9
+Gen 51 | Fit: 0.14 | MaxRaw: -782.7 | Avg: -1038.8
+Gen 52 | Fit: 0.14 | MaxRaw: -802.2 | Avg: -1043.8
+Gen 53 | Fit: 0.18 | MaxRaw: -622.6 | Avg: -923.4
+Gen 54 | Fit: 0.16 | MaxRaw: -600.1 | Avg: -884.7
+Gen 55 | Fit: 0.14 | MaxRaw: -747.0 | Avg: -984.0
+Gen 56 | Fit: 0.17 | MaxRaw: -606.8 | Avg: -911.7
+Gen 57 | Fit: 0.16 | MaxRaw: -647.5 | Avg: -899.8
+Gen 58 | Fit: 0.14 | MaxRaw: -687.6 | Avg: -941.3
+Gen 59 | Fit: 0.15 | MaxRaw: -821.5 | Avg: -1109.5
+Gen 60 | Fit: 0.15 | MaxRaw: -628.5 | Avg: -892.0
+Gen 61 | Fit: 0.17 | MaxRaw: -686.5 | Avg: -969.8
+Gen 62 | Fit: 0.17 | MaxRaw: -665.0 | Avg: -912.2
+Gen 63 | Fit: 0.16 | MaxRaw: -641.6 | Avg: -891.8
+Gen 64 | Fit: 0.15 | MaxRaw: -877.3 | Avg: -1058.1
+Gen 65 | Fit: 0.16 | MaxRaw: -735.9 | Avg: -969.3
+Gen 66 | Fit: 0.16 | MaxRaw: -631.9 | Avg: -920.2
+Gen 67 | Fit: 0.17 | MaxRaw: -604.6 | Avg: -929.1
+Gen 68 | Fit: 0.18 | MaxRaw: -646.7 | Avg: -926.2
+Gen 69 | Fit: 0.14 | MaxRaw: -815.4 | Avg: -1057.7
+Gen 70 | Fit: 0.17 | MaxRaw: -664.5 | Avg: -952.8
+Gen 71 | Fit: 0.16 | MaxRaw: -645.4 | Avg: -920.7
+Gen 72 | Fit: 0.15 | MaxRaw: -732.7 | Avg: -998.3
+Gen 73 | Fit: 0.15 | MaxRaw: -783.2 | Avg: -1035.3
+Gen 74 | Fit: 0.17 | MaxRaw: -594.2 | Avg: -907.1
+Gen 75 | Fit: 0.16 | MaxRaw: -633.2 | Avg: -922.4
+Gen 76 | Fit: 0.14 | MaxRaw: -702.8 | Avg: -933.9
+Gen 77 | Fit: 0.16 | MaxRaw: -712.6 | Avg: -975.2
+Gen 78 | Fit: 0.16 | MaxRaw: -648.6 | Avg: -917.5
+Gen 79 | Fit: 0.15 | MaxRaw: -652.2 | Avg: -887.0
+Gen 80 | Fit: 0.17 | MaxRaw: -623.0 | Avg: -926.4
+Gen 81 | Fit: 0.18 | MaxRaw: -643.2 | Avg: -964.7
+Gen 82 | Fit: 0.16 | MaxRaw: -582.8 | Avg: -921.1
+Gen 83 | Fit: 0.16 | MaxRaw: -624.3 | Avg: -910.3
+Gen 84 | Fit: 0.17 | MaxRaw: -687.7 | Avg: -972.9
+Gen 85 | Fit: 0.13 | MaxRaw: -584.1 | Avg: -930.7
+Gen 86 | Fit: 0.15 | MaxRaw: -707.3 | Avg: -985.8
+Gen 87 | Fit: 0.16 | MaxRaw: -633.8 | Avg: -911.9
+Gen 88 | Fit: 0.17 | MaxRaw: -654.2 | Avg: -969.9
+Gen 89 | Fit: 0.14 | MaxRaw: -756.0 | Avg: -995.9
+Gen 90 | Fit: 0.13 | MaxRaw: -870.3 | Avg: -1098.8
+Gen 91 | Fit: 0.15 | MaxRaw: -725.4 | Avg: -996.3
+Gen 92 | Fit: 0.15 | MaxRaw: -697.9 | Avg: -984.6
+Gen 93 | Fit: 0.17 | MaxRaw: -692.1 | Avg: -969.0
+Gen 94 | Fit: 0.17 | MaxRaw: -689.2 | Avg: -937.0
+Gen 95 | Fit: 0.17 | MaxRaw: -668.3 | Avg: -937.6
+Gen 96 | Fit: 0.15 | MaxRaw: -703.2 | Avg: -947.7
+Gen 97 | Fit: 0.16 | MaxRaw: -647.3 | Avg: -915.1
+Gen 98 | Fit: 0.17 | MaxRaw: -647.3 | Avg: -940.8
+Gen 99 | Fit: 0.13 | MaxRaw: -666.9 | Avg: -982.7
+Gen 100 | Fit: 0.16 | MaxRaw: -704.8 | Avg: -952.2
+
+Final Robustness Check (All 100 Seeds)...
+100%|████████████████████████████████████████████████████████████████████████████| 5000/5000 [5:33:07<00:00,  4.00s/it]
+Best Agent Score: -788.48
+Finish. Results in runs_pendulum/ga_1774289558_seed103
+
+##################################################
+STARTING RUN WITH GLOBAL SEED: 104
+##################################################
+
+Global Seed set to: 104
+Initial subset: [2027, 2050, 2118, 2123, 2054] (Max Age: 10)
+Training Started. Logs: runs_pendulum/ga_1774410108_seed104
+   Detailed logs: runs_pendulum/ga_1774410108_seed104/detailed_history.csv
+   Checkpoints:   runs_pendulum/ga_1774410108_seed104/checkpoints/
+Gen 1 | Fit: 0.15 | MaxRaw: -1246.4 | Avg: -1319.0
+Gen 2 | Fit: 0.17 | MaxRaw: -979.0 | Avg: -1156.6
+Gen 3 | Fit: 0.13 | MaxRaw: -1065.3 | Avg: -1196.7
+Gen 4 | Fit: 0.12 | MaxRaw: -860.7 | Avg: -1031.3
+Gen 5 | Fit: 0.14 | MaxRaw: -907.4 | Avg: -1094.7
+Gen 6 | Fit: 0.14 | MaxRaw: -1008.5 | Avg: -1171.7
+Gen 7 | Fit: 0.15 | MaxRaw: -808.3 | Avg: -990.3
+Gen 8 | Fit: 0.14 | MaxRaw: -847.9 | Avg: -1049.7
+Gen 9 | Fit: 0.14 | MaxRaw: -873.6 | Avg: -1054.5
+Gen 10 | Fit: 0.17 | MaxRaw: -715.0 | Avg: -981.0
+Gen 11 | Fit: 0.14 | MaxRaw: -1029.5 | Avg: -1152.4
+Gen 12 | Fit: 0.13 | MaxRaw: -886.5 | Avg: -1033.1
+Gen 13 | Fit: 0.13 | MaxRaw: -868.7 | Avg: -1070.1
+Gen 14 | Fit: 0.15 | MaxRaw: -1080.6 | Avg: -1216.7
+Gen 15 | Fit: 0.15 | MaxRaw: -894.5 | Avg: -1062.1
+Gen 16 | Fit: 0.17 | MaxRaw: -695.3 | Avg: -987.7
+Gen 17 | Fit: 0.17 | MaxRaw: -674.2 | Avg: -967.6
+Gen 18 | Fit: 0.13 | MaxRaw: -1000.8 | Avg: -1166.4
+Gen 19 | Fit: 0.16 | MaxRaw: -627.9 | Avg: -926.8
+Gen 20 | Fit: 0.14 | MaxRaw: -785.7 | Avg: -1025.6
+Gen 21 | Fit: 0.17 | MaxRaw: -619.6 | Avg: -873.4
+Gen 22 | Fit: 0.13 | MaxRaw: -875.4 | Avg: -1088.5
+Gen 23 | Fit: 0.13 | MaxRaw: -883.7 | Avg: -1073.9
+Gen 24 | Fit: 0.13 | MaxRaw: -823.4 | Avg: -1039.3
+Gen 25 | Fit: 0.14 | MaxRaw: -829.2 | Avg: -1069.4
+Gen 26 | Fit: 0.16 | MaxRaw: -713.3 | Avg: -962.2
+Gen 27 | Fit: 0.15 | MaxRaw: -707.1 | Avg: -985.9
+Gen 28 | Fit: 0.16 | MaxRaw: -590.7 | Avg: -944.3
+Gen 29 | Fit: 0.16 | MaxRaw: -643.2 | Avg: -970.2
+Gen 30 | Fit: 0.17 | MaxRaw: -618.6 | Avg: -939.3
+Gen 31 | Fit: 0.14 | MaxRaw: -931.2 | Avg: -1139.3
+Gen 32 | Fit: 0.13 | MaxRaw: -816.1 | Avg: -1060.3
+Gen 33 | Fit: 0.18 | MaxRaw: -692.7 | Avg: -996.3
+Gen 34 | Fit: 0.15 | MaxRaw: -769.7 | Avg: -1013.1
+Gen 35 | Fit: 0.16 | MaxRaw: -789.8 | Avg: -1028.3
+Gen 36 | Fit: 0.16 | MaxRaw: -636.5 | Avg: -916.8
+Gen 37 | Fit: 0.13 | MaxRaw: -877.2 | Avg: -1082.5
+Gen 38 | Fit: 0.13 | MaxRaw: -840.8 | Avg: -1084.2
+Gen 39 | Fit: 0.17 | MaxRaw: -726.0 | Avg: -1011.8
+Gen 40 | Fit: 0.15 | MaxRaw: -761.9 | Avg: -976.8
+Gen 41 | Fit: 0.16 | MaxRaw: -688.1 | Avg: -961.9
+Gen 42 | Fit: 0.14 | MaxRaw: -793.8 | Avg: -1014.8
+Gen 43 | Fit: 0.16 | MaxRaw: -799.0 | Avg: -1036.1
+Gen 44 | Fit: 0.16 | MaxRaw: -714.5 | Avg: -984.9
+Gen 45 | Fit: 0.14 | MaxRaw: -879.8 | Avg: -1118.2
+Gen 46 | Fit: 0.15 | MaxRaw: -842.3 | Avg: -1081.8
+Gen 47 | Fit: 0.19 | MaxRaw: -625.9 | Avg: -983.7
+Gen 48 | Fit: 0.14 | MaxRaw: -814.7 | Avg: -1108.2
+Gen 49 | Fit: 0.16 | MaxRaw: -799.5 | Avg: -1032.7
+Gen 50 | Fit: 0.14 | MaxRaw: -901.6 | Avg: -1124.0
+Gen 51 | Fit: 0.15 | MaxRaw: -738.6 | Avg: -1010.4
+Gen 52 | Fit: 0.16 | MaxRaw: -777.5 | Avg: -1068.9
+Gen 53 | Fit: 0.18 | MaxRaw: -649.1 | Avg: -1024.9
+Gen 54 | Fit: 0.16 | MaxRaw: -797.0 | Avg: -1076.8
+Gen 55 | Fit: 0.15 | MaxRaw: -834.5 | Avg: -1093.7
+Gen 56 | Fit: 0.16 | MaxRaw: -756.6 | Avg: -1036.8
+Gen 57 | Fit: 0.14 | MaxRaw: -799.0 | Avg: -1063.1
+Gen 58 | Fit: 0.15 | MaxRaw: -811.8 | Avg: -1127.2
+Gen 59 | Fit: 0.14 | MaxRaw: -865.6 | Avg: -1089.7
+Gen 60 | Fit: 0.16 | MaxRaw: -648.9 | Avg: -998.6
+Gen 61 | Fit: 0.14 | MaxRaw: -935.7 | Avg: -1150.1
+Gen 62 | Fit: 0.14 | MaxRaw: -871.0 | Avg: -1120.6
+Gen 63 | Fit: 0.17 | MaxRaw: -632.7 | Avg: -939.1
+Gen 64 | Fit: 0.16 | MaxRaw: -692.6 | Avg: -1002.0
+Gen 65 | Fit: 0.15 | MaxRaw: -813.1 | Avg: -1057.1
+Gen 66 | Fit: 0.15 | MaxRaw: -758.9 | Avg: -1064.1
+Gen 67 | Fit: 0.17 | MaxRaw: -668.4 | Avg: -980.6
+Gen 68 | Fit: 0.15 | MaxRaw: -768.8 | Avg: -1067.8
+Gen 69 | Fit: 0.15 | MaxRaw: -759.8 | Avg: -1002.4
+Gen 70 | Fit: 0.13 | MaxRaw: -876.2 | Avg: -1108.0
+Gen 71 | Fit: 0.15 | MaxRaw: -781.5 | Avg: -1074.8
+Gen 72 | Fit: 0.17 | MaxRaw: -717.1 | Avg: -1002.9
+Gen 73 | Fit: 0.17 | MaxRaw: -693.5 | Avg: -972.3
+Gen 74 | Fit: 0.17 | MaxRaw: -626.2 | Avg: -987.4
+Gen 75 | Fit: 0.13 | MaxRaw: -833.2 | Avg: -1082.8
+Gen 76 | Fit: 0.17 | MaxRaw: -622.8 | Avg: -939.8
+Gen 77 | Fit: 0.15 | MaxRaw: -755.4 | Avg: -1027.4
+Gen 78 | Fit: 0.14 | MaxRaw: -767.7 | Avg: -1035.2
+Gen 79 | Fit: 0.17 | MaxRaw: -719.0 | Avg: -999.4
+Gen 80 | Fit: 0.13 | MaxRaw: -821.9 | Avg: -1058.1
+Gen 81 | Fit: 0.17 | MaxRaw: -697.0 | Avg: -1016.3
+Gen 82 | Fit: 0.15 | MaxRaw: -763.1 | Avg: -1025.1
+Gen 83 | Fit: 0.17 | MaxRaw: -627.9 | Avg: -944.4
+Gen 84 | Fit: 0.15 | MaxRaw: -804.2 | Avg: -1054.0
+Gen 85 | Fit: 0.17 | MaxRaw: -638.5 | Avg: -935.6
+Gen 86 | Fit: 0.16 | MaxRaw: -676.1 | Avg: -967.1
+Gen 87 | Fit: 0.16 | MaxRaw: -664.4 | Avg: -1005.5
+Gen 88 | Fit: 0.17 | MaxRaw: -616.5 | Avg: -982.2
+Gen 89 | Fit: 0.17 | MaxRaw: -653.1 | Avg: -954.7
+Gen 90 | Fit: 0.15 | MaxRaw: -795.9 | Avg: -1037.2
+Gen 91 | Fit: 0.15 | MaxRaw: -713.4 | Avg: -990.2
+Gen 92 | Fit: 0.16 | MaxRaw: -707.7 | Avg: -1038.9
+Gen 93 | Fit: 0.16 | MaxRaw: -627.9 | Avg: -967.1
+Gen 94 | Fit: 0.15 | MaxRaw: -591.2 | Avg: -924.5
+Gen 95 | Fit: 0.17 | MaxRaw: -579.0 | Avg: -939.5
+Gen 96 | Fit: 0.17 | MaxRaw: -689.4 | Avg: -1020.1
+Gen 97 | Fit: 0.16 | MaxRaw: -626.8 | Avg: -982.4
+Gen 98 | Fit: 0.18 | MaxRaw: -646.5 | Avg: -996.0
+Gen 99 | Fit: 0.19 | MaxRaw: -573.8 | Avg: -1017.1
+Gen 100 | Fit: 0.18 | MaxRaw: -685.6 | Avg: -1035.8
+
+Final Robustness Check (All 100 Seeds)...
+100%|████████████████████████████████████████████████████████████████████████████| 5000/5000 [5:30:49<00:00,  3.97s/it]
+Best Agent Score: -816.38
+Finish. Results in runs_pendulum/ga_1774410108_seed104
+
+##################################################
+STARTING RUN WITH GLOBAL SEED: 105
+##################################################
+
+Global Seed set to: 105
+Initial subset: [2100, 2069, 2099, 2038, 2025] (Max Age: 10)
+Training Started. Logs: runs_pendulum/ga_1774530449_seed105
+   Detailed logs: runs_pendulum/ga_1774530449_seed105/detailed_history.csv
+   Checkpoints:   runs_pendulum/ga_1774530449_seed105/checkpoints/
+Gen 1 | Fit: 0.13 | MaxRaw: -1155.5 | Avg: -1220.0
+Gen 2 | Fit: 0.13 | MaxRaw: -1223.3 | Avg: -1330.1
+Gen 3 | Fit: 0.12 | MaxRaw: -1131.4 | Avg: -1275.8
+Gen 4 | Fit: 0.12 | MaxRaw: -1079.8 | Avg: -1146.8
+Gen 5 | Fit: 0.12 | MaxRaw: -1165.5 | Avg: -1255.7
+Gen 6 | Fit: 0.13 | MaxRaw: -1032.2 | Avg: -1204.8
+Gen 7 | Fit: 0.13 | MaxRaw: -1072.1 | Avg: -1178.4
+Gen 8 | Fit: 0.16 | MaxRaw: -859.2 | Avg: -1063.6
+Gen 9 | Fit: 0.14 | MaxRaw: -887.3 | Avg: -1073.4
+Gen 10 | Fit: 0.13 | MaxRaw: -937.1 | Avg: -1099.0
+Gen 11 | Fit: 0.15 | MaxRaw: -1112.6 | Avg: -1285.0
+Gen 12 | Fit: 0.15 | MaxRaw: -797.5 | Avg: -1042.3
+Gen 13 | Fit: 0.16 | MaxRaw: -776.1 | Avg: -1022.8
+Gen 14 | Fit: 0.16 | MaxRaw: -634.3 | Avg: -896.7
+Gen 15 | Fit: 0.15 | MaxRaw: -836.9 | Avg: -1062.6
+Gen 16 | Fit: 0.16 | MaxRaw: -673.4 | Avg: -940.9
+Gen 17 | Fit: 0.14 | MaxRaw: -831.5 | Avg: -1046.6
+Gen 18 | Fit: 0.17 | MaxRaw: -670.7 | Avg: -954.4
+Gen 19 | Fit: 0.16 | MaxRaw: -699.0 | Avg: -932.4
+Gen 20 | Fit: 0.15 | MaxRaw: -805.5 | Avg: -1032.1
+Gen 21 | Fit: 0.14 | MaxRaw: -763.3 | Avg: -995.4
+Gen 22 | Fit: 0.14 | MaxRaw: -688.5 | Avg: -920.2
+Gen 23 | Fit: 0.14 | MaxRaw: -919.3 | Avg: -1119.1
+Gen 24 | Fit: 0.17 | MaxRaw: -796.6 | Avg: -1047.0
+Gen 25 | Fit: 0.14 | MaxRaw: -941.1 | Avg: -1163.7
+Gen 26 | Fit: 0.15 | MaxRaw: -852.5 | Avg: -1127.0
+Gen 27 | Fit: 0.17 | MaxRaw: -682.8 | Avg: -977.4
+Gen 28 | Fit: 0.16 | MaxRaw: -650.8 | Avg: -948.6
+Gen 29 | Fit: 0.15 | MaxRaw: -785.9 | Avg: -1053.3
+Gen 30 | Fit: 0.16 | MaxRaw: -708.5 | Avg: -989.3
+Gen 31 | Fit: 0.15 | MaxRaw: -753.4 | Avg: -1073.0
+Gen 32 | Fit: 0.16 | MaxRaw: -651.9 | Avg: -989.1
+Gen 33 | Fit: 0.17 | MaxRaw: -670.9 | Avg: -969.1
+Gen 34 | Fit: 0.15 | MaxRaw: -743.5 | Avg: -1017.5
+Gen 35 | Fit: 0.15 | MaxRaw: -733.8 | Avg: -1005.5
+Gen 36 | Fit: 0.15 | MaxRaw: -656.8 | Avg: -929.9
+Gen 37 | Fit: 0.14 | MaxRaw: -663.9 | Avg: -924.6
+Gen 38 | Fit: 0.18 | MaxRaw: -712.0 | Avg: -993.4
+Gen 39 | Fit: 0.15 | MaxRaw: -707.8 | Avg: -1008.1
+Gen 40 | Fit: 0.16 | MaxRaw: -691.9 | Avg: -967.8
+Gen 41 | Fit: 0.17 | MaxRaw: -656.6 | Avg: -955.1
+Gen 42 | Fit: 0.15 | MaxRaw: -764.4 | Avg: -1073.8
+Gen 43 | Fit: 0.17 | MaxRaw: -670.3 | Avg: -1005.9
+Gen 44 | Fit: 0.16 | MaxRaw: -621.0 | Avg: -976.5
+Gen 45 | Fit: 0.19 | MaxRaw: -648.7 | Avg: -996.9
+Gen 46 | Fit: 0.18 | MaxRaw: -609.5 | Avg: -952.9
+Gen 47 | Fit: 0.18 | MaxRaw: -654.1 | Avg: -973.2
+Gen 48 | Fit: 0.18 | MaxRaw: -693.1 | Avg: -993.1
+Gen 49 | Fit: 0.15 | MaxRaw: -616.2 | Avg: -920.9
+Gen 50 | Fit: 0.16 | MaxRaw: -646.5 | Avg: -921.8
+Gen 51 | Fit: 0.14 | MaxRaw: -906.2 | Avg: -1166.8
+Gen 52 | Fit: 0.17 | MaxRaw: -635.1 | Avg: -943.4
+Gen 53 | Fit: 0.14 | MaxRaw: -793.3 | Avg: -1056.7
+Gen 54 | Fit: 0.15 | MaxRaw: -731.7 | Avg: -995.8
+Gen 55 | Fit: 0.17 | MaxRaw: -631.0 | Avg: -955.1
+Gen 56 | Fit: 0.16 | MaxRaw: -756.7 | Avg: -1068.8
+Gen 57 | Fit: 0.19 | MaxRaw: -674.0 | Avg: -995.1
+Gen 58 | Fit: 0.13 | MaxRaw: -826.4 | Avg: -1034.3
+Gen 59 | Fit: 0.15 | MaxRaw: -755.8 | Avg: -1045.6
+Gen 60 | Fit: 0.17 | MaxRaw: -709.9 | Avg: -995.3
+Gen 61 | Fit: 0.18 | MaxRaw: -688.7 | Avg: -998.0
+Gen 62 | Fit: 0.16 | MaxRaw: -631.1 | Avg: -951.4
+Gen 63 | Fit: 0.14 | MaxRaw: -713.2 | Avg: -956.6
+Gen 64 | Fit: 0.15 | MaxRaw: -670.3 | Avg: -970.8
+Gen 65 | Fit: 0.13 | MaxRaw: -797.1 | Avg: -1058.3
+Gen 66 | Fit: 0.17 | MaxRaw: -609.3 | Avg: -948.2
+Gen 67 | Fit: 0.15 | MaxRaw: -720.1 | Avg: -1022.1
+Gen 68 | Fit: 0.15 | MaxRaw: -608.6 | Avg: -902.3
+Gen 69 | Fit: 0.16 | MaxRaw: -617.8 | Avg: -951.5
+Gen 70 | Fit: 0.14 | MaxRaw: -750.9 | Avg: -1000.2
+Gen 71 | Fit: 0.16 | MaxRaw: -649.7 | Avg: -1016.9
+Gen 72 | Fit: 0.15 | MaxRaw: -696.0 | Avg: -1010.7
+Gen 73 | Fit: 0.16 | MaxRaw: -714.5 | Avg: -1022.5
+Gen 74 | Fit: 0.17 | MaxRaw: -713.9 | Avg: -1023.1
+Gen 75 | Fit: 0.15 | MaxRaw: -851.0 | Avg: -1067.9
+Gen 76 | Fit: 0.16 | MaxRaw: -708.7 | Avg: -954.2
+Gen 77 | Fit: 0.15 | MaxRaw: -686.2 | Avg: -969.1
+Gen 78 | Fit: 0.15 | MaxRaw: -717.0 | Avg: -1015.8
+Gen 79 | Fit: 0.17 | MaxRaw: -625.5 | Avg: -958.2
+Gen 80 | Fit: 0.16 | MaxRaw: -638.8 | Avg: -963.4
+Gen 81 | Fit: 0.17 | MaxRaw: -594.9 | Avg: -990.3
+Gen 82 | Fit: 0.19 | MaxRaw: -608.2 | Avg: -965.4
+Gen 83 | Fit: 0.16 | MaxRaw: -804.0 | Avg: -1067.8
+Gen 84 | Fit: 0.17 | MaxRaw: -709.8 | Avg: -989.8
+Gen 85 | Fit: 0.15 | MaxRaw: -645.8 | Avg: -959.0
+Gen 86 | Fit: 0.18 | MaxRaw: -623.5 | Avg: -1007.9
+Gen 87 | Fit: 0.16 | MaxRaw: -669.8 | Avg: -967.9
+Gen 88 | Fit: 0.18 | MaxRaw: -628.4 | Avg: -963.3
+Gen 89 | Fit: 0.16 | MaxRaw: -688.5 | Avg: -1025.6
+Gen 90 | Fit: 0.18 | MaxRaw: -630.4 | Avg: -1012.2
+Gen 91 | Fit: 0.17 | MaxRaw: -784.2 | Avg: -1095.1
+Gen 92 | Fit: 0.17 | MaxRaw: -708.9 | Avg: -1029.3
+Gen 93 | Fit: 0.15 | MaxRaw: -665.9 | Avg: -954.8
+Gen 94 | Fit: 0.16 | MaxRaw: -782.7 | Avg: -1093.5
+Gen 95 | Fit: 0.14 | MaxRaw: -765.6 | Avg: -1035.8
+Gen 96 | Fit: 0.15 | MaxRaw: -735.4 | Avg: -1034.0
+Gen 97 | Fit: 0.15 | MaxRaw: -634.1 | Avg: -938.7
+Gen 98 | Fit: 0.16 | MaxRaw: -693.6 | Avg: -979.5
+Gen 99 | Fit: 0.17 | MaxRaw: -673.0 | Avg: -984.8
+Gen 100 | Fit: 0.18 | MaxRaw: -693.6 | Avg: -1057.3
+
+Final Robustness Check (All 100 Seeds)...
+100%|████████████████████████████████████████████████████████████████████████████| 5000/5000 [5:33:38<00:00,  4.00s/it]
+Best Agent Score: -812.49
+Finish. Results in runs_pendulum/ga_1774530449_seed105
+
+All 5 runs completed.
