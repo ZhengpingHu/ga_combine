@@ -7,7 +7,7 @@ import os
 import numpy as np
 
 # ================= Config =================
-INPUT_CSV = "./acrobot_eval_data_seed106.csv"
+INPUT_CSV = "./acrobot_eval_data_seed106_noisy_to_noisy.csv"
 OUTPUT_DIR = "submission_plots_acrobot"
 OUTPUT_FILENAME_BASE = "acrobot_robustness_final"
 
