@@ -34,42 +34,53 @@ plt.rcParams.update({
 })
 
 # ==========================================
-# [透明度配置区] 
+# [透明度配置区] (严格保留您的原始设置)
 # ==========================================
-LINE_ALPHA = 0.35      # 折线的主体透明度 
+LINE_ALPHA = 0.85      # 折线的主体透明度 (稍微调高一点保证红色蓝色清晰可见，您可依喜好改回0.35)
 FILL_UNDER_CURVE = True # 是否在曲线下方绘制积分阴影
 FILL_ALPHA = 0.1       # 曲线下方阴影的透明度 
-LINE_WIDTH = 0.8       # 折线粗细 
+LINE_WIDTH = 1.2       # 折线粗细 
 
 # ==========================================
 # 2. Data Loading & Settings
 # ==========================================
 DATA_FILES = {
-    "PPO (No Noise)": "./power_log_PPO_no_noise.csv",
-    "PPO (Noisy)": "./power_log_PPO_noise.csv",
-    "GA+YOLO (No Noise)": "./power_log_ga_no_noise.csv",
-    "GA+YOLO (Noisy)": "./power_log_ga_noise.csv"
+    "PPO (No Noise)": "power_log_PPO_no_noise.csv",
+    "PPO (Noisy)": "power_log_PPO_noise.csv",
+    "GA+YOLO (No Noise)": "power_log_ga_no_noise.csv",
+    "GA+YOLO (Noisy)": "power_log_ga_noise.csv"
 }
 
+# 导师要求：PPO用红色，GA用蓝色
 COLORS = {
-    "PPO (No Noise)": "#E57373",      # 浅红
-    "PPO (Noisy)": "#B71C1C",         # 深红
-    "GA+YOLO (No Noise)": "#64B5F6",  # 浅蓝
-    "GA+YOLO (Noisy)": "#0D47A1"      # 深蓝
+    "PPO (No Noise)": "#d62728",      # 学术红
+    "PPO (Noisy)": "#d62728",         # 学术红
+    "GA+YOLO (No Noise)": "#1f77b4",  # 学术蓝
+    "GA+YOLO (Noisy)": "#1f77b4"      # 学术蓝
 }
 
+# 因为分成了不同的图，全都用实线即可，视觉上最清晰
 LINESTYLES = {
-    "PPO (No Noise)": "--",
+    "PPO (No Noise)": "-",
     "PPO (Noisy)": "-",
-    "GA+YOLO (No Noise)": "--",
+    "GA+YOLO (No Noise)": "-",
     "GA+YOLO (Noisy)": "-"
+}
+
+# 优化图例显示文字：去掉冗余的环境描述，直接显示算法名
+LEGEND_LABELS = {
+    "PPO (No Noise)": "Baseline: E2E PPO",
+    "PPO (Noisy)": "Baseline: E2E PPO",
+    "GA+YOLO (No Noise)": "Ours: Vision-HSR-GA",
+    "GA+YOLO (Noisy)": "Ours: Vision-HSR-GA"
 }
 
 SMOOTHING_WINDOW = 10 
 
+# 导师要求：按 Clean 和 Noisy 分组
 GROUPS = {
-    "GA": ["GA+YOLO (No Noise)", "GA+YOLO (Noisy)"],
-    "PPO": ["PPO (No Noise)", "PPO (Noisy)"]
+    "Clean (Noise-Free)": ["PPO (No Noise)", "GA+YOLO (No Noise)"],
+    "Noisy (Visual Disturbances)": ["PPO (Noisy)", "GA+YOLO (Noisy)"]
 }
 
 def calculate_total_energy(df, power_col, time_interval=0.5):
@@ -100,10 +111,13 @@ def plot_group(group_name, keys):
         df['CPU_Smooth'] = df[cpu_col].rolling(window=SMOOTHING_WINDOW, min_periods=1).mean()
         df['GPU_Smooth'] = df[gpu_col].rolling(window=SMOOTHING_WINDOW, min_periods=1).mean()
         
+        # 使用映射后的优雅图例名称
+        display_label = LEGEND_LABELS[label]
+        
         # --- 绘制 CPU 曲线 ---
         ax_cpu.plot(
             df[time_col], df['CPU_Smooth'], 
-            label=label, color=COLORS[label], linestyle=LINESTYLES[label], 
+            label=display_label, color=COLORS[label], linestyle=LINESTYLES[label], 
             linewidth=LINE_WIDTH, alpha=LINE_ALPHA 
         )
         if FILL_UNDER_CURVE:
@@ -115,7 +129,7 @@ def plot_group(group_name, keys):
         # --- 绘制 GPU 曲线 ---
         ax_gpu.plot(
             df[time_col], df['GPU_Smooth'], 
-            label=label, color=COLORS[label], linestyle=LINESTYLES[label], 
+            label=display_label, color=COLORS[label], linestyle=LINESTYLES[label], 
             linewidth=LINE_WIDTH, alpha=LINE_ALPHA 
         )
         if FILL_UNDER_CURVE:
@@ -132,40 +146,45 @@ def plot_group(group_name, keys):
         return
 
     # --- CPU 格式化 ---
-    ax_cpu.set_title(f"(a) {group_name} CPU Utilization Over Time", fontweight='bold', pad=10)
+    ax_cpu.set_title(f"(a) CPU Utilization", fontweight='bold', pad=10)
     ax_cpu.set_xlabel("Time (Seconds)")
     ax_cpu.set_ylabel("CPU Usage (%)")
     ax_cpu.set_ylim(0, 105)
     
     # --- GPU 格式化 ---
-    ax_gpu.set_title(f"(b) {group_name} GPU Power Consumption Over Time", fontweight='bold', pad=10)
+    ax_gpu.set_title(f"(b) GPU Power Consumption", fontweight='bold', pad=10)
     ax_gpu.set_xlabel("Time (Seconds)")
     ax_gpu.set_ylabel("GPU Power (Watts)")
     ax_gpu.set_ylim(bottom=0)
     
+    # 整个 Figure 的大标题（表明当前环境）
+    fig.suptitle(f"System Profiling: {group_name} Environment", fontweight='bold', fontsize=13)
+    
+    # 图例设置
     handles, labels = ax_gpu.get_legend_handles_labels()
-    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 1.05), 
+    fig.legend(handles, labels, loc='lower center', bbox_to_anchor=(0.5, -0.05), 
                ncol=2, frameon=False)
 
     # 保存
-    png_path = os.path.join(OUTPUT_DIR, f"{OUTPUT_FILENAME_BASE}_{group_name.lower()}_ieee.png")
-    pdf_path = os.path.join(OUTPUT_DIR, f"{OUTPUT_FILENAME_BASE}_{group_name.lower()}_ieee.pdf")
+    safe_name = group_name.split()[0].lower() # 提取 clean 或 noisy
+    png_path = os.path.join(OUTPUT_DIR, f"{OUTPUT_FILENAME_BASE}_{safe_name}_ieee.png")
+    pdf_path = os.path.join(OUTPUT_DIR, f"{OUTPUT_FILENAME_BASE}_{safe_name}_ieee.pdf")
     
     plt.savefig(pdf_path, format='pdf', bbox_inches='tight')
     plt.savefig(png_path, format='png', dpi=300, bbox_inches='tight')
     
-    print(f"  [+] {group_name} 图像成功保存至: {png_path}")
+    print(f"  [+] {group_name} 图像成功保存至: {pdf_path}")
     
-    # 【核心修复】：释放画布内存，防止下一张图画在同一张底板上或丢失！
+    # 释放画布内存
     plt.close(fig)
 
 def main():
     print("=========================================")
-    print(" 开始生成双系统独立能耗报告")
+    print(" 开始生成按环境分类的双系统独立能耗报告")
     print("=========================================")
     for group_name, keys in GROUPS.items():
         plot_group(group_name, keys)
-    print("\n[+] 全部两套图表生成完毕！")
+    print("\n[+] 全部两套图表生成完毕！请查看 submission_plots 文件夹。")
 
 if __name__ == "__main__":
     main()

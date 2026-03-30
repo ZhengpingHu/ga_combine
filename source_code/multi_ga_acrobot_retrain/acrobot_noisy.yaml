@@ -1,0 +1,10 @@
+# acrobot_noisy.yaml
+path: datasets/acrobot_noisy
+train: images/train
+val: images/val
+
+names:
+  0: acrobot
+
+
+kpt_shape: [3, 3]
