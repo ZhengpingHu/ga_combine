@@ -1,0 +1,27 @@
+(base) PS D:\OneDrive\OneDrive - Dalhousie University\2026_Winter\ga_combine\source_code\multi_ga_mountain_car\eval_106> python eval_noisy_mc_106.py --noisy
+Loading models and preparing YOLO evaluation tasks... [Env: NOISY]
+Starting visual evaluation on 500 episodes.
+Connecting to YOLO Server at 127.0.0.1:6001...
+100%|████████████████████████████████████████████████████████████████████████████████| 500/500 [09:50<00:00,  1.18s/it]
+
+Evaluation Complete. Data saved to: evaluation_results_mc_yolo\mc_yolo_eval_seed106_noisy.csv
+
+=== Summary Statistics (Visual Input) ===
+                     mean        std    min    max
+Agent_Source_Seed
+101               -126.24  20.514159 -200.0 -103.0
+102               -130.84  26.429903 -200.0  -89.0
+103               -136.57  24.437203 -199.0 -109.0
+104               -134.77  26.687437 -199.0  -94.0
+105               -132.28  23.798854 -200.0 -107.0
+D:\OneDrive\OneDrive - Dalhousie University\2026_Winter\ga_combine\source_code\multi_ga_mountain_car\eval_106\eval_noisy_mc_106.py:244: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  success = df.groupby("Agent_Source_Seed").apply(lambda x: (x["Reward"] > -200).mean() * 100)
+
+=== Success Rate (%) ===
+Agent_Source_Seed
+101     99.0
+102     98.0
+103    100.0
+104    100.0
+105     99.0
+dtype: float64
