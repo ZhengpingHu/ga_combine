@@ -1,0 +1,9 @@
+path: ./datasets/mountaincar_noisy
+train: images/train
+val: images/val
+
+names:
+  0: cart
+
+# 严格对齐 2 个关键点
+kpt_shape: [2, 3]
