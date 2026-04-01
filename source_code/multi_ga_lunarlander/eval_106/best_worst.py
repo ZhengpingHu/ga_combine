@@ -215,19 +215,24 @@ def plot_single_trajectory(df_traj, reward, is_best=True):
     # Continuous gray path line
     ax.plot(df_traj['X'], df_traj['Y'], color='gray', linewidth=0.8, linestyle='-', zorder=1, alpha=0.5)
     
+    # Calculate frequency of each action to determine z-order plotting
+    # Sort actions by frequency descending, so least frequent gets plotted last (on top)
+    action_counts = df_traj['Action'].value_counts().to_dict()
+    sorted_actions = sorted(action_counts.keys(), key=lambda a: action_counts.get(a, 0), reverse=True)
+
     # Scatter colored by actions
-    for act in range(4):
+    for act in sorted_actions:
         subset = df_traj[df_traj['Action'] == act]
         if len(subset) > 0:
             ax.scatter(
                 subset['X'], subset['Y'], 
                 c=ACTION_COLORS[act], 
-                s=20, zorder=2, edgecolors='none'
+                s=12, zorder=4, edgecolors='none'  # s=12 (smaller points), zorder=4 (above line)
             )
             
-    # Highlight Start and End points
-    ax.scatter(df_traj['X'].iloc[0], df_traj['Y'].iloc[0], color='black', marker='s', s=40, zorder=3, label='Start')
-    ax.scatter(df_traj['X'].iloc[-1], df_traj['Y'].iloc[-1], color='black', marker='X', s=50, zorder=3, label='End')
+    # Highlight Start and End points (zorder=5 to stay on top of all scatter points)
+    ax.scatter(df_traj['X'].iloc[0], df_traj['Y'].iloc[0], color='black', marker='s', s=30, zorder=5, label='Start')
+    ax.scatter(df_traj['X'].iloc[-1], df_traj['Y'].iloc[-1], color='black', marker='X', s=40, zorder=5, label='End')
 
     ax.set_title(f"{tag} Descent Action Trajectory (Reward: {reward:.1f})", fontweight='bold')
     ax.set_xlabel("Horizontal Position (X)")
